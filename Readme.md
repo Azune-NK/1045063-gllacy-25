@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Кирилл Николаев](https://up.htmlacademy.ru/htmlcss/25/user/1045063).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Фарига](https://htmlacademy.ru/profile/maximfariga).
 
 ---
 
