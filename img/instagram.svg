@@ -1,0 +1,17 @@
+<svg id="Инста" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.219" height="37.22" viewBox="0 0 37.219 37.22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        opacity: 0.5;
+      }
+
+      .cls-2 {
+        opacity: 0.8;
+      }
+    </style>
+  </defs>
+  <path id="Обводка" class="cls-1" d="M94.925,1579.24a18.62,18.62,0,1,1-18.62,18.62A18.616,18.616,0,0,1,94.925,1579.24Zm-0.061,2.99a15.69,15.69,0,1,1-15.692,15.69A15.688,15.688,0,0,1,94.865,1582.23Z" transform="translate(-76.313 -1579.25)"/>
+  <image id="_" data-name="&apos;=]" class="cls-2" x="2.688" y="2.75" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACo0lEQVRYhc2XvWsUURDAf7NsFQsFrSIiqFFUUijBwkpSCKmU2CUIHiI2ISnSGEFEBLVJIYjYpdLOgAQbi3B/QEgCiYJEBY0EsRPJgaCOTDJ7Xu7tV47Lxw+O3Xsz+2b27cy8eUJJVHUvcAHoAbqATqDDn64BK8ASMANUReRHmZkLHVBVM1YBeoE4UEjnNzANTIjIUqpGkQOqam83DFzJ0ytAgUngsYjU0lRTJ1bVI8A4cCgQtsYyMCoinwodUNVu4Amwp03GE1aBIRFZyHTA33xiC4w3OlFpXIm6A/7Nn7dx2bOwzzGYxETUoDS8DcZxGyPJn7UV8FR7kRYTwBfgPvAhkORzHLjr9aIZy44BS9HEgQfAxUBtnWsishiMlkBVzwFPMzTfiMjt2CtcbyD+z+dgJAVVPW/OumReRMzw+1CzTq/Zjr28lq1weewHzrr8p1//5uiv2Y68tu8UPbFvLJtGVc8Al/0trdzOA/d8nm8l5+uKM6I0QFUtfb6LyC9VtaV+1pDGfcB1EZnyerIvmCCdzqhhSy3iDnDAdfqbaoi9yCW/P2h1v2CuhI4oGMpHc6Xr/AlGcoi8mSjLadebbIpw2/9f+X33JuarRd7JlOWqqkYiMgvcBF4DU8ANEXmrqvYpBjYx30rsbdSxQJTOKeCWqj4SkTlgLtFy4xYnR4GvqU+HLMXew/UFomwsAE+qqu2c73z/sGUfbCGlZ8yBKjBWoho2l9V+/yVY9Zv1+49+zQtyi5tqbN2rqk7nbEaHgUURGQ8kxZzI0Zg227tjO3YnxrwD3g5eishDs7N7WjIfGPXGcatY9fa8Xvw2RKl3q0Nb5ETSlm84GwRp4n17xZeqXSx7O74Q2Msy4DEx4rmeqVdAa0ezJkd25nCa4kj7j+fAPyvH2lV50mFEAAAAAElFTkSuQmCC"/>
+</svg>
