@@ -1,3 +1,7 @@
 body {
   background: #849d8f;
 }
+
+.visually-hidden {
+  font-size: 0px;
+}

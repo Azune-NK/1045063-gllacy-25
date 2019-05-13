@@ -2,51 +2,52 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>HTML Academy: Глейси — Каталог</title>
+    <title>Каталог сливочного мороженого Глейси</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-      <header class="main-header">
-          <nav class="main-navigation">
-              <a class="main-header-logo" href="index.html">
-                <img src="img/Logo.svg" alt="Gllacy Shop" width="154" height="64">
-              </a>
-              <ul class="site-navigation"> <!-- пока не знаю что адекватнее - давать классы для li или использовать nth-child и пр -->
-                <li>
-                  <a href="inner.html">Каталог</a>
-                  <ul class="catalog-navigation">
-                    <li><a href="#">Новинки</a></li>
-                    <li><a href="inner.html">Сливочное</a></li>
-                    <li><a href="#">Щербеты</a></li>
-                    <li><a href="#">Фруктовый лед</a></li>
-                    <li><a href="#">Мелорин</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Доставка и оплата</a></li>
-                <li><a href="#">О Компании</a></li>
-              </ul>
-              <ul class="user-navigation">
-                <li class="search"><a href="#"><span class="visible-hidden">Найти</span></a></li>
-                <li class="login"><a href="#">Вход</a></li>
-                <li class="cart"><a href="#">Пусто</a></li>
-              </ul>
-              <div class="header-contacts"> <!-- этот блок можно вынести в main, пока не совсем понимаю за и против -->
-                <h2 class="visible-hidden">Контакты</h2>
-                <p>С 10 до 20, ежедневно</p>
-                <p><a href="tel:+78124502525">8 812 450-25-25</a></p>
-              </div>
-          </nav>
-        </header>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="logo-main-header" href="index.html">
+          <img src="img/Logo.svg" alt="Gllacy Shop" width="154" height="64">
+        </a>
+        <ul class="site-navigation">
+          <li>
+            <a href="inner.html">Каталог</a>
+            <ul class="catalog-navigation">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="inner.html">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О Компании</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li class="search"><a href="#"><span class="visually-hidden">Найти</span></a></li>
+          <li class="login"><a href="#">Вход</a></li>
+          <li class="cart"><a href="#">Пусто</a></li>
+        </ul>
+        <section class="header-contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p>С 10 до 20, ежедневно</p>
+          <p><a href="tel:+78124502525">8 812 450-25-25</a></p>
+        </section>
+      </nav>
+    </header>
     <main class="container"> <!-- я пока не уверен, но мне кажется стоит для многостраничных сайтов в разных мейн добавлять дополнительные класс(ы) помимо "container" -->
-      <h1>Сливочное мороженное</h1>
+      <h1 class="h1-cream">Сливочное мороженое</h1>
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="inner.html">Каталог</a></li>
         <li>Сливочное</li>
       </ul>
-      <section class="catalog-cream"> <!-- не уверен, стоит ли добавить невидыми заголовок "Список\Виды сливочного мороженного" -->
+      <!--  Тут будет фильтр -->
+      <section class="catalog-cream"> <!-- не уверен, стоит ли добавить невидыми заголовок "Список\Виды сливочного мороженого" -->
         <ul class="catalog-list">
           <li class="catalog-item">
             <h2><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h2>
@@ -122,51 +123,53 @@
           </li>
         </ul>
       </section>
+      <!-- тут будет пагинация -->
     </main>
     <footer class="main-footer">
-        <div class="main-footer-social">
-          <ul>
-            <li>
-              <span class="visually-hidden">Twitter</span>
-            <a href="#">
-              <img src="img/twitter.svg" alt="Twitter" width="37" height="37">
-            </a>
-            </li>
-            <li>
-              <span class="visually-hidden">Instagram</span>
-              <a href="#">
-                <img src="img/instagram.svg" alt="Instagram" width="37" height="37">
-              </a>
-            </li>
-            <li>
-              <span class="visually-hidden">Facebook</span>
-              <a href="#">
-                <img src="img/facebook.svg" alt="Facebook" width="37" height="37">
-              </a>
-            </li>
-            <li>
-              <span class="visually-hidden">ВКонтакте</span>
-              <a href="#">
-                <img src="img/vk.svg" alt="ВКонтакте" width="37" height="37">
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="main-footer-item"> <!-- тут пока не знаю что удобнее\правильнее - 1 или 2 блока -->
-          <ul>
-            <li>Для поставщиков</li>
-            <li>О производстве</li>
-            <li>Наши документы</li>
-            <li>Экологические стандарты</li>
-          </ul>
-        </div>
-        <div class="main-footer-copyright">
-          <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo-htmlacademy-small.svg" alt="HTML-Академия" width="108" height="39">
+      <div class="main-footer-social">
+        <ul>
+          <li>
+            <span class="visually-hidden">Twitter</span>
+          <a href="#">
+            <img src="img/twitter.svg" alt="Twitter" width="37" height="37">
           </a>
-          <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
-        </div>
-      </footer>
+           </li>
+          <li>
+            <span class="visually-hidden">Instagram</span>
+            <a href="#">
+              <img src="img/instagram.svg" alt="Instagram" width="37" height="37">
+            </a>
+          </li>
+          <li>
+            <span class="visually-hidden">Facebook</span>
+            <a href="#">
+              <img src="img/facebook.svg" alt="Facebook" width="37" height="37">
+            </a>
+          </li>
+          <li>
+            <span class="visually-hidden">ВКонтакте</span>
+            <a href="#">
+              <img src="img/vk.svg" alt="ВКонтакте" width="37" height="37">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer-documentation">
+        <ul class="main-footer-documentation-list">
+          <li>Для поставщиков</li>
+          <li>О производстве</li>
+          <li>Наши документы</li>
+          <li>Экологические стандарты</li>
+        </ul>
+      </div>
+      <div class="main-footer-copyright">
+        <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-htmlacademy-small.svg" alt="HTML-Академия" width="108" height="39">
+        </a>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+      </div>
+    </footer>
+    <!-- модалки -->
+    <script src="js/script.js"></script>
   </body>
-  <script src="js/script.js"></script>
 </html>

@@ -1,66 +1,115 @@
-<!DOCTYPE html> <!-- Alt Shift A -->
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>HTML Academy: Глейси</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic"> <!-- вопрос с подключением шрифтов - выбор опций по жиронсти\написанию\кирилице в гугле -->
+    <title>Интернет-магазин мороженого Глейси</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic"> <!-- в текущем проекте в ТЗ задан шрифт Roboto, как мне понять какиие опции(жирность, курсив, кирилица и пр) задавать в гугле?(если про это будет в будущих лекциях -тогда опустим вопрос) -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-          <a class="main-header-logo" href="#">
-            <img src="img/Logo.svg" alt="Gllacy Shop" width="154" height="64">
-          </a>
-          <ul class="site-navigation"> <!-- пока не знаю что адекватнее - давать классы для li или использовать nth-child и пр -->
-            <li>
-              <a href="inner.html">Каталог</a>
-              <ul class="catalog-navigation">
-                <li><a href="#">Новинки</a></li>
-                <li><a href="inner.html">Сливочное</a></li>
-                <li><a href="#">Щербеты</a></li>
-                <li><a href="#">Фруктовый лед</a></li>
-                <li><a href="#">Мелорин</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">О Компании</a></li>
-          </ul>
-          <ul class="user-navigation">
-            <li class="search"><a href="#"><span class="visually-hidden">Найти</span></a></li>
-            <li class="login"><a href="#">Вход</a></li>
-            <li class="cart"><a href="#">Пусто</a></li>
-          </ul>
-          <div class="header-contacts"> <!-- этот блок можно вынести в main, пока не совсем понимаю за и против -->
-            <h2 class="visually-hidden">Контакты</h2>
-            <p>С 10 до 20, ежедневно</p>
-            <p><a href="tel:+78124502525">8 812 450-25-25</a></p>
-          </div>
+        <a class="logo-main-header" href="#"> <!-- В реальных проектах логотип чаще оборачивают или не оборачивают div? -->
+          <img src="img/Logo.svg" alt="Gllacy Shop" width="154" height="64">
+        </a>
+        <ul class="site-navigation"> <!-- пока не знаю что адекватнее - давать классы для li или использовать nth-child и пр(если ориентироваться на критерии для защиты - "глубокие" селекторы под запретом - а как быть вне академии, в реальных проектах тоже важно селекторы не  больше 2-3 уровней?) -->
+          <li>
+            <a href="inner.html">Каталог</a>
+            <ul class="catalog-navigation">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="inner.html">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О Компании</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li class="search"><a href="#"><span class="visually-hidden">Найти</span></a></li>
+          <li class="login"><a href="#">Вход</a></li>
+          <li class="cart"><a href="#">Пусто</a></li>
+        </ul>
+        <section class="header-contacts"> <!-- этот блок можно вынести в main, пока не совсем понимаю за и против -->
+          <h2 class="visually-hidden">Контакты</h2>
+          <p>С 10 до 20, ежедневно</p>
+          <p><a href="tel:+78124502525">8 812 450-25-25</a></p>
+        </section>
       </nav>
     </header>
     <main class="container">
-      <h1 class="visually-hidden">Интернет-магазин мороженого Глейси</h1>
+      <h1 class="visually-hidden h1-index">Интернет-магазин мороженого Глейси</h1>
+      <!-- Тут будет слайдер -->
+      <section class="special-offer">
+        <h2 class="visually-hidden">Специальное предложение</h2>
+        <article class="special-offer-raspberry"> <!-- Мне кажется эти блоки могут быть банерами на других сайтах в качестве рекламы, но может я ошибаюсь и надо через section -->
+          <h3 class="special-offer-lead-raspberry">Малинка даром!</h3> <!-- можем же через .special-offer-raspberry h3\p - нужен ли класс тогда... -->
+          <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a class="special-offer-button button" href="#">Хочу варенье!</a>
+        </article>
+        <article class="special-offer-chocolate">
+          <h3 class="special-offer-lead-chocolate">Шоколадки даром!</h3>
+          <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+          <a class="special-offer-button button" href="#">Хочу шоколадки!</a>
+        </article>
+      </section>
+      <section class="popular">
+        <h2 class="visually-hidden">Самые популярные виды мороженого</h2>
+        <ul class="catalog-list"> <!-- картинки мороженки в ссылки оберну позже -->
+          <li class="catalog-item">
+            <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3> <!-- На сколько популярна эта практика в карточке товара оборачивать ссылку с названием товара в h? -->
+            <p><img src="img/hit.jpg" alt="Хит" width="61" height="61"></p> <!-- нужен альт для икноки хита? -->
+            <p><img src="img/orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></p> <!-- на прошлом потокее тоже задавали вопрос "а нужен ли тут альт дублирующий текст в очень узком пространстве - ответа от препода не было. Альт вроде учитывается при выдаче яндекс картинок и пр? -->
+            <p class="catalog-item-price"><span>310 ₽</span><span>/кг</span></p> <!--  тут не уверен ни в 2х спанах, ни в необходимости писать им классы. Это возвращаясь к коменту на 16строке - от того что мы к примеру уберем 50% классов из html и в css будем делать глубокие селекторы - проект как-то выиграет по времени загрузки для пользователей? Пока мышление еще не сформировано, с одной стороны хочется не засорять код классами, с другой хочется найти золотую середину для удобства\скорости работы\снижению риска ошибиться с селекторами и тд -->
+            <button class="catalog-item-button button" type="button">Быстрый просмотр</button>
+          </li>
+          <li class="catalog-item">
+            <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+            <p><img src="img/hit.jpg" alt="Хит" width="61" height="61"></p> <!-- также пока не совсем понятно, почему мы используем(ориентируясь на демку) обертку в виде p, а не div? мне почему-то хочется в p оборачивать только текст -->
+            <p><img src="img/coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></p> <!-- удобнее каждую картинку в отдельную обертку или лучше совместить в одну? -->
+            <p class="catalog-item-price"><span>380 ₽</span><span>/кг</span></p>
+            <button class="catalog-item-button button" type="button">Быстрый просмотр</button>
+          </li>
+          <li class="catalog-item">
+            <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+            <p><img src="img/hit.jpg" alt="Хит" width="61" height="61"></p>
+            <p><img src="img/strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></p>
+            <p class="catalog-item-price"><span>355 ₽</span><span>/кг</span></p>
+            <button class="catalog-item-button button" type="button">Быстрый просмотр</button>
+          </li>
+          <li class="catalog-item">
+            <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+            <p><img src="img/hit.jpg" alt="Хит" width="61" height="61"></p>
+            <p><img src="img/creme-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></p>
+            <p class="catalog-item-price"><span>415 ₽</span><span>/кг</span></p>
+            <button class="catalog-item-button button" type="button">Быстрый просмотр</button>
+          </li>
+        </ul>
+      </section>
       <section class="advantages">
         <h2 class="visually-hidden">Наши преимущества</h2>
-          <p class="advantages-lead">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-          <ul class="advantages-list">
-            <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-            <li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-            <li>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-            <li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
-          </ul>
+        <p class="advantages-lead">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+        <ul class="advantages-list">
+          <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+          <li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+          <li>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          <li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+        </ul>
       </section>
       <article class="news">
         <h2>Новое в нашем блоге</h2>
         <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <section class="subscribe">
-          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <!-- форма -->
       </section>
+      <!-- карта + форма -->
     </main>
     <footer class="main-footer">
-      <div class="main-footer-social">
+      <div class="main-footer-social"> <!-- не уверен, читал про разные способы разметки соц блока - какой самый адекватный? -->
         <ul>
           <li>
             <span class="visually-hidden">Twitter</span>
@@ -88,8 +137,8 @@
           </li>
         </ul>
       </div>
-      <div class="main-footer-item"> <!-- тут пока не знаю что удобнее\правильнее - 1 или 2 блока -->
-        <ul>
+      <div class="main-footer-documentation"> <!-- тут пока не знаю что удобнее\правильнее - 1 или 2 блока -->
+        <ul class="main-footer-documentation-list">
           <li>Для поставщиков</li>
           <li>О производстве</li>
           <li>Наши документы</li>
@@ -103,6 +152,7 @@
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
       </div>
     </footer>
+    <!-- модалки -->
     <script src="js/script.js"></script>
   </body>
 </html>
