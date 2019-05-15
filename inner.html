@@ -15,10 +15,10 @@
         </a>
         <ul class="site-navigation">
           <li class="site-navigation-item">
-            <a class="current" href="#">Каталог</a>
+            <a class="current-site-navigation-link" href="#">Каталог</a>
             <ul class="catalog-navigation">
               <li class="catalog-navigation-item"><a href="#">Новинки</a></li>
-              <li class="catalog-navigation-item"><a class="current" href="inner.html">Сливочное</a></li>
+              <li class="catalog-navigation-item"><a class="current-catalog-navigation-link">Сливочное</a></li>
               <li class="catalog-navigation-item"><a href="#">Щербеты</a></li>
               <li class="catalog-navigation-item"><a href="#">Фруктовый лед</a></li>
               <li class="catalog-navigation-item"><a href="#">Мелорин</a></li>
@@ -42,8 +42,8 @@
     <main class="container">
       <h1 class="h1-cream">Сливочное мороженое</h1>
       <ul class="breadcrumbs">
-        <li class="breadcrumbs-item"><a href="#">Главная</a></li>
-        <li class="breadcrumbs-item"><a href="inner.html">Каталог</a></li>
+        <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
         <li class="breadcrumbs-item"><a>Сливочное</a></li>
       </ul>
       <!--  Тут будет фильтр -->
@@ -125,12 +125,13 @@
         </ul>
       </section>
       <ul class="pagination-list">
-        <li class="pagination-list-item"><a href="#">1</a></li>
+        <li class="pagination-list-item pagination-arrow-left"><a><img src="img/icons/icon-right-small.svg" alt="Назад"></a></li> <!-- стрелку нужно отзеркалить -->
+        <li class="pagination-list-item"><a class="current-pagination">1</a></li>
         <li class="pagination-list-item"><a href="#">2</a></li>
         <li class="pagination-list-item"><a href="#">3</a></li>
         <li class="pagination-list-item"><a href="#">4</a></li>
         <li class="pagination-list-item"><a href="#">5</a></li>
-        <li class="pagination-list-item"><a href="#"><img src="img/icons/icon-right-small.svg" alt="Дальше"></a></li>
+        <li class="pagination-list-item pagination-arrow-right"><a href="#"><img src="img/icons/icon-right-small.svg" alt="Вперед"></a></li>
       </ul>
     </main>
     <footer class="main-footer">
@@ -152,7 +153,7 @@
       </div>
       <div class="main-footer-copyright">
         <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmlacademy-small.svg" alt="HTML-Академия" width="108" height="39">
+          <img src="img/icons/logo-htmlacademy.svg" alt="HTML-Академия" width="108" height="39">
         </a>
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
       </div>
