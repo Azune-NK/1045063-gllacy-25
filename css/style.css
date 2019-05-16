@@ -1,7 +1,21 @@
 body {
+  background: #9d8b84;
+  background: #8996a6;
   background: #849d8f;
+}
+
+.main-footer-copyright p{
+  color: #fefefe;
 }
 
 .visually-hidden {
   font-size: 0px;
+}
+
+.pagination-arrow-left img{
+  transform: rotate(180deg);
+}
+
+.catalog-item-image-circle img{
+ border-radius: 150px;
 }
