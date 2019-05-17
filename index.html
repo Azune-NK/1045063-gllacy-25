@@ -142,8 +142,17 @@
         <p class="modal-login-email"><input id="input-login-email" type="email" name="login-email" placeholder="Электронная почта"></p>
         <p class="modal-login-password"><input id="input-login-password" type="password" name="login-password" placeholder="Пароль"></p>
         <button type="submit">Войти</button>
+      </form>
         <a href="#">Забыли пароль?</a>
         <a href="#">Новая регистрация</a>
+    </section>
+    <section class="modal-feedback">
+      <p class="modal-feedback-lead">Мы обязательно вам ответим!</p>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-feedback-name"><input id="input-feedback-name" type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p> <!-- Вопрос - Вроде скринридеры не всегда читают placeholder, aria-label получается задавать верно? -->
+        <p class="modal-feedback-email"><input id="input-feedback-email" type="email" name="feedback-email" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?"></p>
+        <textarea id="textarea-feedback-info" name="feedback-info" cols="30" rows="5" aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
+        <button class="modal-feedback-button button" type="submit">Отправить</button>
       </form>
     </section>
     <script src="js/script.js"></script>
