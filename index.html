@@ -29,8 +29,8 @@
         </ul>
         <ul class="user-navigation">
           <li class="user-navigation-search"><a href="#"><span class="visually-hidden">Поиск по сайту</span></a></li>
-          <li class="user-navigation-login"><a href="#">Вход</a></li>
-          <li class="user-navigation-cart"><a href="#">Пусто</a></li>
+          <li class="user-navigation-login"><a href="#">Вход<span class="visually-hidden">на сайт</span></a></li>
+          <li class="user-navigation-cart"><a href="#"><span class="visually-hidden">В корзине</span>Пусто</a></li>
         </ul>
         <section class="header-contacts">
           <h2 class="visually-hidden">Контакты</h2>
@@ -101,7 +101,7 @@
       <section class="subscribe">
           <p class="subscribe-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form action="https://echo.htmlacademy.ru" method="post"> <!-- Вопрос - зачем задавать class для формы -->
-          <p class="subscribe-input"><input id="input-email" type="email" name="email" placeholder="Электронная почта"></p> <!-- Вопрос - может имеет смысл текст выше сделать в label? \ По стайлгайду мы классы всегда выносим первым атрибутом, для id также поступать? -->
+          <p class="subscribe-input"><input id="input-subscribe-email" type="email" name="email" placeholder="Электронная почта"></p> <!-- Вопрос - может имеет смысл текст выше сделать в label? \ По стайлгайду мы классы всегда выносим первым атрибутом, для id также поступать? -->
           <button class="subscribe-button button" type="submit">Отправить</button>
           </form>
       </section>
@@ -132,6 +132,11 @@
       </div>
     </footer>
     <!-- модалки -->
+    <section class="modal-search">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <input id="input-header-search" type="search" name="search" placeholder="Что ищем?">
+      </form>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>
