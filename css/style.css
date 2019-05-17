@@ -1,15 +1,76 @@
-body {
+/*
+    Позиционирование
+    Блочная модель
+    Типографика
+    Оформление
+    Анимация
+    Разное
+ */
+
+ body {
   background: #9d8b84;
   background: #8996a6;
   background: #849d8f;
 }
 
-.main-footer-copyright p{
-  color: #fefefe;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.visually-hidden {
-  font-size: 0px;
+/* СОЦ-ПАНЕЛЬ */
+
+.main-footer-social-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.main-footer-social-list-item a::after {
+  content: '';
+  position: relative;
+  top: 0;
+  right: 0;
+  display: block;
+  height: 32px;
+  width: 32px;
+  opacity: 0.8;
+  margin-right: 11px;
+}
+
+.main-footer-social-list-item:nth-child(1) a::after{
+  background: url(../img/icons/twitter.svg) no-repeat;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Вопрос - обычно для обводки таких элементов используют border или box-shadow? если я меняю на border - весь объект смещается вниз вправо на 3px */
+  border-radius: 100%; /* Вопрос - cовсем пока не понимаю как понять какой нужен радиус по макету, 50% визуально дает тот же круг что и 100%, аналогично в px */
+}
+
+.main-footer-social-list-item:nth-child(2) a::after{
+  background: url(../img/icons/instagram.svg) no-repeat;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+}
+
+.main-footer-social-list-item:nth-child(3) a::after{
+  background: url(../img/icons/fb.svg) no-repeat;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+}
+
+.main-footer-social-list-item:nth-child(4) a::after{
+  background: url(../img/icons/vk.svg) no-repeat;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+}
+
+/* Лист ожидания */
+
+.main-footer-copyright p{
+  color: #fefefe;
 }
 
 .pagination-arrow-left img{
