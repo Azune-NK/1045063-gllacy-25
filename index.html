@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Интернет-магазин мороженого Глейси</title>
+    <title>Магазин мороженого Глейси</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -11,7 +11,7 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="logo-main-header">
-          <img src="img/icons/logo.svg" alt="Gllacy Shop" width="154" height="64">
+          <img src="img/icons/logo.svg" alt="Глейси" width="154" height="64">
         </a>
         <ul class="site-navigation">
           <li class="site-navigation-item">
@@ -40,7 +40,7 @@
       </nav>
     </header>
     <main class="container">
-      <h1 class="visually-hidden h1-index">Интернет-магазин мороженого Глейси</h1>
+      <h1 class="visually-hidden h1-index">Магазин мороженого Глейси</h1>
       <!-- Тут будет слайдер -->
       <section class="special-offer">
         <h2 class="visually-hidden">Специальное предложение</h2>
@@ -99,8 +99,11 @@
         <p class="news-blog-link"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
       </article>
       <section class="subscribe">
-          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <!-- форма -->
+          <p class="subscribe-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form action="https://echo.htmlacademy.ru" method="post"> <!-- Вопрос - зачем задавать class для формы -->
+          <p class="subscribe-input"><input id="input-email" type="email" name="email" placeholder="Электронная почта"></p> <!-- Вопрос - может имеет смысл текст выше сделать в label? \ По стайлгайду мы классы всегда выносим первым атрибутом, для id также поступать? -->
+          <button class="subscribe-button button" type="submit">Отправить</button>
+          </form>
       </section>
       <!-- карта + форма -->
     </main>
