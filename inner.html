@@ -125,7 +125,7 @@
         </ul>
       </section>
       <ul class="pagination-list">
-        <li class="pagination-list-item pagination-arrow-left"><a><img src="img/icons/icon-right-small.svg" alt="Назад"></a></li>
+        <li class="pagination-list-item pagination-arrow-left"><a><img src="img/icons/icon-right-small.svg" alt="Назад"></a></li> <!-- Вопрос - тут тоже псевдоэлементом делаем стрелочки? Я пока до конца не понимаю пользу от псевдоэлементов, меньше кода в html - больше в css, единственное серьезное отличие которое я пока вижу - псевдо = декоративный тип изображений, а не контентный  -->
         <li class="pagination-list-item"><a class="current-pagination">1</a></li>
         <li class="pagination-list-item"><a href="#">2</a></li>
         <li class="pagination-list-item"><a href="#">3</a></li>
@@ -135,28 +135,25 @@
       </ul>
     </main>
     <footer class="main-footer">
-      <div class="main-footer-social">
+      <section class="main-footer-social">
+        <h2 class="visually-hidden">Глейси в социальных сетях</h2>
         <ul class="main-footer-social-list">
           <li class="main-footer-social-list-item"><a href="#"><span class="visually-hidden">Twitter</span></a></li>
           <li class="main-footer-social-list-item"><a href="#"><span class="visually-hidden">Instagram</span></a></li>
           <li class="main-footer-social-list-item"><a href="#"><span class="visually-hidden">Facebook</span></a></li>
           <li class="main-footer-social-list-item"><a href="#"><span class="visually-hidden">ВКонтакте</span></a></li>
         </ul>
-      </div>
-      <div class="main-footer-documentation">
+      </section>
+      <section class="main-footer-documentation">
+        <h2 class="visually-hidden">Дополнительная информация</h2>
         <ul class="main-footer-documentation-list">
-          <li class="main-footer-documentation-list-item">Для поставщиков</li>
-          <li class="main-footer-documentation-list-item">О производстве</li>
-          <li class="main-footer-documentation-list-item">Наши документы</li>
-          <li class="main-footer-documentation-list-item">Экологические стандарты</li>
+          <li class="main-footer-documentation-list-item"><a href="#">Для поставщиков</a></li>
+          <li class="main-footer-documentation-list-item"><a href="#">О производстве</a></li>
+          <li class="main-footer-documentation-list-item"><a href="#">Наши документы</a></li>
+          <li class="main-footer-documentation-list-item"><a href="#">Экологические стандарты</a></li>
         </ul>
-      </div>
-      <div class="main-footer-copyright">
-        <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/icons/logo-htmlacademy.svg" alt="HTML-Академия" width="108" height="39">
-        </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
-      </div>
+      </section>
+      <p class="main-footer-copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
     </footer>
     <!-- модалки -->
     <section class="modal-search">
@@ -176,7 +173,7 @@
     <section class="modal-feedback">
       <p class="modal-feedback-lead">Мы обязательно вам ответим!</p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-feedback-name"><input id="input-feedback-name" type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p> <!-- Вопрос - Вроде скринридеры не всегда читают placeholder, aria-label получается задавать верно? -->
+        <p class="modal-feedback-name"><input id="input-feedback-name" type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p>
         <p class="modal-feedback-email"><input id="input-feedback-email" type="email" name="feedback-email" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?"></p>
         <textarea id="textarea-feedback-info" name="feedback-info" cols="30" rows="5" aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
         <button class="modal-feedback-button button" type="submit">Отправить</button>
