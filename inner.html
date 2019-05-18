@@ -99,7 +99,44 @@
       <section class="catalog-filter">
         <h2 class="visually-hidden">Фильтры каталога</h2>
         <form action="" method="post">
-
+          <fieldset class="field-sorting">
+            <legend>Сортировка:</legend>
+            <select id="catalog-sorting" name="sorting">
+              <option>по популярности</option> <!-- Вопрос - убрал value - писали на курсах что если нет его - отправится значение внутри, как по мне дублировать текст в value трата времени - все ок? -->
+              <option>сначала недорогие</option>
+              <option>сначала дорогие</option>
+              <option>по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset class="field-price-range">
+            <legend>Цена: 100 руб. – 500 руб.</legend>
+            <input id="catalog-price-range" type="range" name="price-range" min="100" max="500" step="5">
+          </fieldset>
+          <fieldset class="field-fat">
+            <legend>Жирность:</legend>
+            <input id="fat-zero" type="radio" name="fat-content">
+            <label for="fat-zero">0%</label>
+            <input id="fat-below-10" type="radio" name="fat-content" checked>
+            <label for="fat-below-10">до 10%</label>
+            <input id="fat-below-30" type="radio" name="fat-content">
+            <label for="fat-below-30">до 30%</label>
+            <input id="fat-above-30" type="radio" name="fat-content">
+            <label for="fat-above-30">выше 30%</label>
+          </fieldset>
+          <fieldset class="field-filler">
+            <legend>Наполнители:</legend>
+            <input id="filler-choco" type="checkbox" name="filler" checked>
+            <label for="filler-choco">шоколадные</label>
+            <input id="filler-sugar" type="checkbox" name="filler" checked>
+            <label for="filler-sugar">сахарные присыпки</label>
+            <input id="filler-fruits" type="checkbox" name="filler">
+            <label for="filler-fruits">фрукты</label>
+            <input id="filler-syrup" type="checkbox" name="filler">
+            <label for="filler-syrup">сиропы</label>
+            <input id="filler-jam" type="checkbox" name="filler">
+            <label for="filler-jam">джемы</label>
+          </fieldset>
+          <button class="catalog-filter-button" type="submit">Применить</button>
         </form>
       </section>
       <section class="catalog-cream">
