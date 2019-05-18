@@ -157,28 +157,49 @@
     </footer>
     <!-- модалки -->
     <section class="modal-search">
+      <h2 class="visually-hidden">Форма поиска</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <input id="input-header-search" type="search" name="search" placeholder="Что ищем?">
+        <input id="input-header-search" type="search" name="search" aria-label="Что ищем?" placeholder="Что ищем?">
       </form>
       </section>
     <section class="modal-login">
+        <h2 class="visually-hidden">Форма логина</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-login-email"><input id="input-login-email" type="email" name="login-email" placeholder="Электронная почта"></p>
-        <p class="modal-login-password"><input id="input-login-password" type="password" name="login-password" placeholder="Пароль"></p>
+        <p class="modal-login-email"><input id="input-login-email" type="email" name="login-email" aria-label="Электронная почта" placeholder="Электронная почта"></p>
+        <p class="modal-login-password"><input id="input-login-password" type="password" name="login-password" aria-label="Пароль" placeholder="Пароль"></p>
         <button type="submit">Войти</button>
       </form>
         <a href="#">Забыли пароль?</a>
         <a href="#">Новая регистрация</a>
     </section>
-    <section class="modal-feedback">
-      <p class="modal-feedback-lead">Мы обязательно вам ответим!</p>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-feedback-name"><input id="input-feedback-name" type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p>
-        <p class="modal-feedback-email"><input id="input-feedback-email" type="email" name="feedback-email" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?"></p>
-        <textarea id="textarea-feedback-info" name="feedback-info" cols="30" rows="5" aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
-        <button class="modal-feedback-button button" type="submit">Отправить</button>
-      </form>
-      </section>
+    <section class="modal-filled-cart">
+      <h2 class="visually-hidden">В корзине</h2>
+      <table class="modal-filled-cart-table">
+        <tbody class="cart-tbody"> <!-- Вопрос - tbody\tfoot прошлый век? -->
+          <tr class="">
+            <td class=""><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
+            <td class=""><a href="#"><img src="img/catalog-item/mini-orange.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></a></td>
+            <td class=""><a href="#">Пломбир с апельсиновым джемом</a></td>
+            <td class="">1,5 кг х <span>200 руб.</span></td>
+            <td class="">300 руб.</td>
+          </tr>
+          <tr class="">
+            <td class=""><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
+            <td class=""><a href="#"><img src="img/catalog-item/mini-strawberry.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></a></td>
+            <td class=""><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+            <td class="">1,5 кг х <span>300 руб.</span></td>
+            <td class="">450 руб.</td>
+          </tr>
+        </tbody>
+        <tfoot class="cart-tfoot">
+          <tr class="">
+            <td class="" colspan="4">Итого:</td>
+            <td class="">750 руб.</td>
+          </tr>
+        </tfoot>
+      </table>
+      <a class="modal-filled-cart-button button" href="#">Оформить заказ</a>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>

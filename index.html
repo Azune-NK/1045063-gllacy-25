@@ -62,7 +62,7 @@
             <h3 class="catalog-item-name"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             <p class="catalog-item-image-circle"><a href="#"><img src="img/catalog-item/orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></a></p>
             <p class="catalog-item-price"><span>310 ₽</span><span>/кг</span></p> <!-- Вопрос - почему стоит использовать svg для рублей, а не символ-->
-            <button class="catalog-item-button button" type="button">Быстрый просмотр</button> <!-- Вопрос - изначально тут просится лучше ссылка, но по смыслу - быстрый просмотр - вроде предполагается что откроется модалка с мороженкой, описанием, ценой и др параметрами и кнопкой купить, оставляем кнопку? -->
+            <button class="catalog-item-button button" type="button">Быстрый просмотр</button> <!-- Вопрос - изначально тут просится ссылка, но по смыслу - быстрый просмотр - вроде предполагается что откроется модалка с мороженкой, КОРОТКИМ описанием и кнопкой купить - оставляем кнопку? -->
           </li>
           <li class="catalog-item hit">
             <h3 class="catalog-item-name"><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
@@ -99,11 +99,12 @@
         <p class="news-blog-link"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
       </article>
       <section class="subscribe">
-          <p class="subscribe-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form action="https://echo.htmlacademy.ru" method="post"> <!-- Вопрос - зачем задавать class для формы -->
-          <p class="subscribe-input"><input id="input-subscribe-email" type="email" name="subscribe-email" placeholder="Электронная почта"></p> <!-- Вопрос - может имеет смысл текст выше сделать в label? \ По стайлгайду мы классы всегда выносим первым атрибутом, для id также поступать? -->
-          <button class="subscribe-button button" type="submit">Отправить</button>
-          </form>
+        <h2 class="visually-hidden">Подписка на рассылку</h2>
+        <p class="subscribe-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form action="https://echo.htmlacademy.ru" method="post"> <!-- Вопрос - зачем задавать class для формы -->
+        <p class="subscribe-input"><input id="input-subscribe-email" type="email" name="subscribe-email" aria-label="Электронная почта" placeholder="Электронная почта"></p> <!-- Вопрос - может имеет смысл текст выше сделать в label? \ По стайлгайду мы классы всегда выносим первым атрибутом, для id также поступать? -->
+        <button class="subscribe-button button" type="submit">Отправить</button>
+        </form>
       </section>
       <!-- карта + форма -->
     </main>
@@ -130,23 +131,26 @@
     </footer>
     <!-- модалки -->
     <section class="modal-search">
+      <h2 class="visually-hidden">Форма поиска</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <input id="input-header-search" type="search" name="search" placeholder="Что ищем?">
+        <input id="input-header-search" type="search" name="search" aria-label="Что ищем?" placeholder="Что ищем?">
       </form>
     </section>
     <section class="modal-login">
+      <h2 class="visually-hidden">Форма логина</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-login-email"><input id="input-login-email" type="email" name="login-email" placeholder="Электронная почта"></p>
-        <p class="modal-login-password"><input id="input-login-password" type="password" name="login-password" placeholder="Пароль"></p>
+        <p class="modal-login-email"><input id="input-login-email" type="email" name="login-email" aria-label="Электронная почта" placeholder="Электронная почта"></p>
+        <p class="modal-login-password"><input id="input-login-password" type="password" name="login-password" aria-label="Пароль" placeholder="Пароль"></p>
         <button type="submit">Войти</button>
       </form>
         <a href="#">Забыли пароль?</a>
         <a href="#">Новая регистрация</a>
     </section>
     <section class="modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <p class="modal-feedback-lead">Мы обязательно вам ответим!</p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-feedback-name"><input id="input-feedback-name" type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p> <!-- Вопрос - Вроде скринридеры не всегда читают placeholder, aria-label получается задавать верно? -->
+        <p class="modal-feedback-name"><input id="input-feedback-name" type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p>
         <p class="modal-feedback-email"><input id="input-feedback-email" type="email" name="feedback-email" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?"></p>
         <textarea id="textarea-feedback-info" name="feedback-info" cols="30" rows="5" aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
         <button class="modal-feedback-button button" type="submit">Отправить</button>
