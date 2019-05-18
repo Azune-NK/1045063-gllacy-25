@@ -28,8 +28,28 @@
           <li class="site-navigation-item"><a href="#">О Компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="user-navigation-search"><a href="#"><span class="visually-hidden">Поиск по сайту</span></a></li>
-          <li class="user-navigation-login"><a href="#">Вход<span class="visually-hidden">на сайт</span></a></li>
+          <li class="user-navigation-search"><a href="#">
+            <span class="visually-hidden">Поиск по сайту</span></a>
+            <section class="hover-search">
+              <h2 class="visually-hidden">Форма поиска</h2>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <input id="input-header-search" type="search" name="search" aria-label="Что ищем?" placeholder="Что ищем?">
+              </form>
+            </section>
+          </li>
+          <li class="user-navigation-login">
+            <a href="#">Вход<span class="visually-hidden">на сайт</span></a>
+            <section class="hover-login">
+              <h2 class="visually-hidden">Форма логина</h2>
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <p class="hover-login-email"><input id="input-login-email" type="email" name="login-email" aria-label="Электронная почта" placeholder="Электронная почта"></p>
+                <p class="hover-login-password"><input id="input-login-password" type="password" name="login-password" aria-label="Пароль" placeholder="Пароль"></p>
+                <button type="submit">Войти</button>
+              </form>
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </section>
+          </li>
           <li class="user-navigation-cart"><a href="#"><span class="visually-hidden">В корзине</span>Пусто</a></li>
         </ul>
         <section class="header-contacts">
@@ -129,23 +149,6 @@
       </section>
       <p class="main-footer-copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
     </footer>
-    <!-- модалки -->
-    <section class="modal-search">
-      <h2 class="visually-hidden">Форма поиска</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <input id="input-header-search" type="search" name="search" aria-label="Что ищем?" placeholder="Что ищем?">
-      </form>
-    </section>
-    <section class="modal-login">
-      <h2 class="visually-hidden">Форма логина</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-login-email"><input id="input-login-email" type="email" name="login-email" aria-label="Электронная почта" placeholder="Электронная почта"></p>
-        <p class="modal-login-password"><input id="input-login-password" type="password" name="login-password" aria-label="Пароль" placeholder="Пароль"></p>
-        <button type="submit">Войти</button>
-      </form>
-        <a href="#">Забыли пароль?</a>
-        <a href="#">Новая регистрация</a>
-    </section>
     <section class="modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p class="modal-feedback-lead">Мы обязательно вам ответим!</p>
