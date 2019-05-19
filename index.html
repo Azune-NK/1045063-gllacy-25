@@ -32,8 +32,8 @@
             <span class="visually-hidden">Поиск по сайту</span></a>
             <section class="hover-search">
               <h2 class="visually-hidden">Форма поиска</h2>
-              <form action="https://echo.htmlacademy.ru" method="post">
-                <input id="input-header-search" type="search" name="search" aria-label="Что ищем?" placeholder="Что ищем?">
+              <form class="hover-search-form" action="https://echo.htmlacademy.ru" method="post">
+                <input type="search" name="search" aria-label="Что ищем?" placeholder="Что ищем?">
               </form>
             </section>
           </li>
@@ -41,13 +41,15 @@
             <a href="#">Вход<span class="visually-hidden">на сайт</span></a>
             <section class="hover-login">
               <h2 class="visually-hidden">Форма логина</h2>
-              <form action="https://echo.htmlacademy.ru" method="post">
-                <p class="hover-login-email"><input id="input-login-email" type="email" name="login-email" aria-label="Электронная почта" placeholder="Электронная почта"></p>
-                <p class="hover-login-password"><input id="input-login-password" type="password" name="login-password" aria-label="Пароль" placeholder="Пароль"></p>
-                <button type="submit">Войти</button>
+              <form class="hover-login-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="hover-login-input"><input type="email" name="login-email" aria-label="Электронная почта" placeholder="Электронная почта"></p>
+                <p class="hover-login-input"><input type="password" name="login-password" aria-label="Пароль" placeholder="Пароль"></p>
+                <button class="hover-login-button button" type="submit">Войти</button>
+                <p class="hover-login-links">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </p>
               </form>
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
             </section>
           </li>
           <li class="user-navigation-cart"><a href="#"><span class="visually-hidden">В корзине</span>Пусто</a></li>
@@ -81,26 +83,26 @@
           <li class="catalog-item hit">
             <h3 class="catalog-item-name"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             <p class="catalog-item-image-circle"><a href="#"><img src="img/catalog-item/orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></a></p>
-            <p class="catalog-item-price"><span>310 ₽</span><span>/кг</span></p> <!-- Вопрос - почему стоит использовать svg для рублей, а не символ-->
-            <button class="catalog-item-button button" type="button">Быстрый просмотр</button> <!-- Вопрос - изначально тут просится ссылка, но по смыслу - быстрый просмотр - вроде предполагается что откроется модалка с мороженкой, КОРОТКИМ описанием и кнопкой купить - оставляем кнопку? -->
+            <p class="catalog-item-price">310<span class="visually-hidden"> руб.</span><span class="weight">/кг</span></p>
+            <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hit">
             <h3 class="catalog-item-name"><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
             <p class="catalog-item-image-circle"><a href="#"><img src="img/catalog-item/coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></a></p>
-            <p class="catalog-item-price"><span>380 ₽</span><span>/кг</span></p>
-            <button class="catalog-item-button button" type="button">Быстрый просмотр</button>
+            <p class="catalog-item-price">380<span class="visually-hidden"> руб.</span><span class="weight">/кг</span></p>
+            <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hit">
             <h3 class="catalog-item-name"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
             <p class="catalog-item-image-circle"><a href="#"><img src="img/catalog-item/strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></a></p>
-            <p class="catalog-item-price"><span>355 ₽</span><span>/кг</span></p>
-            <button class="catalog-item-button button" type="button">Быстрый просмотр</button>
+            <p class="catalog-item-price">355<span class="visually-hidden"> руб.</span><span class="weight">/кг</span></p>
+            <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hit">
             <h3 class="catalog-item-name"><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
             <p class="catalog-item-image-circle"><a href="#"><img src="img/catalog-item/cream-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></a></p>
-            <p class="catalog-item-price"><span>415 ₽</span><span>/кг</span></p>
-            <button class="catalog-item-button button" type="button">Быстрый просмотр</button>
+            <p class="catalog-item-price">415<span class="visually-hidden"> руб.</span><span class="weight">/кг</span></p>
+            <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -120,24 +122,26 @@
       </article>
       <section class="subscribe">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
-        <p class="subscribe-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <form action="https://echo.htmlacademy.ru" method="post"> <!-- Вопрос - зачем задавать class для формы -->
-        <p class="subscribe-input"><input id="input-subscribe-email" type="email" name="subscribe-email" aria-label="Электронная почта" placeholder="Электронная почта"></p> <!-- Вопрос - может имеет смысл текст выше сделать в label? \ По стайлгайду мы классы всегда выносим первым атрибутом, для id также поступать? -->
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+        <label for="input-subscribe-email" class="subscribe-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
+        <input id="input-subscribe-email" type="email" name="subscribe-email" aria-label="Электронная почта" placeholder="Электронная почта">
         <button class="subscribe-button button" type="submit">Отправить</button>
         </form>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Наши контакты</h2>
         <img src="img/map-with-pin-and-shadow.jpg" alt="Наши контакты" width="1200" height="430">
-        <section class="map-addres">
-          <h3 class="map-addres-lead">Адрес главного офиса и офлайн-магазина:</h3>
-          <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+        <section class="map-info">
+          <section class="map-addres">
+            <h3 class="map-addres-lead">Адрес главного офиса и офлайн-магазина:</h3>
+            <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+          </section>
+          <section class="map-contacts">
+            <h3 class="map-contacts-lead">Для заказов по телефону:</h3>
+            <p><a class="map-contacts-tel" href="tel:+78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)</p>
+          </section>
+          <a class="map-feedback-button button" href="#">Форма обратной связи</a>
         </section>
-        <section class="map-contacts">
-          <h3 class="map-contacts-lead">Для заказов по телефону:</h3>
-          <p><a class="map-contacts-tel" href="tel:+78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)</p>
-        </section>
-        <button class="map-feedback-button button" type="button">Форма обратной связи</button>
       </section>
     </main>
     <footer class="main-footer">
@@ -164,10 +168,10 @@
     <section class="modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p class="modal-feedback-lead">Мы обязательно вам ответим!</p>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="modal-feedback-name"><input id="input-feedback-name" type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p>
-        <p class="modal-feedback-email"><input id="input-feedback-email" type="email" name="feedback-email" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?"></p>
-        <textarea id="textarea-feedback-info" name="feedback-info" cols="30" rows="5" aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
+      <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-feedback-name"><input type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p>
+        <p class="modal-feedback-email"><input type="email" name="feedback-email" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?"></p>
+        <textarea name="feedback-info" cols="30" rows="5" aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
         <button class="modal-feedback-button button" type="submit">Отправить</button>
       </form>
     </section>
