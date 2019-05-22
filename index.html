@@ -28,8 +28,8 @@
           <li class="site-navigation-item"><a href="#">О Компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="user-navigation-search"><a href="#">
-            <span class="visually-hidden">Поиск по сайту</span></a>
+          <li class="user-navigation-search">
+            <a href="#"><span class="visually-hidden">Поиск по сайту</span></a>
             <section class="hover-search">
               <h2 class="visually-hidden">Форма поиска</h2>
               <form class="hover-search-form" action="https://echo.htmlacademy.ru" method="post">
@@ -63,7 +63,29 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden h1-index">Магазин мороженого Глейси</h1>
-      <!-- Тут будет слайдер -->
+      <section class="slider">  <!-- Пока beta вариант, объяснили только почему button лучше чем radio\checkbox и что списком делать ок - обертка\как заполнять слайдер не рассматривалось-->
+        <h2 class="visually-hidden">Лучшие комбинации мороженого</h2>
+        <ul class="slider-list">
+          <li class="slider-item">
+            <button class="slider-switch-button">Первый слайд</button> <!-- Вопрос - текст скрываем через vis-hid span или в css уберем? -->
+            <img src="img/slider/slider-icecream-1.png" alt="Первый слайд">
+            <p>Крем-брюле и пломбир с малиновым джемом</p>
+            <a class="slider-lead-button button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item">
+            <button class="slider-switch-button">Второй слайд</button>
+            <img src="img/slider/slider-icecream-2.png" alt="Второй слайд">
+            <p>Шоколадный пломбир и лимонный сорбет</p>
+            <a class="slider-lead-button button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item">
+            <button class="slider-switch-button">Третий слайд</button>
+            <img src="img/slider/slider-icecream-3.png" alt="Третий слайд">
+            <p>Пломбир с помадкой и клубничный щербет</p>
+            <a class="slider-lead-button button" href="#">Давайте оба!</a>
+          </li>
+        </ul>
+      </section>
       <section class="special-offer">
         <h2 class="visually-hidden">Специальное предложение</h2>
         <article class="special-offer-banner banner-raspberry">
@@ -81,26 +103,34 @@
         <h2 class="visually-hidden">Самые популярные виды мороженого</h2>
         <ul class="catalog-list">
           <li class="catalog-item hit">
-            <h3 class="catalog-item-name"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-            <p class="catalog-item-image-circle"><a href="#"><img src="img/catalog-item/orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></a></p>
+            <a href="#">
+              <h3 class="catalog-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+              <p class="catalog-item-image-circle"><img src="img/catalog-item/orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></p>
+            </a>
             <p class="catalog-item-price">310<span class="visually-hidden"> руб.</span><span class="weight">/кг</span></p>
             <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hit">
-            <h3 class="catalog-item-name"><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
-            <p class="catalog-item-image-circle"><a href="#"><img src="img/catalog-item/coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></a></p>
+            <a href="#">
+              <h3 class="catalog-item-name">Сливочно-кофейное с кусочками шоколада</h3>
+              <p class="catalog-item-image-circle"><img src="img/catalog-item/coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></p>
+            </a>
             <p class="catalog-item-price">380<span class="visually-hidden"> руб.</span><span class="weight">/кг</span></p>
             <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hit">
-            <h3 class="catalog-item-name"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-            <p class="catalog-item-image-circle"><a href="#"><img src="img/catalog-item/strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></a></p>
+            <a href="#">
+              <h3 class="catalog-item-name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+              <p class="catalog-item-image-circle"><img src="img/catalog-item/strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></p>
+            </a>
             <p class="catalog-item-price">355<span class="visually-hidden"> руб.</span><span class="weight">/кг</span></p>
             <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hit">
-            <h3 class="catalog-item-name"><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
-            <p class="catalog-item-image-circle"><a href="#"><img src="img/catalog-item/cream-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></a></p>
+            <a href="#">
+              <h3 class="catalog-item-name">Сливочное крем-брюле с карамельной подливкой</h3>
+              <p class="catalog-item-image-circle"><img src="img/catalog-item/cream-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></p>
+            </a>
             <p class="catalog-item-price">415<span class="visually-hidden"> руб.</span><span class="weight">/кг</span></p>
             <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
           </li>
@@ -120,25 +150,27 @@
         <h2 class="news-blog-title">Новое в нашем блоге</h2>
         <p class="news-blog-link"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
       </article>
-      <section class="subscribe">
-        <h2 class="visually-hidden">Подписка на рассылку</h2>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-        <label for="input-subscribe-email" class="subscribe-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
-        <input id="input-subscribe-email" type="email" name="subscribe-email" aria-label="Электронная почта" placeholder="Электронная почта">
-        <button class="subscribe-button button" type="submit">Отправить</button>
-        </form>
-      </section>
+      <div class="subscribe-border">
+        <section class="subscribe">
+          <h2 class="visually-hidden">Подписка на рассылку</h2>
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+          <label for="input-subscribe-email" class="subscribe-offer">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
+          <input id="input-subscribe-email" type="email" name="subscribe-email" aria-label="Электронная почта" placeholder="Электронная почта">
+          <button class="subscribe-button button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
       <section class="map">
-        <h2 class="visually-hidden">Наши контакты</h2>
-        <img src="img/map-with-pin-and-shadow.jpg" alt="Наши контакты" width="1200" height="430">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <img src="img/map-with-pin-and-shadow.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
         <section class="map-info">
+          <h3 class="visually-hidden">Наши контакты</h3>
           <section class="map-addres">
-            <h3 class="map-addres-lead">Адрес главного офиса и офлайн-магазина:</h3>
-            <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+            <p>Адрес главного офиса и офлайн-магазина:</p>
+            <address  class="map-addres-lead">ул. Большая Конюшенная 19/8, Санкт-Петербург</address>
           </section>
           <section class="map-contacts">
-            <h3 class="map-contacts-lead">Для заказов по телефону:</h3>
-            <p><a class="map-contacts-tel" href="tel:+78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)</p>
+            <p>Для заказов по телефону: <a class="map-contacts-tel" href="tel:+78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)</p>
           </section>
           <a class="map-feedback-button button" href="#">Форма обратной связи</a>
         </section>
