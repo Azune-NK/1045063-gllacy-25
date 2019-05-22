@@ -302,6 +302,49 @@ li .current-catalog-navigation-link:focus {
   font-weight: 700;
 }
 
+/* Блок подписки */
+
+.subscribe-border { /* Вопрос - правильнее задать двойной фон без оберточного div? И правильно я понял что такой вариант "рамочки" не стоит пытаться реализовать на border-image? */
+  width: 560px;
+  height: 220px;
+  background: url(../img/icons/bg-border-lines.svg) no-repeat;
+  padding: 4px 5px 5px 6px;
+  /* box-sizing: border-box; */
+}
+
+.subscribe {
+  width: 549px;
+  height: 211px;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+}
+
+.subscribe-offer {
+  font-size: 16px;
+  line-height: 22px;
+  color: #5a5a5a;
+}
+
+.subscribe-form input {
+  width: 368px;
+  height: 44px;
+  border-radius: 5px;
+  border: solid 1px rgba(178, 178, 178, 0.52);
+  font-size: 16px;
+  color: #999999;
+  padding-left: 15px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.subscribe-button {
+  width: 129px;
+  height: 44px;
+  color: #fefefe;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 /* ПОДВАЛ */
 
 .main-footer-social-list,
