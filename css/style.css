@@ -256,6 +256,15 @@ li .current-catalog-navigation-link:focus {
   border-bottom-color: rgba(232, 77, 55, 0.3)
 }
 
+.hover-login-button {
+  width: 100px;
+  height: 44px;
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
+}
+
 /* ХОВЕР - КОРЗИНА */
 
 .hover-filled-cart {
@@ -300,6 +309,15 @@ li .current-catalog-navigation-link:focus {
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
+}
+
+.hover-filled-cart-button {
+  width: 170px;
+  height: 44px;
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
 }
 
 /* СЛАЙДЕР */
@@ -385,6 +403,66 @@ li .current-catalog-navigation-link:focus {
 .banner-chocolate .special-offer-button {
   width: 189px;
   height: 45px;
+}
+
+/* КАТАЛОГ */
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item-image-circle img{
+  border-radius: 50%;
+ }
+
+ .hit .catalog-item-image-circle::before{
+  content: '';
+  display: block;
+  width: 61px;
+  height: 61px;
+  background: url(../img/icons/hit.svg) no-repeat;
+ }
+
+ .catalog-item-name { 
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.catalog-item-name:hover,
+.catalog-item-name:focus {
+  color: #ffbc9e;
+  border-bottom-color: rgba(255, 188, 158, 0.2);
+}
+
+.catalog-item-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-item-weight {
+  font-size: 30px;
+}
+
+.catalog-item-weight::before { /* Вопрос - по макету у текстового симвлоа рубля есть тень - box\text shadow не работают - как быть?*/
+  content: '';
+  display: block;
+  width: 31px;
+  height: 36px;
+  background: url(../img/icons/ruble.svg) no-repeat;
+}
+
+.catalog-item-button {
+  width: 200px;
+  height: 44px;
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
 }
 
 /* БЛОК ПРЕИМУЩЕСТВ */
