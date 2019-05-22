@@ -423,7 +423,7 @@ li .current-catalog-navigation-link:focus {
   background: url(../img/icons/hit.svg) no-repeat;
  }
 
- .catalog-item-name { 
+ .catalog-item-name {
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
@@ -602,6 +602,40 @@ li .current-catalog-navigation-link:focus {
   font-size: 18px;
   line-height: 24px;
 }
+
+/* МОДАЛКА ПОДПИСКИ */
+
+.modal-feedback {
+  width: 478px;
+  height: 443px;
+  border-radius: 10px;
+  background-color: #f8f7f4;
+}
+
+.modal-feedback-lead {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.modal-feedback-lead::after {
+  content: '';
+  display: block;
+  height: 17px;
+  width: 18px;
+  background: url(../img/icons/cross-big.svg) no-repeat;
+}
+
+.modal-feedback-button {
+  width: 139px;
+  height: 44px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
+}
+
+/* КАРТА */
 
 /* ПОДВАЛ */
 
