@@ -302,14 +302,77 @@ li .current-catalog-navigation-link:focus {
   font-weight: 700;
 }
 
+/* Блок преимуществ */
+
+.advantages {
+  width: 1146px;
+  height: 306px;
+  border-radius: 15px;
+  background-color: #f0e5d0;
+  background-image: url(../img/bg-waffle-pattern.jpg);
+}
+
+.advantages-lead {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #323232;
+}
+
+.advantages-list {
+  list-style: none;
+}
+
+.advantages-list-item {
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+}
+
+.advantages-list-item:nth-child(1)::before {
+  content: '';
+  display: block;
+  float: left;
+  height: 49px;
+  width: 49px;
+  background: url(../img/icons/ice-cream.svg) no-repeat;
+}
+
+.advantages-list-item:nth-child(2)::before {
+  content: '';
+  display: block;
+  float: left;
+  height: 49px;
+  width: 49px;
+  background: url(../img/icons/cow.svg) no-repeat;
+}
+
+.advantages-list-item:nth-child(3)::before {
+  content: '';
+  display: block;
+  float: left;
+  height: 49px;
+  width: 49px;
+  background: url(../img/icons/eco.svg) no-repeat;
+}
+
+.advantages-list-item:nth-child(4)::before {
+  content: '';
+  display: block;
+  float: left;
+  height: 49px;
+  width: 49px;
+  background: url(../img/icons/thermometer.svg) no-repeat;
+}
+
 /* Блок новостей */
 
 .news-blog {
-  background-color: #ffffff;
-  background-image: url(../img/bg-banner-strawberry.jpg);
   width: 560px;
   height: 220px;
   border-radius: 15px;
+  background-color: #ffffff;
+  background: url(../img/bg-banner-strawberry.jpg) no-repeat;
 }
 
 .news-blog-title {
