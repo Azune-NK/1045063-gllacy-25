@@ -338,14 +338,56 @@ li .current-catalog-navigation-link:focus {
 
 .slider-switch-button:nth-child(1)::before { /* Что-то я пока не понял как убрать блочный фон, а оставить только круг */
   content: '';
-  display: block;
   width: 21px;
   height: 21px;
   border-radius: 50%;
   background-color: #ffffff;
 }
 
-/* Блок преимуществ */
+/* БЛОК СПЕЦ ПРЕДЛОЖЕНИЙ */
+
+.special-offer-lead {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.special-offer-banner p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.special-offer-banner {
+  width: 560px;
+  height: 229px;
+  border-radius: 15px;
+}
+
+.banner-raspberry {
+  background: url(../img/bg-banner-raspberry.jpg) no-repeat;
+  background-color: #aa0532;
+}
+
+.banner-chocolate {
+  background: url(../img/bg-banner-choco.jpg) no-repeat;
+  background-color: #512f19;
+}
+
+.special-offer-button {
+  width: 165px;
+  height: 46px;
+  opacity: 0.99;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.banner-chocolate .special-offer-button {
+  width: 189px;
+  height: 45px;
+}
+
+/* БЛОК ПРЕИМУЩЕСТВ */
 
 .advantages {
   width: 1146px;
@@ -408,7 +450,7 @@ li .current-catalog-navigation-link:focus {
   background: url(../img/icons/thermometer.svg) no-repeat;
 }
 
-/* Блок новостей */
+/* БЛОК НОВОСТЕЙ */
 
 .news-blog {
   width: 560px;
@@ -440,7 +482,7 @@ li .current-catalog-navigation-link:focus {
   border-bottom-color: #e84d37;
 }
 
-/* Блок подписки */
+/* БЛОК ПОДПИСКИ */
 
 .subscribe-border { /* Вопрос - правильнее задать двойной фон без оберточного div? И правильно я понял что такой вариант "рамочки" не стоит пытаться реализовать на border-image? */
   width: 560px;
@@ -490,6 +532,50 @@ li .current-catalog-navigation-link:focus {
   list-style: none;
 }
 
+/* СОЦ-ПАНЕЛЬ */
+
+.main-footer-social-list {
+  display: flex;
+}
+
+.main-footer-social-list-item a::before {
+  content: '';
+  display: block;
+  height: 32px;
+  width: 32px;
+  margin-right: 11px;
+  opacity: 0.8;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Вопрос - обычно для обводки таких элементов используют border или box-shadow? если я меняю на border - весь объект смещается вниз вправо на 3px */
+  border-radius: 50%;
+}
+
+.main-footer-social-list-item:nth-child(1) a::before{
+  background: url(../img/icons/twitter.svg) no-repeat;
+}
+
+.main-footer-social-list-item:nth-child(2) a::before{
+  background: url(../img/icons/instagram.svg) no-repeat;
+}
+
+.main-footer-social-list-item:nth-child(3) a::before{
+  background: url(../img/icons/fb.svg) no-repeat;
+}
+
+.main-footer-social-list-item:nth-child(4) a::before{
+  background: url(../img/icons/vk.svg) no-repeat;
+}
+
+.main-footer-social-list-item a:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+.main-footer-social-list-item a:focus::before {
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+  /* тут нужен эффект "наложение цвета" #e9e9e9 - используя background-color-цвет накладывается и на центральную часть иконки, а не только на фон*/
+}
+
 /* БЛОК ДОКУМЕНТАЦИИ */
 
 .main-footer-documentation a {
@@ -535,46 +621,3 @@ li .current-catalog-navigation-link:focus {
   border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
-/* СОЦ-ПАНЕЛЬ */
-
-.main-footer-social-list {
-  display: flex;
-}
-
-.main-footer-social-list-item a::before {
-  content: '';
-  display: block;
-  height: 32px;
-  width: 32px;
-  margin-right: 11px;
-  opacity: 0.8;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Вопрос - обычно для обводки таких элементов используют border или box-shadow? если я меняю на border - весь объект смещается вниз вправо на 3px */
-  border-radius: 50%;
-}
-
-.main-footer-social-list-item:nth-child(1) a::before{
-  background: url(../img/icons/twitter.svg) no-repeat;
-}
-
-.main-footer-social-list-item:nth-child(2) a::before{
-  background: url(../img/icons/instagram.svg) no-repeat;
-}
-
-.main-footer-social-list-item:nth-child(3) a::before{
-  background: url(../img/icons/fb.svg) no-repeat;
-}
-
-.main-footer-social-list-item:nth-child(4) a::before{
-  background: url(../img/icons/vk.svg) no-repeat;
-}
-
-.main-footer-social-list-item a:hover::before {
-  opacity: 1;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
-}
-
-.main-footer-social-list-item a:focus::before {
-  opacity: 1;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
-  /* тут нужен эффект "наложение цвета" #e9e9e9 - используя background-color-цвет накладывается и на центральную часть иконки, а не только на фон*/
-}
