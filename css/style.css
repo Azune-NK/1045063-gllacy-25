@@ -321,6 +321,33 @@ li .current-catalog-navigation-link:focus {
   color: #fefefe;
 }
 
+/* ХЛЕБНЫЕ КРОШКИ */
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.breadcrumbs a:not(.breadcrumbs-current):hover,
+.breadcrumbs a:not(.breadcrumbs-current):focus {
+  color: #ffbc9e;
+  border-bottom-color: rgba(255, 188, 158, 0.2);
+}
+
+.breadcrumbs a:not(.breadcrumbs-current) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs a:not(.breadcrumbs-current)::after { /* Пока не понятно ( пробовал разные варианты) как убрать border от ссылки под стрелочками и подсветку ховера*/
+  content: " »";
+}
+
+
 /* СЛАЙДЕР */
 
 .slider-item p {
