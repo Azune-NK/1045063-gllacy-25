@@ -132,7 +132,8 @@ li .current-catalog-navigation-link:focus {
   font-weight: 700;
 }
 
-.header-contacts-tel:hover {
+.header-contacts-tel:hover,
+.header-contacts-tel:focus {
  color: #ffbc9e;
 }
 
@@ -636,6 +637,50 @@ li .current-catalog-navigation-link:focus {
 }
 
 /* КАРТА */
+
+.map-info {
+  width: 302px;
+  height: 305px;
+  background-color: #ffffff;
+  color: #323232;
+}
+
+.map-addres p,
+.map-contacts p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.map-addres-lead {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.map-contacts-tel {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #323232;
+}
+
+.map-contacts-tel:hover,
+.map-contacts-tel:focus {
+  color: #e84d37;
+}
+
+.map-contacts span {
+  line-height: 22px;
+}
+
+.map-feedback-button {
+  width: 252px;
+  height: 44px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
+}
 
 /* ПОДВАЛ */
 
