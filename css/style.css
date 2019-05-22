@@ -301,3 +301,99 @@ li .current-catalog-navigation-link:focus {
   line-height: 18px;
   font-weight: 700;
 }
+
+/* ПОДВАЛ */
+
+.main-footer-social-list,
+.main-footer-documentation-list {
+  list-style: none;
+}
+
+/* БЛОК ДОКУМЕНТАЦИИ */
+
+.main-footer-documentation a {
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-footer-documentation-list-item:first-of-type a {
+  font-weight: 700;
+}
+
+.main-footer-documentation a:hover {
+  color: #ffbc9e;
+  border-bottom-color: #ffbc9e;
+}
+
+.main-footer-documentation-list-item:first-of-type a::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 13px;
+  margin-right: 7px;
+  background: url(../img/icons/heart.svg) no-repeat;
+}
+
+/* БЛОК КОПИРАЙТА */
+
+.main-footer-copyright p{
+  font-size: 12px;
+  line-height: 18px;
+  color: #fefefe;
+}
+
+.main-footer-copyright a {
+  color: #fefefe;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-footer-copyright a:hover {
+  color: #ffbc9e;
+  border-bottom-color: #ffbc9e;
+}
+
+/* СОЦ-ПАНЕЛЬ */
+
+.main-footer-social-list {
+  display: flex;
+}
+
+.main-footer-social-list-item a::before {
+  content: '';
+  display: block;
+  height: 32px;
+  width: 32px;
+  margin-right: 11px;
+  opacity: 0.8;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Вопрос - обычно для обводки таких элементов используют border или box-shadow? если я меняю на border - весь объект смещается вниз вправо на 3px */
+  border-radius: 50%;
+}
+
+.main-footer-social-list-item:nth-child(1) a::before{
+  background: url(../img/icons/twitter.svg) no-repeat;
+}
+
+.main-footer-social-list-item:nth-child(2) a::before{
+  background: url(../img/icons/instagram.svg) no-repeat;
+}
+
+.main-footer-social-list-item:nth-child(3) a::before{
+  background: url(../img/icons/fb.svg) no-repeat;
+}
+
+.main-footer-social-list-item:nth-child(4) a::before{
+  background: url(../img/icons/vk.svg) no-repeat;
+}
+
+.main-footer-social-list-item a:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+.main-footer-social-list-item a:focus::before {
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+  /* тут нужен эффект "наложение цвета" #e9e9e9 - используя background-color-цвет накладывается и на центральную часть иконки, а не только на фон*/
+}
