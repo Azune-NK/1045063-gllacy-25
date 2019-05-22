@@ -302,6 +302,38 @@ li .current-catalog-navigation-link:focus {
   font-weight: 700;
 }
 
+/* Блок новостей */
+
+.news-blog {
+  background-color: #ffffff;
+  background-image: url(../img/bg-banner-strawberry.jpg);
+  width: 560px;
+  height: 220px;
+  border-radius: 15px;
+}
+
+.news-blog-title {
+  color: #323232;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.news-blog-link a {
+  width: 279px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #323232;
+  border-bottom: 2px solid #323232;
+}
+
+.news-blog-link a:hover,
+.news-blog-link a:focus {
+  color: #e84d37;
+  border-bottom-color: #e84d37;
+}
+
 /* Блок подписки */
 
 .subscribe-border { /* Вопрос - правильнее задать двойной фон без оберточного div? И правильно я понял что такой вариант "рамочки" не стоит пытаться реализовать на border-image? */
@@ -367,7 +399,7 @@ li .current-catalog-navigation-link:focus {
 
 .main-footer-documentation a:hover {
   color: #ffbc9e;
-  border-bottom-color: #ffbc9e;
+  border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
 .main-footer-documentation-list-item:first-of-type a::before {
@@ -394,7 +426,7 @@ li .current-catalog-navigation-link:focus {
 
 .main-footer-copyright a:hover {
   color: #ffbc9e;
-  border-bottom-color: #ffbc9e;
+  border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
 /* СОЦ-ПАНЕЛЬ */
