@@ -48,7 +48,7 @@ img {
   background-repeat: no-repeat; /* Вопрос - нужен ли no-repeat для градиентов? */
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 36px; /* Вопрос - как понять какой нужен бордер радиус по макету - не у всех объектов в zeplin указан радиус - в ФШ нас не научили его смотреть - я погуглил - либо у нас макет кривой, либо я не могу вытащить свойство радиуса у объекта */
-  border: 0;
+  border: none;
 }
 
 /* ШАПКА */
@@ -670,6 +670,7 @@ li .current-catalog-navigation-link:focus {
   height: 305px;
   background-color: #ffffff;
   color: #323232;
+  border-radius: 10px;
 }
 
 .map-addres p,
@@ -708,6 +709,56 @@ li .current-catalog-navigation-link:focus {
   line-height: 24px;
   color: #fefefe;
 }
+
+/* ПАГИНАЦИЯ */
+
+.pagination-list {
+  display: flex;
+  list-style: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.pagination-list a {
+  color: #ffffff;
+}
+
+.pagination-list a:focus {
+  color: #000000;
+}
+
+.current-pagination a {
+  color: #000000;
+}
+
+.pagination-list-item:not(:first-child):not(:last-child) a{
+  display: block;
+  width: 27px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.pagination-list-item:not(.current-pagination):not(:first-child):not(:last-child) a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-list-item:not(.current-pagination):not(:first-child):not(:last-child) a:focus {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.current-pagination a{
+  background-color: #ffffff;
+}
+
+.pagination-arrow:first-child img{
+  transform: rotate(180deg);
+}
+
+.pagination-arrow:last-child img{ /* Ой что я нашел - костыль ) Проблема в исходнике\свойствах в зеплине - пока не знаю какой вариант решения адекватнее. Во первых идем в ФШ, там мы снова видим эффект наложения цвета на svg как для фокуса соц.иконок. Также существует нестыковка со стайлгайдом в размерах стрелочек 8 12 в каталоге против 9 14 в стайлгайде */
+  filter: brightness(50);
+}
+
 
 /* ПОДВАЛ */
 
@@ -778,13 +829,17 @@ li .current-catalog-navigation-link:focus {
   border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
-.main-footer-documentation-list-item:first-of-type a::before {
+/* .main-footer-documentation-list-item:first-of-type a::before {
   content: '';
   display: block;
   width: 15px;
   height: 13px;
   margin-right: 7px;
   background: url(../img/icons/heart.svg) no-repeat;
+} */
+
+a:hover .svg-heart path { /* Не получилось при ховере для псевдо-svg изменить заливку - попробовал вставить svg в html - заработало - но пока не понятно как сохранить одновременный ховер ссылки и svg, но при этом убрать border-bottom под svg(пробовал не оборачивать svg ссылкой - бордер ушел, одновременный ховер не получилось сделать*/
+  fill: #ffbc9e;
 }
 
 /* БЛОК КОПИРАЙТА */
