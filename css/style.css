@@ -68,7 +68,7 @@ img {
 }
 
 .main-navigation a {
-  color: #ffffff;
+  color: inherit;
 }
 
 .site-navigation-item > a{
@@ -125,7 +125,7 @@ li .current-site-navigation-link:focus,
 li .current-catalog-navigation-link,
 li .current-catalog-navigation-link:hover,
 li .current-catalog-navigation-link:focus {
-  color: #ffffff;
+  color: inherit;
   background-color: #d07058;
   border: none;
 }
@@ -350,7 +350,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .breadcrumbs a {
   font-size: 14px;
   line-height: 16px;
-  color: #ffffff;
+  color: inherit;
 }
 
 .breadcrumbs a:not(.breadcrumbs-current):hover,
@@ -477,7 +477,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   line-height: 22px;
   font-weight: 700;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  color: inherit;
 }
 
 .catalog-item-name:hover,
@@ -744,7 +744,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .pagination-list a {
-  color: #ffffff;
+  color: inherit;
 }
 
 .pagination-list a:active {
@@ -842,7 +842,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .main-footer-documentation a {
   font-size: 13px;
   line-height: 18px;
-  color: #ffffff;
+  color: inherit;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
