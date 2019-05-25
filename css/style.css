@@ -61,10 +61,39 @@ img {
 
 /* ШАПКА */
 
+.main-navigation {
+  width: 1146px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 27px;
+}
+
 .site-navigation,
 .catalog-navigation,
 .user-navigation {
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-main-header {
+  width: 154px;
+  margin-right: 10px;
+  padding-top: 9px;
+}
+
+.site-navigation {
+  width: 689px;
+  margin-right: auto;
+  padding-top: 30px;
+}
+
+.user-navigation {
+  width: 267px;
+  margin-left: auto;
+  justify-content: flex-end;
+  padding-top: 22px;
 }
 
 .main-navigation a {
@@ -98,6 +127,7 @@ img {
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  display: none;
 }
 
 .catalog-navigation a {
@@ -137,10 +167,23 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   border: none;
 }
 
+.header-contacts {
+  width: 167px; /* Вопрос - а надо тут задавать ширину? Она кстати в фш 165 и не влезает */
+  height: 47px; background-color: rgb(255, 0, 0);
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
 .header-contacts-hours {
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7px;
 }
 
 .header-contacts-tel {
@@ -343,8 +386,33 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 /* ХЛЕБНЫЕ КРОШКИ */
 
+.inner-h1-breadcrumbs-wrapper {
+  width: 382px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 27px;
+  margin-top: -50px;
+}
+
+.h1-cream {
+  font-size: 35px;
+  line-height: 41px;
+  order: 1;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .breadcrumbs {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-bottom: 9px;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .breadcrumbs a {
