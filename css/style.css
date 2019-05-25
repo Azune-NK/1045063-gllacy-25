@@ -740,10 +740,14 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .pagination-list {
   display: flex;
+  width: 267px;
+  justify-content: flex-end;
   list-style: none;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  margin: 0 27px 35px auto;
+  padding: 0;
 }
 
 .pagination-list a {
@@ -763,6 +767,9 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   width: 27px;
   height: 26px;
   border-radius: 50%;
+  text-align: center;
+  padding-top: 4px; /* Вопрос - как отцентровать текст\картинки в цетре блока? я добавил text-align и на глаз взял падинг(ибо если брать по фш отступ сверху - 7px - а это сильно много) */
+  margin-right: 2px;
 }
 
 .pagination-list-item:not(.current-pagination):not(.pagination-disabled) a:hover,
@@ -774,19 +781,21 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   background-color: rgba(255, 255, 255, 1);
 }
 
+.pagination-list-item:not(.pagination-disabled) a:active path { /* Вопрос - тройную вложенность запрещают - вот для такого момента сделают исключение? */
+  fill: #000000;
+}
+
 .current-pagination a {
   background-color: #ffffff;
 }
 
-.pagination-arrow:first-child img{
+.pagination-arrow:first-child svg{
   transform: rotate(180deg);
 }
 
-/* надо переделать - исходник стрелочки печаль\свойства в зеплине печаль - существует нестыковка со стайлгайдом в размерах стрелочек 8 12 в каталоге против 9 14 в стайлгайде */
-/* .pagination-arrow:last-child img {
-  filter: brightness(50);
-} */
-
+.pagination-arrow:not(.pagination-disabled) path {
+  fill: #ffffff;
+}
 
 /* ПОДВАЛ */
 
