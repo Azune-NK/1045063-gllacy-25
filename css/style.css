@@ -393,7 +393,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 /* ХЛЕБНЫЕ КРОШКИ */
 
-.h1-breadcrumbs-wrapper {
+.wrapper-h1-breadcrumbs {
   width: 382px;
   display: flex;
   flex-direction: column;
@@ -670,9 +670,18 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .advantages {
   /* width: 1146px;
   height: 306px; */
+  width: 100%; /* Вопрос - правильнее задать так чем 1146? */
+  padding: 32px 0 0 20px;
   border-radius: 15px;
   background-color: #f0e5d0;
   background-image: url(../img/bg-waffle-pattern.jpg);
+  margin-bottom: 40px;
+}
+
+.advantages-lead,
+.advantages-list {
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-lead {
@@ -683,7 +692,12 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .advantages-list {
+  display: flex;
   list-style: none;
+}
+
+.advantages-list:nth-child(odd) {
+  margin-right: 26px;
 }
 
 .advantages-list-item {
@@ -729,6 +743,12 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 /* БЛОК НОВОСТЕЙ */
+
+.wrapper-double-collumns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 39px;
+}
 
 .news-blog {
   width: 560px;
