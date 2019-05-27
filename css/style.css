@@ -566,10 +566,41 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 } */
 
 /* КАТАЛОГ */
+/* margin-bot самих карточек надо будет решить когда появится ховер - в ТЗ условие чтобы ховер не толкал вниз ничего */
+.catalog {
+  width: 1146px;
+}
+
+.catalog-popular {
+  margin-bottom: 37px;
+}
+
+.catalog-cream {
+  margin-bottom: 86px;
+}
+
+.catalog-list,
+.catalog-list h3,
+.catalog-list p {
+  margin: 0;
+  padding: 0;
+}
 
 .catalog-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.catalog-item {
+  width: 267px;
+  margin-right: 26px;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
 
 .catalog-item-image-circle img{
   border-radius: 50%;
@@ -587,10 +618,14 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
+  text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  order: 1;
 }
 
-.catalog-item a {
+.catalog-item a:first-child {
+  display: flex;
+  flex-direction: column;
   color: inherit;
 }
 
@@ -627,6 +662,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
+  order: 2;
 }
 
 /* БЛОК ПРЕИМУЩЕСТВ */
