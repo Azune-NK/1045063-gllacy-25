@@ -8,90 +8,88 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container">
-      <header class="main-header">
-        <nav class="main-navigation">
-          <a class="logo-main-header" href="index.html">
-            <img src="img/icons/logo.svg" alt="Gllacy Shop" width="154" height="64">
-          </a>
-          <ul class="site-navigation">
-            <li class="site-navigation-item">
-              <a class="current-site-navigation-link" href="#">Каталог</a>
-              <ul class="catalog-navigation">
-                <li class="catalog-navigation-item"><a href="#">Новинки</a></li>
-                <li class="catalog-navigation-item"><a class="current-catalog-navigation-link">Сливочное</a></li>
-                <li class="catalog-navigation-item"><a href="#">Щербеты</a></li>
-                <li class="catalog-navigation-item"><a href="#">Фруктовый лед</a></li>
-                <li class="catalog-navigation-item"><a href="#">Мелорин</a></li>
-              </ul>
-            </li>
-            <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
-            <li class="site-navigation-item"><a href="#">О Компании</a></li>
-          </ul>
-          <ul class="user-navigation">
-            <li class="user-navigation-search">
-              <a href="#"><span class="visually-hidden">Поиск по сайту</span></a>
-              <section class="hover-search">
-                <h2 class="visually-hidden">Форма поиска</h2>
-                <form class="hover-search-form" action="https://echo.htmlacademy.ru" method="post">
-                  <input type="search" name="search" aria-label="Что ищем?" placeholder="Что ищем?">
-                </form>
-              </section>
-            </li>
-            <li class="user-navigation-login">
-              <a href="#">Вход<span class="visually-hidden">на сайт</span></a>
-              <section class="hover-login">
-                <h2 class="visually-hidden">Форма логина</h2>
-                <form class="hover-login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <p class="hover-login-input"><input type="email" name="login-email" aria-label="Электронная почта" placeholder="Электронная почта"></p>
-                  <p class="hover-login-input"><input type="password" name="login-password" aria-label="Пароль" placeholder="Пароль"></p>
-                  <button class="hover-login-button button" type="submit">Войти</button>
-                  <p class="hover-login-links">
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                  </p>
-                </form>
-              </section>
-            </li>
-            <li class="user-navigation-cart filled-cart">
-              <a href="#"><span class="visually-hidden">В корзине</span>2 товара</a>
-              <section class="hover-filled-cart">
-                <h2 class="visually-hidden">В корзине</h2>
-                <table class="hover-filled-cart-table">
-                  <tbody class="cart-tbody">
-                    <tr class="">
-                      <td class=""><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
-                      <td class="cart-item-image"><a href="#"><img src="img/catalog-item/mini-orange.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></a></td>
-                      <td class=""><a href="#">Пломбир с апельсиновым джемом</a></td>
-                      <td class="">1,5 кг х <span class="cart-price-per-weight">200 руб.</span></td>
-                      <td class="">300 руб.</td>
-                    </tr>
-                    <tr class="">
-                      <td class=""><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
-                      <td class="cart-item-image"><a href="#"><img src="img/catalog-item/mini-strawberry.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></a></td>
-                      <td class=""><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                      <td class="">1,5 кг х <span class="cart-price-per-weight">300 руб.</span></td>
-                      <td class="">450 руб.</td>
-                    </tr>
-                  </tbody>
-                  <tfoot class="cart-tfoot">
-                    <tr class="">
-                      <td class="" colspan="5">Итого: 750 руб.</td>
-                    </tr>
-                  </tfoot>
-                </table>
-                <a class="hover-filled-cart-button button" href="#">Оформить заказ</a>
-              </section>
-            </li>
-          </ul>
-          <section class="header-contacts">
-            <h2 class="visually-hidden">Контакты</h2>
-            <p class="header-contacts-hours">С 10 до 20, ежедневно</p>
-            <a class="header-contacts-tel" href="tel:+78124502525">8 812 450-25-25</a>
-          </section>
-        </nav>
-      </header>
-    </div>
+    <header class="main-header container">
+      <nav class="main-navigation">
+        <a class="logo-main-header" href="index.html">
+          <img src="img/icons/logo.svg" alt="Gllacy Shop" width="154" height="64">
+        </a>
+        <ul class="site-navigation">
+          <li class="site-navigation-item">
+            <a class="current-site-navigation-link" href="#">Каталог</a>
+            <ul class="catalog-navigation">
+              <li class="catalog-navigation-item"><a href="#">Новинки</a></li>
+              <li class="catalog-navigation-item"><a class="current-catalog-navigation-link">Сливочное</a></li>
+              <li class="catalog-navigation-item"><a href="#">Щербеты</a></li>
+              <li class="catalog-navigation-item"><a href="#">Фруктовый лед</a></li>
+              <li class="catalog-navigation-item"><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
+          <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
+          <li class="site-navigation-item"><a href="#">О Компании</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li class="user-navigation-search">
+            <a href="#"><span class="visually-hidden">Поиск по сайту</span></a>
+            <section class="hover-search">
+              <h2 class="visually-hidden">Форма поиска</h2>
+              <form class="hover-search-form" action="https://echo.htmlacademy.ru" method="post">
+                <input type="search" name="search" aria-label="Что ищем?" placeholder="Что ищем?">
+              </form>
+            </section>
+          </li>
+          <li class="user-navigation-login">
+            <a href="#">Вход<span class="visually-hidden">на сайт</span></a>
+            <section class="hover-login">
+              <h2 class="visually-hidden">Форма логина</h2>
+              <form class="hover-login-form" action="https://echo.htmlacademy.ru" method="post">
+                <p class="hover-login-input"><input type="email" name="login-email" aria-label="Электронная почта" placeholder="Электронная почта"></p>
+                <p class="hover-login-input"><input type="password" name="login-password" aria-label="Пароль" placeholder="Пароль"></p>
+                <button class="hover-login-button button" type="submit">Войти</button>
+                <p class="hover-login-links">
+                  <a href="#">Забыли пароль?</a>
+                  <a href="#">Новая регистрация</a>
+                </p>
+              </form>
+            </section>
+          </li>
+          <li class="user-navigation-cart filled-cart">
+            <a href="#"><span class="visually-hidden">В корзине</span>2 товара</a>
+            <section class="hover-filled-cart">
+              <h2 class="visually-hidden">В корзине</h2>
+              <table class="hover-filled-cart-table">
+                <tbody class="cart-tbody">
+                  <tr class="">
+                    <td class=""><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
+                    <td class="cart-item-image"><a href="#"><img src="img/catalog-item/mini-orange.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></a></td>
+                    <td class=""><a href="#">Пломбир с апельсиновым джемом</a></td>
+                    <td class="">1,5 кг х <span class="cart-price-per-weight">200 руб.</span></td>
+                    <td class="">300 руб.</td>
+                  </tr>
+                  <tr class="">
+                    <td class=""><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
+                    <td class="cart-item-image"><a href="#"><img src="img/catalog-item/mini-strawberry.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></a></td>
+                    <td class=""><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                    <td class="">1,5 кг х <span class="cart-price-per-weight">300 руб.</span></td>
+                    <td class="">450 руб.</td>
+                  </tr>
+                </tbody>
+                <tfoot class="cart-tfoot">
+                  <tr class="">
+                    <td class="" colspan="5">Итого: 750 руб.</td>
+                  </tr>
+                </tfoot>
+              </table>
+              <a class="hover-filled-cart-button button" href="#">Оформить заказ</a>
+            </section>
+          </li>
+        </ul>
+        <section class="header-contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="header-contacts-hours">С 10 до 20, ежедневно</p>
+          <a class="header-contacts-tel" href="tel:+78124502525">8 812 450-25-25</a>
+        </section>
+      </nav>
+    </header>
     <main class="container">
       <div class="wrapper-h1-breadcrumbs">
         <h1 class="h1-cream">Сливочное мороженое</h1>
