@@ -58,7 +58,7 @@ img {
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%); /* Проверить градиент для защиты */
   background-repeat: no-repeat;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-  border: none;
+  border: 0;
   display: block;
   text-align: center;
 }
@@ -115,14 +115,14 @@ img {
 .site-navigation-item > a:focus {
   color: #323232;
   background-color: #f7f6f3;
-  border: none;
+  border: 0;
 }
 
 .site-navigation-item > a:active {
   color: #323232;
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
-  border: none;
+  border: 0;
 }
 
 .catalog-navigation {
@@ -161,14 +161,14 @@ li .current-catalog-navigation-link:hover,
 li .current-catalog-navigation-link:focus {
   color: inherit;
   background-color: #d07058;
-  border: none;
+  border: 0;
 }
 
 li .current-site-navigation-link:active { /* Вопрос - тут четкого решения стайлгайд не дает - могу сделать так - могу убрать изменение цвета и оставить только появление тени при нажатии(эффект вдавливания) */
   color: #323232;
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
-  border: none;
+  border: 0;
 }
 
 /* НАВИГАЦИЯ ПОЛЬЗОВАТЕЛЯ */
@@ -444,6 +444,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 
 /* СЛАЙДЕР */
+/* Пока не ясно как делать отступ вниз */
 
 .slider-item p {
   font-size: 60px;
@@ -472,7 +473,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .slider-switch-button {
-  border: none;
+  border: 0;
   background-color: transparent;
   font-size: 0;
 }
@@ -565,6 +566,24 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   height: 45px;
 } */
 
+/* ФИЛЬТРЫ КАТАЛОГА */
+
+.catalog-filter {
+  width: 879px;
+  margin-bottom: 40px;
+}
+
+.catalog-filter form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-filter fieldset { /* Вопрос - тут я не уверен у кого еще могут быть встроенные отступы */
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 /* КАТАЛОГ */
 /* margin-bot самих карточек надо будет решить когда появится ховер - в ТЗ условие чтобы ховер не толкал вниз ничего */
 .catalog {
@@ -601,7 +620,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   margin-right: 0;
 }
 
-
 .catalog-item-image-circle img{
   border-radius: 50%;
  }
@@ -623,7 +641,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   order: 1;
 }
 
-.catalog-item a:first-child {
+.catalog-item a:first-child { /* Вопрос - существует проблема с подчеркиванием ссылки - ссылка в каталоге подчеркивается не как текст, а как блок - пробовал переопределить .catalog-item-name как inline ( ниже этого правила) - не вышло - я думаю проблема с разметкой и надо для h3 и img сделать индивидуальный ссылки - да?*/
   display: flex;
   flex-direction: column;
   color: inherit;
@@ -830,6 +848,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   /* height: 443px; */
   border-radius: 10px;
   background-color: #f8f7f4;
+  display: none;
 }
 
 .modal-feedback-lead {
