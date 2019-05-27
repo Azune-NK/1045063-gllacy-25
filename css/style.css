@@ -16,9 +16,7 @@ html {
 }
 
 body {
-  width: 1200px;  /* Вопрос - это же так надо центровку сайта задавать(первые 3 свойства)? */
-  height: 2416px;
-  margin: 0 auto;
+  min-width: 1200px;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -26,6 +24,12 @@ body {
   background: #9d8b84;
   background: #8996a6;
   background: #849d8f;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
 }
 
 a {
@@ -65,7 +69,6 @@ img {
   width: 1146px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 27px;
 }
 
 .site-navigation,
@@ -79,6 +82,7 @@ img {
 
 .logo-main-header {
   width: 154px;
+  height: 64px;
   margin-right: 10px;
   padding-top: 9px;
 }
@@ -165,37 +169,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
   border: none;
-}
-
-.header-contacts {
-  width: 167px; /* Вопрос - а надо тут задавать ширину? Она кстати в фш 165 и не влезает */
-  height: 47px; background-color: rgb(255, 0, 0);
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-end;
-}
-
-.header-contacts-hours {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 7px;
-}
-
-.header-contacts-tel {
-  font-size: 22px;
-  line-height: 24px;
-  font-weight: 700;
-}
-
-.header-contacts-tel:hover,
-.header-contacts-tel:focus,
-.header-contacts-tel:active {
- color: #ffbc9e;
 }
 
 /* НАВИГАЦИЯ ПОЛЬЗОВАТЕЛЯ */
@@ -384,14 +357,47 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   color: #fefefe;
 }
 
+/* ХЕДЕР КОНТАКТЫ */
+
+.header-contacts {
+  width: 167px; /* Вопрос - а надо тут задавать ширину(для чисто текста)? Она кстати в фш 165 и не влезает */
+  height: 47px;
+  margin-left: auto;
+  margin-top: 2px; /* Вопрос - как еще можно задать отступ 1й флекс строки от 2й? Нам вроде советуют все margin делать bottom, только для футера top */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.header-contacts-hours {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 7px;
+}
+
+.header-contacts-tel {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.header-contacts-tel:hover,
+.header-contacts-tel:focus,
+.header-contacts-tel:active {
+ color: #ffbc9e;
+}
+
 /* ХЛЕБНЫЕ КРОШКИ */
 
-.inner-h1-breadcrumbs-wrapper {
+.h1-breadcrumbs-wrapper {
   width: 382px;
   display: flex;
   flex-direction: column;
-  margin-left: 27px;
-  margin-top: -50px;
+  margin-top: -24px; /* Вопрос - я взял 24 от line-h телефона - правильно? */
 }
 
 .h1-cream {
@@ -400,7 +406,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   order: 1;
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .breadcrumbs {
@@ -814,7 +820,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-  margin: 0 27px 35px auto;
+  margin: 0 0 35px auto;
   padding: 0;
 }
 
@@ -836,7 +842,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   height: 26px;
   border-radius: 50%;
   text-align: center;
-  padding-top: 4px; /* Вопрос - как отцентровать текст\картинки в цетре блока? я добавил text-align и на глаз взял падинг(ибо если брать по фш отступ сверху - 7px - а это сильно много) */
+  padding-top: 4px; /* Вопрос - как отцентровать текст\стрелочки в цетре блока? я добавил text-align и на глаз взял падинг(ибо если брать по фш отступ сверху - 7px - а это сильно много) */
   margin-right: 2px;
 }
 
@@ -870,7 +876,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .main-footer {
   display: flex;
   min-height: 103px;
-  margin: 0 27px;
   align-items: center;
   box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.3); /* пока не знаю как отодвинуть на высоту 107 от футера */
 }
@@ -992,6 +997,8 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 } */
 
 .svg-heart {
+  width: 15px;
+  height: 13px;
   margin-right: 7px;
 }
 
