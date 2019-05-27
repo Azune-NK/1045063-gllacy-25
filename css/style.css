@@ -465,19 +465,30 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   list-style: none;
 }
 
+.slider-list,
+.sliper-list p {
+  margin: 0px;
+  padding: 0px;
+}
+
 .slider-switch-button {
-  font-size: 0px;
   border: none;
+  background-color: transparent;
+  font-size: 0;
+}
+
+.slider-item:not(.slider-current) {
+  display: none;
 }
 
 .slider-switch-button::before {
   content: '';
   display: block;
-  width: 21px;
+  width: 50px;
   height: 21px;
 }
 
-.slider-switch-button:nth-child(1)::before { /* Что-то я пока не понял как убрать блочный фон, а оставить только круг */
+.slider-item:nth-child(1) button::before {
   content: '';
   width: 21px;
   height: 21px;
@@ -485,7 +496,31 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   background-color: #ffffff;
 }
 
+.slider-item:not(:nth-child(1)) button::before {
+  content: '';
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #ffffff;
+}
+
 /* БЛОК СПЕЦ ПРЕДЛОЖЕНИЙ */
+
+.special-offer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.special-offer-banner h3,
+.special-offer-banner p {
+  margin: 0;
+  padding: 0;
+}
+
+.special-offer-banner {
+  padding-top: 23px;
+  padding-left: 20px;
+}
 
 .special-offer-lead {
   font-size: 35px;
@@ -497,6 +532,8 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
+  margin: 25px 0 47px;
+
 }
 
 .special-offer-banner {
