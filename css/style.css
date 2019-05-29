@@ -38,15 +38,18 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -59,14 +62,13 @@ img {
   background-repeat: no-repeat;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   border: 0;
-  display: block;
+  display: inline-block;
   text-align: center;
 }
 
 /* ШАПКА */
 
 .main-navigation {
-  width: 1146px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -265,7 +267,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  display: none; /* Костыль - пока не знаю как работать с ховерами */
+  display: none;
 }
 
 /* ХОВЕР - ЛОГИН */
@@ -295,7 +297,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .hover-login-button {
   width: 100px;
-  /* height: 44px; */
   box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
@@ -350,7 +351,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .hover-filled-cart-button {
   width: 170px;
-  /* height: 44px; */
   box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
@@ -360,14 +360,9 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 /* ХЕДЕР КОНТАКТЫ */
 
 .header-contacts {
-  width: 167px; /* Вопрос - а надо тут задавать ширину(для чисто текста)? Она кстати в фш 165 и не влезает */
-  height: 47px;
   margin-left: auto;
   margin-top: 2px; /* Вопрос - как еще можно задать отступ 1й флекс строки от 2й? Нам вроде советуют все margin делать bottom, только для футера top */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  text-align: right;
 }
 
 .header-contacts-hours {
@@ -394,7 +389,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 /* ХЛЕБНЫЕ КРОШКИ */
 
 .wrapper-h1-breadcrumbs {
-  width: 382px;
   display: flex;
   flex-direction: column;
   margin-top: -24px; /* Вопрос - я взял 24 от line-h телефона - правильно? */
@@ -453,9 +447,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .slider-lead-button {
-  /* display: block;
-  width: 280px;
-  height: 64px; */
   font-size: 32px;
   line-height: 44px;
   text-align: center;
@@ -510,6 +501,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .special-offer {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .special-offer-banner h3,
@@ -539,7 +531,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .special-offer-banner {
   width: 560px;
-  height: 229px;
   border-radius: 15px;
 }
 
@@ -554,17 +545,10 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .special-offer-button {
-  /* width: 165px;
-  height: 46px; */
   opacity: 0.99;
   font-size: 18px;
   line-height: 24px;
 }
-
-/* .banner-chocolate .special-offer-button {
-  width: 189px;
-  height: 45px;
-} */
 
 /* ФИЛЬТРЫ КАТАЛОГА */
 
@@ -578,7 +562,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   flex-wrap: wrap;
 }
 
-.catalog-filter fieldset { /* Вопрос - тут я не уверен у кого еще могут быть встроенные отступы */
+.catalog-filter fieldset {
   margin: 0;
   padding: 0;
   border: 0;
@@ -586,9 +570,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 /* КАТАЛОГ */
 /* margin-bot самих карточек надо будет решить когда появится ховер - в ТЗ условие чтобы ховер не толкал вниз ничего */
-.catalog {
-  width: 1146px;
-}
 
 .catalog-popular {
   margin-bottom: 37px;
@@ -602,16 +583,18 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .catalog-list h3,
 .catalog-list p {
   margin: 0;
-  padding: 0;
 }
 
 .catalog-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
 }
 
 .catalog-item {
+  display: flex;
+  flex-direction: column;
   width: 267px;
   margin-right: 26px;
 }
@@ -626,25 +609,24 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
  .hit .catalog-item-image-circle::before{
   content: '';
-  display: block;
+  position: absolute;
   width: 61px;
   height: 61px;
   background: url(../img/icons/hit.svg) no-repeat;
  }
 
  .catalog-item-name {
+   color: inherit;
+   text-align: center;
+   order: 1;
+ }
+
+ .catalog-item-name h3{
+  display: inline; /* Вопрос - это единственный способ, который решил проблему, что подчеркивался блок, а не текст - все ок? */
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
-  text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  order: 1;
-}
-
-.catalog-item a:first-child { /* Вопрос - существует проблема с подчеркиванием ссылки - ссылка в каталоге подчеркивается не как текст, а как блок - пробовал переопределить .catalog-item-name как inline ( ниже этого правила) - не вышло - я думаю проблема с разметкой и надо для h3 и img сделать индивидуальный ссылки - да?*/
-  display: flex;
-  flex-direction: column;
-  color: inherit;
 }
 
 .catalog-item-name:hover,
@@ -667,15 +649,13 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .catalog-item-weight::before { /* У символа рубля должна быть тень */
   content: '';
-  display: block;
+  position: absolute;
   width: 31px;
   height: 36px;
   background: url(../img/icons/ruble.svg) no-repeat;
 }
 
 .catalog-item-button {
-  /* width: 200px;
-  height: 44px; */
   box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
@@ -686,9 +666,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 /* БЛОК ПРЕИМУЩЕСТВ */
 
 .advantages {
-  /* width: 1146px;
-  height: 306px; */
-  width: 100%; /* Вопрос - правильнее задать так чем 1146? */
   padding: 32px 0 0 20px;
   border-radius: 15px;
   background-color: #f0e5d0;
@@ -770,7 +747,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .news-blog {
   width: 560px;
-  /* height: 220px; */
   border-radius: 15px;
   background-color: #ffffff;
   background: url(../img/bg-banner-strawberry.jpg) no-repeat;
@@ -803,14 +779,13 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .subscribe-border {
   width: 560px;
-  height: 220px;
+  min-height: 220px;
   background: url(../img/icons/bg-border-lines.svg) no-repeat;
   padding: 4px 5px 5px 6px;
 }
 
 .subscribe {
   width: 549px;
-  /* height: 211px; */
   background-color: #f8f7f4;
   border-radius: 10px;
 }
@@ -835,7 +810,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .subscribe-button {
   width: 129px;
-  /* height: 44px; */
   color: #fefefe;
   font-size: 18px;
   line-height: 24px;
@@ -845,7 +819,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .modal-feedback {
   width: 478px;
-  /* height: 443px; */
   border-radius: 10px;
   background-color: #f8f7f4;
   display: none;
@@ -867,8 +840,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .modal-feedback-button {
-  /* width: 139px;
-  height: 44px; */
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
@@ -878,7 +849,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .map-info {
   width: 302px;
-  height: 305px;
   background-color: #ffffff;
   color: #323232;
   border-radius: 10px;
@@ -915,8 +885,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .map-feedback-button {
-  /* width: 252px;
-  height: 44px; */
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
@@ -926,7 +894,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .pagination-list {
   display: flex;
-  width: 267px;
   justify-content: flex-end;
   list-style: none;
   font-size: 16px;
@@ -1002,7 +969,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 /* СОЦ-ПАНЕЛЬ */
 
-.main-footer-social-list {
+.main-footer-social {
   width: 267px;
 }
 
@@ -1064,8 +1031,11 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 /* БЛОК ДОКУМЕНТАЦИИ */
 
+.main-footer-documentation {
+  width: 590px;
+}
+
 .main-footer-documentation-list {
-  width: 590px; /* идея тут в том что при желании заказчик может добавить 1 столбец с 2мя пунктами - */
   height: 44px; /* Вопрос - пробовал через взять line-height\2+высота от верха буквы первой строки до низа буквы второй строки - получилось 38. но было мало - текущую высоту нашел путем "подбора", чтобы получились колонки - как посчитать точно через ФШ? */
   flex-direction: column;
   flex-wrap: wrap;
