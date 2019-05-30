@@ -55,6 +55,10 @@ img {
 }
 
 .button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font: inherit;
   font-weight: bold;
   color: #ffffff;
   background-color: #f26843;
@@ -62,8 +66,7 @@ img {
   background-repeat: no-repeat;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   border: 0;
-  display: inline-block;
-  text-align: center;
+  border-radius: 30px;
 }
 
 /* ШАПКА */
@@ -447,6 +450,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .slider-lead-button {
+  padding: 10px 42px;
   font-size: 32px;
   line-height: 44px;
   text-align: center;
@@ -507,30 +511,12 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .special-offer-banner h3,
 .special-offer-banner p {
   margin: 0;
-  padding: 0;
 }
 
 .special-offer-banner {
-  padding-top: 23px;
-  padding-left: 20px;
-}
-
-.special-offer-lead {
-  font-size: 35px;
-  line-height: 41px;
-  font-weight: 700;
-}
-
-.special-offer-banner p {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 700;
-  margin: 25px 0 47px;
-
-}
-
-.special-offer-banner {
+  position: relative;
   width: 560px;
+  padding: 20px;
   border-radius: 15px;
 }
 
@@ -544,10 +530,26 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   background-color: #512f19;
 }
 
+.special-offer-lead {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.special-offer-banner p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  margin: 20px 0 40px;
+
+}
+
 .special-offer-button {
-  opacity: 0.99;
+  padding: 10px 22px;
+  float: right; /* Вопрос - пробовал и позиционирование абс\отнс\и маргин слева - много писать и иногда нужен доп класс - 1 свойство решило все проблемы - ругать не будут?*/
   font-size: 18px;
   line-height: 24px;
+  opacity: 0.99;
 }
 
 /* ФИЛЬТРЫ КАТАЛОГА */
@@ -593,6 +595,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .catalog-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 267px;
@@ -637,6 +640,8 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .catalog-item-price {
+  position: absolute;
+  top: 214px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 700;
@@ -644,18 +649,23 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .catalog-item-weight {
+  margin-left: 38px;
   font-size: 30px;
 }
 
 .catalog-item-weight::before { /* У символа рубля должна быть тень */
   content: '';
   position: absolute;
+  top: 5px;
+  left: 82px;
   width: 31px;
   height: 36px;
   background: url(../img/icons/ruble.svg) no-repeat;
 }
 
 .catalog-item-button {
+  margin: 20px auto 0;
+  padding: 10px 17px;
   box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
@@ -666,7 +676,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 /* БЛОК ПРЕИМУЩЕСТВ */
 
 .advantages {
-  padding: 32px 0 0 20px;
+  padding: 20px 30px 20px 20px;
   border-radius: 15px;
   background-color: #f0e5d0;
   background-image: url(../img/bg-waffle-pattern.jpg);
@@ -680,6 +690,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .advantages-lead {
+  margin-bottom: 20px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -687,12 +698,23 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .advantages-list {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
 }
 
-.advantages-list:nth-child(odd) {
-  margin-right: 26px;
+.advantages-list-item {
+  width: 480px;
+}
+
+.advantages-list-item:first-child {
+  margin-bottom: 20px;
+}
+
+.advantages-list-item:nth-child(odd){
+  margin-left: 57px;
 }
 
 .advantages-list-item {
@@ -703,8 +725,9 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .advantages-list-item:nth-child(1)::before {
   content: '';
-  display: block;
-  float: left;
+  position: absolute;
+  top: -13px;
+  left: 0;
   height: 49px;
   width: 49px;
   background: url(../img/icons/ice-cream.svg) no-repeat;
@@ -712,8 +735,9 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .advantages-list-item:nth-child(2)::before {
   content: '';
-  display: block;
-  float: left;
+  position: absolute;
+  top: -13px;
+  left: 553px;
   height: 49px;
   width: 49px;
   background: url(../img/icons/cow.svg) no-repeat;
@@ -721,8 +745,9 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .advantages-list-item:nth-child(3)::before {
   content: '';
-  display: block;
-  float: left;
+  position: absolute;
+  top: 76px;
+  left: 0;
   height: 49px;
   width: 49px;
   background: url(../img/icons/eco.svg) no-repeat;
@@ -730,8 +755,9 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .advantages-list-item:nth-child(4)::before {
   content: '';
-  display: block;
-  float: left;
+  position: absolute;
+  top: 76px;
+  left: 553px;
   height: 49px;
   width: 49px;
   background: url(../img/icons/thermometer.svg) no-repeat;
@@ -809,6 +835,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .subscribe-button {
+  padding: 10px 19px;
   width: 129px;
   color: #fefefe;
   font-size: 18px;
@@ -885,6 +912,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .map-feedback-button {
+  padding: 10px 28px;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
