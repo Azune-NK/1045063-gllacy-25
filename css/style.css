@@ -772,6 +772,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .news-blog {
+  padding: 20px;
   width: 560px;
   border-radius: 15px;
   background-color: #ffffff;
@@ -779,14 +780,20 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .news-blog-title {
+  margin: 0;
+  margin-bottom: 7px;
   color: #323232;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
 }
 
+.news-blog-link {
+  margin: 0;
+  width: 285px;
+}
+
 .news-blog-link a {
-  width: 279px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -811,6 +818,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .subscribe {
+  padding: 30px 20px 35px;
   width: 549px;
   background-color: #f8f7f4;
   border-radius: 10px;
@@ -823,6 +831,8 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .subscribe-form input {
+  margin-top: 35px;
+  margin-right: 8px;
   width: 368px;
   height: 44px;
   border-radius: 5px;
@@ -874,27 +884,60 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 /* КАРТА */
 
+.map {
+  position: relative;
+}
+
 .map-info {
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  padding: 30px 25px;
   width: 302px;
   background-color: #ffffff;
   color: #323232;
   border-radius: 10px;
 }
 
+.map-addres {
+  margin-bottom: 15px;
+}
+
 .map-addres p,
 .map-contacts p {
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
 }
 
+.map-addres p {
+  width: 150px;
+}
+
+.map-contacts {
+  width: 175px;
+  margin-bottom: 20px;
+}
+
 .map-addres-lead {
+  margin-top: 3px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   font-style: normal;
 }
 
+.map-contacts p:first-of-type {
+  margin-bottom: 3px;
+}
+
+.map-contacts p:last-of-type {
+  margin-top: 3px;
+  line-height: 22px;
+}
+
 .map-contacts-tel {
+  vertical-align: middle; /* Вопрос - визуально показалось что текст смещен вверх - надо было выравнивать так? и почему так могло произойти?(отступов не было) */
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
@@ -907,12 +950,8 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   color: #e84d37;
 }
 
-.map-contacts span {
-  line-height: 22px;
-}
-
 .map-feedback-button {
-  padding: 10px 28px;
+  padding: 10px 27px;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
