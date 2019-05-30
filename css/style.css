@@ -1031,10 +1031,10 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   content: "";
   position: absolute;
   top: -6px;
-  left: 27px;  
+  left: 27px;
   width: 1146px;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.3);  
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .main-footer-social-list,
@@ -1091,21 +1091,22 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 /* БЛОК ДОКУМЕНТАЦИИ */
 
 .main-footer-documentation {
-  width: 586px;
+  width: 434px;
   margin-bottom: 35px;
 }
 
 .main-footer-documentation-list {
-  height: 44px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  flex-wrap: wrap; /* Сделал я без колонок - при добавлении новых li получается намного хуже, чем при варианте со столбцами ( как я заранее узнаю как отступы давать - да и растяжение в высоту менее привлекательно, чем просто добавление нового столбца справа) */
   padding: 0;
   padding-left: 129px;
 }
 
-.main-footer-documentation-list-item {
+.main-footer-documentation-list-item:first-child {
   margin-right: 32px;
+}
+
+.main-footer-documentation-list-item:nth-child(3) {
+  margin-right: 44px;
 }
 
 .main-footer-documentation a {
