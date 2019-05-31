@@ -1153,6 +1153,7 @@ a:hover + .svg-heart path{ /* Вопрос - вот ради этого двой
 /* БЛОК КОПИРАЙТА */
 
 .main-footer-copyright {
+  position: relative;
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
@@ -1172,9 +1173,11 @@ a:hover + .svg-heart path{ /* Вопрос - вот ради этого двой
   border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
-.main-footer-copyright::before {
+.main-footer-copyright a::after {
   content: '';
-  display: block;
+  position: absolute;
+  top: -44px;
+  left: 0;
   width: 108px;
   height: 39px;
   margin-bottom: 5px;
