@@ -600,6 +600,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   flex-direction: column;
   width: 267px;
   margin-right: 26px;
+  margin-bottom: 40px;
 }
 
 .catalog-item:nth-child(4n) {
@@ -664,13 +665,42 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .catalog-item-button {
+  position: absolute;
+  bottom: -55px;
+  right: 33px;
   margin: 20px auto 0;
   padding: 10px 17px;
   box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
-  order: 2;
+  display: none;
+  z-index: 1;
+}
+
+.catalog-item::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -13px;
+  width: 293px;
+  height: 405px;
+  opacity: 0.2;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  display: none;
+  z-index: -1;
+}
+
+.catalog-item:hover::before,
+.catalog-item:focus::before {
+  display: block;
+}
+
+.catalog-item:hover .catalog-item-button ,
+.catalog-item:focus .catalog-item-button { /* Вопрос - как решить проблему с пропаданием ховера в 90% случаях при попытке навести мышку на кнопку? Визуал есть, функционала нет ) */
+  display: inline-block;
 }
 
 /* БЛОК ПРЕИМУЩЕСТВ */
