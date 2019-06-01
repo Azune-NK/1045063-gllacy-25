@@ -14,7 +14,7 @@
           <img src="img/icons/logo.svg" alt="Gllacy Shop" width="154" height="64">
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation-item">
+          <li class="site-navigation-item current-site-navigation-item">
             <a class="current-site-navigation-link" href="#">Каталог</a>
             <ul class="catalog-navigation">
               <li class="catalog-navigation-item"><a href="#">Новинки</a></li>
@@ -29,7 +29,7 @@
         </ul>
         <ul class="user-navigation">
           <li class="user-navigation-search">
-            <a href="#"><span class="visually-hidden">Поиск по сайту</span></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg><span class="visually-hidden">Поиск по сайту</span></a>
             <section class="hover-search">
               <h2 class="visually-hidden">Форма поиска</h2>
               <form class="hover-search-form" action="https://echo.htmlacademy.ru" method="post">
@@ -38,7 +38,7 @@
             </section>
           </li>
           <li class="user-navigation-login">
-            <a href="#">Вход<span class="visually-hidden">на сайт</span></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#000"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>Вход<span class="visually-hidden">на сайт</span></a>
             <section class="hover-login">
               <h2 class="visually-hidden">Форма логина</h2>
               <form class="hover-login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -53,29 +53,29 @@
             </section>
           </li>
           <li class="user-navigation-cart filled-cart">
-            <a href="#"><span class="visually-hidden">В корзине</span>2 товара</a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/></svg><span class="visually-hidden">В корзине</span>2 товара</a>
             <section class="hover-filled-cart">
               <h2 class="visually-hidden">В корзине</h2>
               <table class="hover-filled-cart-table">
                 <tbody class="cart-tbody">
-                  <tr class="">
-                    <td class=""><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
+                  <tr class="cart-tbody-row">
+                    <td class="cart-delete"><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
                     <td class="cart-item-image"><a href="#"><img src="img/catalog-item/mini-orange.png" alt="Пломбир с апельсиновым джемом" width="33" height="33"></a></td>
-                    <td class=""><a href="#">Пломбир с апельсиновым джемом</a></td>
-                    <td class="">1,5 кг х <span class="cart-price-per-weight">200 руб.</span></td>
-                    <td class="">300 руб.</td>
+                    <td class="cart-item-name"><a href="#">Пломбир с апельсиновым джемом</a></td>
+                    <td class="cart-price">1,5 кг х <span class="cart-price-per-weight">200 руб.</span></td>
+                    <td class="cart-price-sum">300 руб.</td>
                   </tr>
-                  <tr class="">
-                    <td class=""><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
+                  <tr class="cart-tbody-row">
+                    <td class="cart-delete"><button class="cart-delete-button" type="button"><span class="visually-hidden">Удалить</span></button></td>
                     <td class="cart-item-image"><a href="#"><img src="img/catalog-item/mini-strawberry.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33"></a></td>
-                    <td class=""><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                    <td class="">1,5 кг х <span class="cart-price-per-weight">300 руб.</span></td>
-                    <td class="">450 руб.</td>
+                    <td class="cart-item-name"><a href="#">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                    <td class="cart-price">1,5 кг х <span class="cart-price-per-weight">300 руб.</span></td>
+                    <td class="cart-price-sum">450 руб.</td>
                   </tr>
                 </tbody>
                 <tfoot class="cart-tfoot">
-                  <tr class="">
-                    <td class="" colspan="5">Итого: 750 руб.</td>
+                  <tr class="cart-tfoot-row">
+                    <td class="cart-total" colspan="5">Итого: 750 руб.</td>
                   </tr>
                 </tfoot>
               </table>
