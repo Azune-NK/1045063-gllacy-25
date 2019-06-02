@@ -69,7 +69,7 @@ img {
   border-radius: 30px;
 }
 
-/* ШАПКА */ /* Вопрос - проблемы 1) на inner ховер по телефону работает частично 2) заметил проблему с ховерами в шапке - часто пропадают пока мышку на них ведешь 3) site-nav делался через появляющийся паддинг у ссылки при ховере и противоборство с маргинами при отсутствии ховера - в итоге пришлось страдать когда нужно было в inner делать текущую ссылку + поехало меню в ховере - мне кажется с такой подход не эффективен, когда уже сделал - подумал - может правильнее сделать изначально нужный размер отступов(а не при ховере) для site-nav>a, в спокойном состоянии фон будет transparent, при ховере или куренте уже как надо - да? */
+/* ШАПКА */ /* Вопрос - заметил проблему с ховерами в шапке - часто пропадают пока мышку на них ведешь, пока кажется проблема в дизайне,если убрать отступ между ховером и ссылкой - все плавно работает p.s. спаны внутри ссылок site-nav добавил, тк бордер рисовался по боксу, а не по тексту ; проблему с частично работающим ховером телефона из-за невидимого перекрывания решил z-index'ом */
 
 .main-navigation {
   display: flex;
@@ -95,14 +95,14 @@ img {
 .site-navigation {
   width: 689px;
   margin-right: auto;
-  padding-top: 30px;
+  padding-top: 27px;
 }
 
 .user-navigation {
   width: 267px;
   margin-left: auto;
   justify-content: flex-end;
-  padding-top: 22px;
+  padding-top: 23px;
 }
 
 .main-navigation a {
@@ -110,36 +110,57 @@ img {
 }
 
 .site-navigation-item > a {
-  margin: 0 14px;
+  padding: 8px 14px 9px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  background-color: transparent;
 }
 
-.site-navigation-item:first-of-type a {
-  position: relative;
+.site-navigation-item-border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .site-navigation-item > a:hover,
 .site-navigation-item > a:focus {
-  margin: 0;
-  padding: 8px 14px 9px;
-  border-radius: 25px;
   color: #323232;
   background-color: #f7f6f3;
-  border: 0;
 }
 
 .site-navigation-item > a:active {
   color: #323232;
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
-  border: 0;
 }
 
-.site-navigation-item:first-child {
+a:hover .site-navigation-item-border,
+a:focus .site-navigation-item-border,
+a:active .site-navigation-item-border,
+.current-site-navigation-link .site-navigation-item-border {
+  border-bottom: none;
+}
+
+li .current-site-navigation-link,
+li .current-site-navigation-link:hover,
+li .current-site-navigation-link:focus,
+li .current-catalog-navigation-link {
+  color: inherit;
+  background-color: #d07058;
+}
+
+li .current-site-navigation-link:active { /* Вопрос - тут четкого решения стайлгайд не дает - могу сделать так - могу убрать изменение цвета и оставить только появление тени при нажатии(эффект вдавливания) - для меня более логичен первый вариант  */
+  color: #323232;
+  background-color: #ededed;
+  box-shadow: inset 0px 2px 1px 0 #696969;
+}
+
+.site-navigation-item {
   position: relative;
+}
+
+.site-navigation-item:hover .catalog-navigation {
+  display: block;
 }
 
 .catalog-navigation {
@@ -164,10 +185,6 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.site-navigation-item:first-child:hover .catalog-navigation {
-  display: block;
-}
-
 .catalog-navigation-item:first-of-type a {
   padding: 5px 0 7px 20px;
   margin: 7px 0 13px;
@@ -188,54 +205,21 @@ img {
   color: #323232;
 }
 
+.catalog-navigation .current-catalog-navigation-link {
+  color: #ffffff;
+}
+
 .catalog-navigation-item:first-of-type a {
   font-weight: 700;
 }
 
-.catalog-navigation a:hover,
-.catalog-navigation a:focus {
+.catalog-navigation a:not(.current-catalog-navigation-link):hover,
+.catalog-navigation a:not(.current-catalog-navigation-link):focus {
   background-color: #fbded7;
 }
 
-.catalog-navigation a:active {
+.catalog-navigation a:not(.current-catalog-navigation-link):active {
   background-color: #f6b5a5;
-}
-
-.current-site-navigation-item {
-  margin: 0 -14px;
-}
-
-.current-site-navigation-item a:hover,
-.current-site-navigation-item a:focus {
-  margin: 0 14px;
-}
-
-.current-site-navigation-link {
-  padding: 8px 14px 9px;
-  background-color: #d07058;
-  border-radius: 25px;
-}
-
-.current-site-navigation-item .catalog-navigation {
-  left: 7px;
-}
-
-/* li .current-site-navigation-link,
-li .current-site-navigation-link:hover,
-li .current-site-navigation-link:focus, */
-li .current-catalog-navigation-link,
-li .current-catalog-navigation-link:hover,
-li .current-catalog-navigation-link:focus {
-  color: inherit;
-  background-color: #d07058;
-  border: 0;
-}
-
-li .current-site-navigation-link:active { /* Вопрос - тут четкого решения стайлгайд не дает - могу сделать так - могу убрать изменение цвета и оставить только появление тени при нажатии(эффект вдавливания) */
-  color: #323232;
-  background-color: #ededed;
-  box-shadow: inset 0px 2px 1px 0 #696969;
-  border: 0;
 }
 
 /* НАВИГАЦИЯ ПОЛЬЗОВАТЕЛЯ */
@@ -283,8 +267,8 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .user-navigation-search {
   position: relative;
   width: 33px;
-  height: 33px;
-  padding: 8px;
+  height: 32px;
+  padding: 7px 7px 7px 8px;
   margin-right: 10px;
   border-radius: 50%;
 }
@@ -302,7 +286,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .user-navigation-cart {
   position: relative;
   width: 100px;
-  height: 33px;
+  height: 32px;
   padding-top: 3px;
   padding-left: 44px;
   border-radius: 30px;
@@ -329,6 +313,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   display: none;
+  z-index: 4;
 }
 
 .user-navigation-search:hover .hover-search {
@@ -363,6 +348,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   display: none;
+  z-index: 4;
 }
 
 .user-navigation-login svg {
@@ -419,6 +405,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   background-color: #f8f7f4;
   box-sizing: border-box;
   display: none;
+  z-index: 4;
 }
 
 .user-navigation-cart svg {
@@ -503,12 +490,11 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   line-height: 24px;
 }
 
-
 /* ХЕДЕР КОНТАКТЫ */
 
 .header-contacts {
   margin-left: auto;
-  margin-top: 2px; /* Вопрос - как еще можно задать отступ 1й флекс строки от 2й? Нам вроде советуют все margin делать bottom, только для футера top */
+  margin-top: 8px; /* Вопрос - как еще можно задать отступ 1й флекс строки от 2й? Нам вроде советуют все margin делать bottom, только для футера top */
   text-align: right;
 }
 
@@ -517,14 +503,16 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   line-height: 16px;
   font-weight: 700;
   margin: 0;
-  padding: 0;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
 }
 
 .header-contacts-tel {
+  position: relative;
+  right: -1px;
   font-size: 22px;
   line-height: 24px;
   font-weight: 700;
+  z-index: 3;
 }
 
 .header-contacts-tel:hover,
@@ -538,7 +526,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .wrapper-h1-breadcrumbs {
   display: flex;
   flex-direction: column;
-  margin-top: -24px; /* Вопрос - я взял 24 от line-h телефона - правильно? */
+  margin-top: -24px; /* Вопрос - я взял 24 от line-h телефона - правильно?(фундаментально) понятно что потом по PixP посмотрим */
 }
 
 .h1-cream {
@@ -717,12 +705,8 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 /* КАТАЛОГ */
 /* margin-bot самих карточек надо будет решить когда появится ховер - в ТЗ условие чтобы ховер не толкал вниз ничего */
 
-.catalog-popular {
-  margin-bottom: 37px;
-}
-
 .catalog-cream {
-  margin-bottom: 86px;
+  margin-bottom: 40px;
 }
 
 .catalog-list,
@@ -746,6 +730,11 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   margin-right: 26px;
   margin-bottom: 40px;
 }
+
+.catalog-popular .catalog-item {
+  margin-bottom: 35px;
+}
+
 
 .catalog-item:nth-child(4n) {
   margin-right: 0;
@@ -773,7 +762,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   display: inline; /* Вопрос - это единственный способ, который решил проблему, что подчеркивался блок, а не текст - все ок? */
   font-size: 16px;
   line-height: 22px;
-  font-weight: 700;
+  font-weight: 500;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
