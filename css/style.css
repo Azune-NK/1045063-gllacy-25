@@ -799,6 +799,10 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   margin-right: 0;
 }
 
+.catalog-item-image-circle {
+  z-index: 0; /* Вопрос - Вот как сейчас все хорошо, кроме того что картинка мороженки закрыта ховер фоном(ну и ее ссылка не активна) - я пока вижу только один вариант - прописывать zind 2 для первого ряда, потом для третьего для всех z поменять на 3 и тд - в обзоре проекта говорили что такой ховер с точки зрения дизайна кривой, но он учебный, т.е они этого и хотят чтобы каждому ряду прописывался свой zindex? */
+}
+
 .catalog-item-image-circle img{
   border-radius: 50%;
  }
@@ -815,6 +819,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
    color: inherit;
    text-align: center;
    order: 1;
+   z-index: 2;
  }
 
  .catalog-item-name h3{
@@ -839,6 +844,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   line-height: 45px;
   font-weight: 700;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  z-index: 2;
 }
 
 .catalog-item-weight {
@@ -867,7 +873,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   line-height: 24px;
   color: #fefefe;
   display: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 .catalog-item::before {
@@ -882,7 +888,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
   display: none;
-  z-index: -1;
+  z-index: 2;
 }
 
 .catalog-item:hover::before,
@@ -891,7 +897,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .catalog-item:hover .catalog-item-button ,
-.catalog-item:focus .catalog-item-button { /* Вопрос - как решить проблему с пропаданием ховера в 90% случаях при попытке навести мышку на кнопку? Визуал есть, функционала нет ) */
+.catalog-item:focus .catalog-item-button {
   display: inline-block;
 }
 
