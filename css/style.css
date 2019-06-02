@@ -54,7 +54,7 @@ img {
   overflow: hidden;
 }
 
-.button {
+.button { /* Проверить шрифты\цвет шрифта и прозрачность кнопок */
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -62,11 +62,27 @@ img {
   font-weight: bold;
   color: #ffffff;
   background-color: #f26843;
-  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%); /* Проверить градиент для защиты */
+  background-image: linear-gradient(to top, #e74a35, #f26843); /* Проверить градиент для защиты */
   background-repeat: no-repeat;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   border: 0;
   border-radius: 30px;
+}
+
+
+.button:hover,
+.button:focus {
+  box-shadow: 0px 2px 2px 0 #ac1000;
+  background-image:
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+  linear-gradient(to top, #e74a35, #f26843);
+}
+
+.button:active {
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image:
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+  linear-gradient(to bottom, #e74a35, #f26843);
 }
 
 /* ШАПКА */ /* Вопрос - заметил проблему с ховерами в шапке - часто пропадают пока мышку на них ведешь, пока кажется проблема в дизайне,если убрать отступ между ховером и ссылкой - все плавно работает p.s. спаны внутри ссылок site-nav добавил, тк бордер рисовался по боксу, а не по тексту ; проблему с частично работающим ховером телефона из-за невидимого перекрывания решил z-index'ом */
@@ -306,7 +322,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .hover-search {
   position: absolute; /* Вопрос - почему без pos-a просвечивал телефон через фон ховера? */
   left: -309px; /* Вопрос - визуально одинаково, но почему тут 5 отступ, а у остальных пришлось делать 10? */
-  bottom: -85px;
+  bottom: -89px;
   width: 341px;
   padding: 20px 15px;
   background-color: #f8f7f4;
@@ -321,12 +337,33 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
  }
 
  .hover-search input {
-   padding: 11px 0 10px 15px;
-   width: 311px;
-   border: solid 1px #d3d3d2;
-   border-radius: 5px;
+  padding: 11px 0 10px 15px;
+  width: 311px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #323232;
+  font-weight: 700;
+  box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+  border: none;
+  border-radius: 5px;
  }
 
+ .hover-search input::placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.hover-search input:hover {
+  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+}
+
+.hover-search input:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+}
+
+.hover-search input:invalid {
+  box-shadow: 0 0 0 2px red;
+}
 
 /* ХОВЕР - ЛОГИН */
 
@@ -341,7 +378,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .hover-login {
   position: absolute;
   left: -183px;
-  bottom: -217px;
+  bottom: -224px;
   width: 277px;
   padding: 20px 17px 22px 19px;
   background-color: #f8f7f4;
@@ -359,8 +396,30 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .hover-login input {
   padding: 11px 0 10px 15px;
   width: 241px;
-  border: solid 1px #d3d3d2;
+  font-size: 14px;
+  line-height: 24px;
+  color: #323232;
+  font-weight: 700;
+  box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+  border: none;
   border-radius: 5px;
+}
+
+.hover-login input::placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.hover-login input:hover {
+  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+}
+
+.hover-login input:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+}
+
+.hover-login input:invalid {
+  box-shadow: 0 0 0 2px red;
 }
 
 .user-navigation-login:hover .hover-login {
@@ -396,7 +455,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .hover-filled-cart {
   position: absolute;
   left: -423px;
-  bottom: -255px;
+  bottom: -256px;
   padding: 20px 14px 21px 20px;
   width: 540px;
   border-radius: 5px;
@@ -988,6 +1047,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .subscribe-offer {
+  margin: 0;
   font-size: 16px;
   line-height: 22px;
   color: #5a5a5a;
@@ -996,15 +1056,33 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .subscribe-form input {
   margin-top: 35px;
   margin-right: 8px;
+  padding: 11px 0 10px 15px;
   width: 368px;
   height: 44px;
-  border-radius: 5px;
-  border: solid 1px rgba(178, 178, 178, 0.52);
   font-size: 16px;
+  line-height: 24px;
+  color: #323232;
+  font-weight: 700;
+  box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+  border: none;
+  border-radius: 5px;
+}
+
+.subscribe-form input::placeholder {
   color: #999999;
-  padding-left: 15px;
-  background-color: #ffffff;
-  box-sizing: border-box;
+  font-weight: 400;
+}
+
+.subscribe-form input:hover {
+  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+}
+
+.subscribe-form input:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+}
+
+.subscribe-form input:invalid {
+  box-shadow: 0 0 0 2px red;
 }
 
 .subscribe-button {
@@ -1018,6 +1096,12 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 /* МОДАЛКА ПОДПИСКИ */
 
 .modal-feedback {
+  position: absolute;
+  top: 337px;
+  left: 50%;
+  transform: translate(-50%, 0%); /* Вопрос - пробовал margin: - width\2; не сработало, пчму? */
+  padding: 16px 25px 27px;
+  margin: 0 auto;
   width: 478px;
   border-radius: 10px;
   background-color: #f8f7f4;
@@ -1025,6 +1109,8 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 .modal-feedback-lead {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
@@ -1033,13 +1119,62 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .modal-feedback-lead::after {
   content: '';
-  display: block;
-  height: 17px;
+  position: absolute;
+  top: 16px;
+  right: 17px;
   width: 18px;
+  height: 17px;
   background: url(../img/icons/cross-big.svg) no-repeat;
 }
 
+.modal-feedback-name,
+.modal-feedback-email {
+  margin: 0;
+}
+
+.modal-feedback-form input,
+.modal-feedback-form textarea {
+  margin-bottom: 20px;
+  padding: 11px 0 10px 15px;
+  width: 267px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #323232;
+  font-weight: 700;
+  box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+  border: 0;
+  border-radius: 5px;
+ }
+
+.modal-feedback-form textarea {
+  margin-bottom: 25px;
+  width: 428px;
+}
+
+.modal-feedback-form input::placeholder,
+.modal-feedback-form textarea::placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.modal-feedback-form input:hover,
+.modal-feedback-form textarea:hover {
+  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+}
+
+.modal-feedback-form input:focus,
+.modal-feedback-form textarea:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+}
+
+.modal-feedback-form input:invalid {
+  box-shadow: 0 0 0 2px red;
+}
+
+
 .modal-feedback-button {
+  float: right;
+  padding: 11px 24px;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
