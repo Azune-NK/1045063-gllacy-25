@@ -103,41 +103,72 @@
         <h2 class="visually-hidden">Фильтры каталога</h2>
         <form class="catalog-filter-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="field-sorting">
-            <legend>Сортировка:</legend>
-            <select class="visually-hidden" name="sorting" aria-label="Выбор сортировки">
+            <legend class="field-sorting-title">Сортировка:</legend>
+            <select class="field-sorting-options" name="sorting" aria-label="Выбор сортировки">
               <option value="popularity">по популярности</option>
               <option value="cheap-first">сначала недорогие</option>
               <option value="expensive-first">сначала дорогие</option>
               <option value="fat-content">по жирности</option>
             </select>
+            <span class="field-sorting-options-arrow"></span>
           </fieldset>
-          <fieldset class="field-price-range">
+          <fieldset class="field-price-range"> <!-- Вопрос - у нас тут заглушка, норм что текст просто в легенде написан или надо 100 руб и 500 руб вынести в 2 отдельных лейбла с инпутами? -->
             <legend>Цена: 100 руб. – 500 руб.</legend>
-            <input class="visually-hidden" type="range" name="price-range" min="100" max="500" step="5" aria-label="Выбор ценового диапазона">
+            <input class="visually-hidden" type="range" name="price-range" min="100" max="500" step="5" aria-label="Выбор ценового диапазона" tabindex="-1">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+              </div>
+            </div>
           </fieldset>
           <fieldset class="field-fat">
             <legend>Жирность<span class="visually-hidden"> мороженого</span>:</legend>
-            <input class="visually-hidden" id="fat-zero" type="radio" name="fat-content">
-            <label for="fat-zero">0%</label>
-            <input class="visually-hidden" id="fat-below-10" type="radio" name="fat-content" checked>
-            <label for="fat-below-10">до 10%</label>
-            <input class="visually-hidden" id="fat-below-30" type="radio" name="fat-content">
-            <label for="fat-below-30">до 30%</label>
-            <input class="visually-hidden" id="fat-above-30" type="radio" name="fat-content">
-            <label for="fat-above-30">выше 30%</label>
+            <div class="field-wrapper field-wrapper-fat">
+              <label for="fat-zero">
+                <input class="visually-hidden" id="fat-zero" type="radio" name="fat-content">
+                <span class="fat-radio"></span>0%
+              </label>
+              <label for="fat-below-10">
+                <input class="visually-hidden" id="fat-below-10" type="radio" name="fat-content" checked>
+                <span class="fat-radio"></span>до 10%
+              </label>
+              <label for="fat-below-30">
+                 <input class="visually-hidden" id="fat-below-30" type="radio" name="fat-content">
+                 <span class="fat-radio"></span>до 30%
+              </label>
+              <label for="fat-above-30">
+                <input class="visually-hidden" id="fat-above-30" type="radio" name="fat-content">
+                <span class="fat-radio"></span>выше 30%
+              </label>
+            </div>
           </fieldset>
           <fieldset class="field-filler">
-            <legend>Наполнители<span> для мороженого</span>:</legend>
-            <input class="visually-hidden" id="filler-choco" type="checkbox" name="filler-choco" checked>
-            <label for="filler-choco">шоколадные</label>
-            <input class="visually-hidden" id="filler-sugar" type="checkbox" name="filler-sugar" checked>
-            <label for="filler-sugar">сахарные присыпки</label>
-            <input class="visually-hidden" id="filler-fruits" type="checkbox" name="filler-fruits">
-            <label for="filler-fruits">фрукты</label>
-            <input class="visually-hidden" id="filler-syrup" type="checkbox" name="filler-syrup">
-            <label for="filler-syrup">сиропы</label>
-            <input class="visually-hidden" id="filler-jam" type="checkbox" name="filler-jam">
-            <label for="filler-jam">джемы</label>
+            <legend>Наполнители<span class="visually-hidden"> для мороженого</span>:</legend>
+            <div class="field-wrapper field-wrapper-filler">
+              <label for="filler-choco">
+                <input class="visually-hidden" id="filler-choco" type="checkbox" name="filler-choco" checked>
+                <span class="filler-checkbox"></span>шоколадные
+              </label>
+              <label for="filler-sugar">
+                <input class="visually-hidden" id="filler-sugar" type="checkbox" name="filler-sugar" checked>
+                <span class="filler-checkbox"></span>сахарные присыпки
+              </label>
+              <label for="filler-fruits">
+                <input class="visually-hidden" id="filler-fruits" type="checkbox" name="filler-fruits">
+                <span class="filler-checkbox"></span>фрукты
+              </label>
+              <label for="filler-syrup">
+                <input class="visually-hidden" id="filler-syrup" type="checkbox" name="filler-syrup">
+                <span class="filler-checkbox"></span>сиропы
+              </label>
+              <label for="filler-jam">
+                <input class="visually-hidden" id="filler-jam" type="checkbox" name="filler-jam">
+                <span class="filler-checkbox"></span>джемы
+              </label>
+            </div>
           </fieldset>
           <button class="catalog-filter-button" type="submit">Применить</button>
         </form>

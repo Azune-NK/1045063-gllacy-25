@@ -38,7 +38,9 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -50,14 +52,6 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.visually-hidden-input { /* Почему-то обычный хидер скрывает инпут,но дефолтные чекбоксы или радиокнопки появляются при нажатии на лейблы */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0, 0, 0, 0);
-}
-
 
 .button { /* Проверить шрифты\цвет шрифта и прозрачность кнопок */
   display: inline-block;
@@ -562,6 +556,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 /* ХЕДЕР КОНТАКТЫ */
 
 .header-contacts {
+  width: 170px;
   margin-left: auto;
   margin-top: 8px; /* Вопрос - как еще можно задать отступ 1й флекс строки от 2й? Нам вроде советуют все margin делать bottom, только для футера top */
   text-align: right;
@@ -595,7 +590,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 .wrapper-h1-breadcrumbs {
   display: flex;
   flex-direction: column;
-  margin-top: -24px; /* Вопрос - я взял 24 от line-h телефона - правильно?(фундаментально) понятно что потом по PixP посмотрим */
+  margin-top: -23px; /* Вопрос - я взял 24 от line-h телефона - правильно?(фундаментально) понятно что потом по PixP посмотрим */
 }
 
 .h1-cream {
@@ -604,7 +599,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   order: 1;
   padding: 0;
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
 }
 
 .breadcrumbs {
@@ -612,11 +607,11 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   padding: 0;
   margin: 0;
   display: flex;
-  margin-bottom: 9px;
+  margin-bottom: 2px;
 }
 
 .breadcrumbs-item:not(:last-child) {
-  margin-right: 8px;
+  margin-right: 9px;
 }
 
 .breadcrumbs a {
@@ -638,6 +633,8 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 
 .breadcrumbs li:not(:last-child)::after {
   content: " »";
+  position: relative;
+  left: 3px;
 }
 
 
@@ -801,24 +798,283 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 /* ФИЛЬТРЫ КАТАЛОГА */
 
 .catalog-filter {
-  width: 879px;
+  width: 880px;
   margin-bottom: 40px;
 }
 
-.catalog-filter form {
+.catalog-filter-form {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .catalog-filter fieldset {
   margin: 0;
+  margin-right: 15px;
   padding: 0;
   border: 0;
 }
 
+.catalog-filter legend {
+  padding-left: 15px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.field-wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* СОРТИРОВКА */
+
+.field-sorting-options::-ms-expand {  /* Вопрос - правильно решена задача "убрать стрелку селекта" тут и чуть нижже appearance с префиксами */
+  display: none;
+  }
+
+.field-sorting-options {
+  -webkit-appearance: none;
+	-moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  width: 193px; /* Вопрос - не уверен, что правильно задавать тут ширину и высоту */
+  height: 36px;
+  margin-bottom: 15px;
+  padding-left: 11px;
+  padding-bottom: 1px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  border: none;
+}
+
+.field-sorting {
+  position: relative;
+}
+
+.field-sorting .field-sorting-title {
+  padding-left: 16px;
+}
+
+.field-sorting-options-arrow::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 168px;
+  border-left: 5.5px solid transparent;
+  border-right: 5.5px solid transparent;
+  border-top: 10px solid #ffffff;
+  pointer-events: none; /* О БОЖЕ!!! сидел пытался понять как исправить то,что при наведении мышкой на стрелочку пропадает ховер всего блока - написал доп селекторы чтобы при ховере на стрелочку все было также, но работало на 50% ( цвет стрелки да, фон блока нет) - оказывается есть такое замечательное свойство  */
+}
+
+.field-sorting-options option {
+  padding: 0;
+  color: #323232;
+}
+
+.field-sorting-options:hover + .field-sorting-options-arrow::before,
+.field-sorting-options:focus + .field-sorting-options-arrow::before {
+  border-top: 10px solid #323232;
+}
+
+.field-sorting-options:hover,
+.field-sorting-options:focus {
+  color: #323232;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* ВЫБОР ЦЕНЫ */
+
+.range-controls {
+  position: relative;
+  width: 219px;
+  height: 36px;
+  padding-top: 16px;
+  padding-left: 22px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.range-controls .scale {
+  width: 176px;
+  height: 4px;
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.range-controls .bar {
+  position: absolute;
+  left: 38px;
+  width: 107px;
+  height: 4px;
+  background-color: #f8f7f4;
+}
+
+.range-controls .range-toggle {
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 34.5px;
+}
+
+.range-toggle-max {
+  right: 66.5px;
+}
+
+/* ВЫБОР ЖИРНОСТИ */
+
+.field-wrapper-fat {
+  padding: 6px 2.5px 7px 14px;
+}
+
+label[for|="fat"] {
+  position: relative;
+  padding-left: 32px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.fat-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+label:hover .fat-radio,
+input[type="radio"]:focus + .fat-radio {
+  border: 4px solid rgba(255, 255, 255, 1);
+}
+
+input[type="radio"]:checked + .fat-radio::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+label:hover input[type="radio"]:checked:not(:disabled) + .fat-radio::after,
+input[type="radio"]:focus + .fat-radio::after {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+input[type="radio"]:focus + .fat-radio {
+  outline: thin dotted;
+}
+
+
+input[type="radio"]:disabled + .fat-radio{
+  border: 4px solid rgba(255, 255, 255, 0.4);
+}
+
+input[type="radio"]:disabled + .fat-radio::after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ВЫБОР НАПОЛНИТЕЛЯ */
+
+.field-wrapper-filler {
+  padding: 6.5px 19.5px 6.5px 47px;
+}
+
+label[for|="filler"] {
+  position: relative;
+  margin-right: 51px;
+  cursor: pointer;
+}
+
+label[for|="filler"]:first-of-type {
+  margin-right: 49px;
+}
+
+label[for|="filler"]:last-of-type {
+  margin-right: 0;
+}
+
+.filler-checkbox {
+  position: absolute;
+  top: 0;
+  left: -31px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+}
+
+label[for="filler-sugar"] .filler-checkbox {
+  left: -32px;
+}
+
+label[for="filler-fruits"] .filler-checkbox,
+label[for="filler-jam"] .filler-checkbox {
+  left: -34px;
+}
+
+label[for="filler-syrup"] .filler-checkbox {
+  left: -31.5px;
+}
+
+label:hover .filler-checkbox,
+input[type="checkbox"]:focus + .filler-checkbox {
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
+input[type="checkbox"]:checked + .filler-checkbox {
+  border: none;
+}
+
+input[type="checkbox"]:checked + .filler-checkbox::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 20px;
+  background: url(../img/icons/checkbox-on.svg) no-repeat;
+  opacity: 0.8;
+}
+
+label:hover input[type="checkbox"]:checked:not(:disabled) + .filler-checkbox::after,
+input[type="checkbox"]:focus + .filler-checkbox::after {
+  opacity: 1;
+}
+
+input[type="checkbox"]:focus + .filler-checkbox {
+  outline: thin dotted;
+}
+
+input[type="checkbox"]:disabled:not(:checked) + .filler-checkbox {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+input[type="checkbox"]:disabled + .filler-checkbox::after {
+  opacity: 0.4;
+}
+
 .catalog-filter-button {
-  padding: 7px 29px 9px;
+  position: relative;
+  top: -1px;
+  left: 0.5px;
+  align-self: flex-end;
+  padding: 6.5px 27px 7.5px 28px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -835,7 +1091,7 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
   background-color: #ffffff;
 }
 
-.catalog-filter-button:active {
+.catalog-filter-button:active { /* Вопрос - норм что кнопка теряя бордер при нажатии как бы уменьшается? ну и в стайлгайде для базовой обводки кнопки хотят использовать бордер,но с ним как-то кривее получалось */
   color: #323232;
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
@@ -843,7 +1099,6 @@ li .current-site-navigation-link:active { /* Вопрос - тут четког�
 }
 
 /* КАТАЛОГ */
-/* margin-bot самих карточек надо будет решить когда появится ховер - в ТЗ условие чтобы ховер не толкал вниз ничего */
 
 .catalog-cream {
   margin-bottom: 40px;
