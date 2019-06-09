@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked tabindex="-1">
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle" tabindex="-1">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle" tabindex="-1">
     <div class="wrapper-page-index">
       <header class="main-header container">
         <nav class="main-navigation">
@@ -106,9 +106,9 @@
           <h2 class="visually-hidden">Самые популярные виды мороженого</h2>
           <ul class="catalog-list">
             <li class="catalog-item hit">
-              <a class="catalog-item-name" href="#">
-                <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-              </a>
+              <h3 class="catalog-item-name">
+                <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              </h3>
               <a class="catalog-item-image-circle" href="#">
                 <p><img src="img/catalog-item/orange.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267"></p>
               </a>
@@ -116,9 +116,9 @@
               <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-item hit">
-              <a class="catalog-item-name" href="#">
-                <h3>Сливочно-кофейное с кусочками шоколада</h3>
-              </a>
+              <h3 class="catalog-item-name">
+                <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+              </h3>
               <a class="catalog-item-image-circle" href="#">
                 <p><img src="img/catalog-item/coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267"></p>
               </a>
@@ -126,9 +126,9 @@
               <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-item hit">
-              <a class="catalog-item-name" href="#">
-                <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-              </a>
+              <h3 class="catalog-item-name">
+                <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              </h3>
               <a class="catalog-item-image-circle" href="#">
                 <p><img src="img/catalog-item/strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267"></p>
               </a>
@@ -136,9 +136,9 @@
               <a class="catalog-item-button button" href="#">Быстрый просмотр</a>
             </li>
             <li class="catalog-item hit">
-              <a class="catalog-item-name" href="#">
-                <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-              </a>
+              <h3 class="catalog-item-name">
+                <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+              </h3>
               <a class="catalog-item-image-circle" href="#">
                 <p><img src="img/catalog-item/cream-brulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267"></p>
               </a>
@@ -178,15 +178,15 @@
           <img src="img/map-with-pin-and-shadow.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
           <section class="map-info">
             <h3 class="visually-hidden">Наши контакты</h3>
-            <section class="map-addres">
+            <div class="map-addres">
               <p>Адрес главного офиса и офлайн-магазина:</p>
               <address  class="map-addres-lead">ул. Большая Конюшенная 19/8, Санкт-Петербург</address>
-            </section>
-            <section class="map-contacts">
+            </div>
+            <div class="map-contacts">
               <p>Для заказов по телефону:</p>
               <a class="map-contacts-tel" href="tel:+78124502525">8 812 450-25-25</a>
               <p>(с 10 до 20 ежедневно)</p>
-            </section>
+            </div>
             <a class="map-feedback-button button" href="#">Форма обратной связи</a>
           </section>
         </section>
@@ -205,8 +205,8 @@
           <h2 class="visually-hidden">Дополнительная информация</h2>
           <ul class="main-footer-documentation-list">
             <li class="main-footer-documentation-list-item"><a href="#">Для поставщиков</a><svg class="svg-heart" xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13"><path fill="#FFF" d="M10.799 0c-1.35 0-2.551.65-3.3 1.661A4.097 4.097 0 0 0 4.199 0C1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z"/></svg></li>
-            <li class="main-footer-documentation-list-item"><a href="#">Наши документы</a></li>
             <li class="main-footer-documentation-list-item"><a href="#">О производстве</a></li>
+            <li class="main-footer-documentation-list-item"><a href="#">Наши документы</a></li>
             <li class="main-footer-documentation-list-item"><a href="#">Экологические стандарты</a></li>
           </ul>
         </section>
