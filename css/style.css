@@ -236,8 +236,7 @@ li .current-site-navigation-link:active {
           box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.site-navigation-item:hover .catalog-navigation,
-.site-navigation-item:focus-within .catalog-navigation {
+.site-navigation-item:hover .catalog-navigation {
   /* Доделать на js для caniuse .popup-show */
   display: block;
 }
@@ -302,9 +301,6 @@ li .current-site-navigation-link:active {
 .user-navigation-search:hover,
 .user-navigation-login:hover,
 .user-navigation-cart:not(.filled-cart):hover,
-.user-navigation-search:focus-within,
-.user-navigation-login:focus-within,
-.user-navigation-cart:not(.filled-cart):focus-within,
 .filled-cart {
   background-color: #f8f7f4;
 }
@@ -312,9 +308,6 @@ li .current-site-navigation-link:active {
 .user-navigation-search:hover a,
 .user-navigation-login:hover a,
 .user-navigation-cart:hover > a,
-.user-navigation-search:focus-within,
-.user-navigation-login:focus-within,
-.user-navigation-cart:not(.filled-cart):focus-within,
 .filled-cart > a {
   color: #323232;
 }
@@ -326,11 +319,7 @@ li .current-site-navigation-link:active {
 .user-navigation-search:hover path,
 .user-navigation-cart:not(.filled-cart):hover path,
 .user-navigation-cart:not(.filled-cart):hover circle,
-.user-navigation-search:focus-within path,
-.user-navigation-cart:not(.filled-cart):focus-within path,
-.user-navigation-cart:not(.filled-cart):focus-within circle,
-.user-navigation-login:hover path,
-.user-navigation-login:focus-within path {
+.user-navigation-login:hover path {
   fill: #323232;
 }
 
@@ -396,10 +385,7 @@ li .current-site-navigation-link:active {
 
 .user-navigation-search:hover .hover-search,
 .user-navigation-cart:hover .hover-filled-cart,
-.user-navigation-login:hover .hover-login,
-.user-navigation-search:focus-within .hover-search,
-.user-navigation-cart:focus-within .hover-filled-cart,
-.user-navigation-login:focus-within .hover-login {
+.user-navigation-login:hover .hover-login {
   display: block;
 }
 
@@ -848,7 +834,7 @@ li .current-site-navigation-link:active {
 }
 
 .slider-item p {
-  width: 670px;
+  width: 675px;
   margin: 0 auto;
   margin-bottom: 30px;
 
