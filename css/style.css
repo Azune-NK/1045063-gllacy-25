@@ -7,21 +7,24 @@
     Разное
  */
 
-*, *::before, *::after {
-    -webkit-box-sizing: inherit;
-            box-sizing: inherit;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
-   -webkit-box-sizing: border-box;
-           box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
+  font-family: "Roboto", Arial, sans-serif;
   color: #ffffff;
+
   background-color: #849d8f;
 }
 
@@ -44,40 +47,48 @@ img {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  overflow: hidden;
+
   white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .popup-show {
   display: block;
 }
 
-.button { /* Проверить шрифты\цвет шрифта и прозрачность кнопок */
+.button {
+  /* Проверить шрифты\цвет шрифта и прозрачность кнопок */
   display: inline-block;
-  text-align: center;
+
   font: inherit;
   font-weight: bold;
+  text-align: center;
   color: #ffffff;
+
   background-color: #f26843;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
   background-image: linear-gradient(to top, #e74a35, #f26843); /* Проверить градиент для защиты */
   background-repeat: no-repeat;
-  -webkit-box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-          box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   border: 0;
   border-radius: 50px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+          box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   cursor: pointer;
 }
 
-.button:hover, /* Стили фотошопа в коментах - активные стили - из демки академии */
+.button:hover,
+/* Стили фотошопа в коментах - активные стили - из демки академии */
 .button:focus {
   /* box-shadow: 0px 2px 2px 0 #ac1000;
   background-image:
@@ -113,12 +124,13 @@ input[type="radio"].visually-hidden {
 .site-navigation,
 .catalog-navigation,
 .user-navigation {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .logo-main-header {
@@ -135,11 +147,11 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   width: 267px;
   margin-left: auto;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   padding-top: 23px;
 }
 
@@ -149,13 +161,15 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-item > a {
   display: block;
-  padding: 6px 13px 7px 14px;
   margin-right: 1px;
+  padding: 6px 13px 7px 14px;
+
+  font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 700;
-  border-radius: 25px;
+
   background-color: transparent;
+  border-radius: 25px;
 }
 
 .site-navigation-item-border {
@@ -165,14 +179,16 @@ input[type="radio"].visually-hidden {
 .site-navigation-item > a:hover,
 .site-navigation-item > a:focus {
   color: #323232;
+
   background-color: #f7f6f3;
 }
 
 .site-navigation-item > a:active {
   color: #323232;
+
   background-color: #ededed;
-  -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
-          box-shadow: inset 0px 2px 1px 0 #696969;
+  -webkit-box-shadow: inset 0 2px 1px 0 #696969;
+          box-shadow: inset 0 2px 1px 0 #696969;
 }
 
 a:hover .site-navigation-item-border,
@@ -187,14 +203,16 @@ li .current-site-navigation-link:hover,
 li .current-site-navigation-link:focus,
 li .current-catalog-navigation-link {
   color: inherit;
+
   background-color: #d07058;
 }
 
 li .current-site-navigation-link:active {
   color: #323232;
+
   background-color: #ededed;
-  -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
-          box-shadow: inset 0px 2px 1px 0 #696969;
+  -webkit-box-shadow: inset 0 2px 1px 0 #696969;
+          box-shadow: inset 0 2px 1px 0 #696969;
 }
 
 .site-navigation-item {
@@ -205,19 +223,22 @@ li .current-site-navigation-link:active {
   position: absolute;
   top: 37px;
   left: -6px;
+  z-index: 10;
+
+  display: none;
   width: 143px;
   padding-top: 5px;
   padding-bottom: 4px;
+
   background-color: #f8f7f4;
-  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  display: none;
-  z-index: 10;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .site-navigation-item:hover .catalog-navigation,
-.site-navigation-item:focus-within .catalog-navigation {  /* Доделать на js для caniuse .popup-show */
+.site-navigation-item:focus-within .catalog-navigation {
+  /* Доделать на js для caniuse .popup-show */
   display: block;
 }
 
@@ -226,15 +247,18 @@ li .current-site-navigation-link:active {
   position: absolute;
   top: 38px;
   left: 6px;
+
   width: 128px;
   height: 1px;
+
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .catalog-navigation a {
   display: block;
-  padding: 5px 0 7px 20px;
   margin-bottom: 3px;
+  padding: 5px 0 7px 20px;
+
   font-size: 14px;
   line-height: 16px;
   color: #323232;
@@ -264,9 +288,9 @@ li .current-site-navigation-link:active {
 /* НАВИГАЦИЯ ПОЛЬЗОВАТЕЛЯ */
 
 .user-navigation a {
+  font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 500;
 }
 
 .user-navigation-search,
@@ -312,10 +336,13 @@ li .current-site-navigation-link:active {
 
 .user-navigation-search {
   position: relative;
-  text-align: left;
+
   width: 33px;
   height: 32px;
   margin-right: 10px;
+
+  text-align: left;
+
   border-radius: 50%;
 }
 
@@ -326,8 +353,10 @@ li .current-site-navigation-link:active {
 
 .user-navigation-login {
   position: relative;
+
   width: 92px;
   height: 32px;
+
   border-radius: 30px;
 }
 
@@ -338,9 +367,11 @@ li .current-site-navigation-link:active {
 
 .user-navigation-cart {
   position: relative;
+
   width: 100px;
   height: 32px;
   margin-left: 10px;
+
   border-radius: 30px;
 }
 
@@ -351,8 +382,8 @@ li .current-site-navigation-link:active {
 
 .filled-cart {
   width: 117px;
-  margin-left: 9px;
   margin-right: 1px;
+  margin-left: 9px;
 }
 
 .filled-cart > a {
@@ -378,47 +409,51 @@ li .current-site-navigation-link:active {
   position: absolute;
   right: 0;
   bottom: -88px;
+  z-index: 4;
+
+  display: none;
   width: 341px;
   padding: 20px 15px;
+
   background-color: #f8f7f4;
-  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  display: none;
-  z-index: 4;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .hover-search input {
-  padding: 10px 0 10px 15px;
   width: 311px;
+  padding: 10px 0 10px 15px;
+
+  font-weight: 700;
   font-size: 14px;
   line-height: 24px;
   color: #323232;
-  font-weight: 700;
-  -webkit-box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
-          box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+
   border: none;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+          box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
 }
 
 .hover-search input::-webkit-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .hover-search input:-ms-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .hover-search input::-ms-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .hover-search input::placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .hover-search input:hover {
@@ -454,15 +489,17 @@ li .current-site-navigation-link:active {
   position: absolute;
   right: 0;
   bottom: -218px;
+  z-index: 4;
+
+  display: none;
   width: 277px;
   height: 214px; /* Вопрос - про PxP - вот у ссылок под инпутами высота строки аж 24 при шрифте 13, по зеплину между ссылками по высоте отступ 8, при такой lh отступ будет 11, что мы и видим при отрисовке браузером, если уменьшу lh - смогу сделать как по макету, иначе мне что остается, через pos-r двигать 2ю ссылку ближе к 1й? Вот как в таком случае решать по PxP конкретно тут и в будущем */
   padding: 20px 17px 22px 19px;
+
   background-color: #f8f7f4;
-  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  display: none;
-  z-index: 4;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .user-navigation-login svg {
@@ -471,36 +508,38 @@ li .current-site-navigation-link:active {
 }
 
 .hover-login input {
-  padding: 10px 0 10px 15px;
   width: 241px;
+  padding: 10px 0 10px 15px;
+
+  font-weight: 700;
   font-size: 14px;
   line-height: 24px;
   color: #323232;
-  font-weight: 700;
-  -webkit-box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
-          box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+
   border: none;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+          box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
 }
 
 .hover-login input::-webkit-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .hover-login input:-ms-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .hover-login input::-ms-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .hover-login input::placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .hover-login input:hover {
@@ -523,6 +562,7 @@ li .current-site-navigation-link:active {
   font-size: 13px;
   line-height: 24px;
   color: #323232;
+
   border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
 
@@ -530,19 +570,22 @@ li .current-site-navigation-link:active {
 .hover-login-links a:focus,
 .hover-login-links a:active {
   color: #e84d37;
-  border-bottom-color: rgba(232, 77, 55, 0.3)
+
+  border-bottom-color: rgba(232, 77, 55, 0.3);
 }
 
 .hover-login-button {
   float: left;
-  padding: 11px 25px 9px;
   margin-right: 20px;
-  -webkit-box-shadow: 0px 1px 2px 0 #ac1000;
-          box-shadow: 0px 1px 2px 0 #ac1000;
+  padding: 11px 25px 9px;
+
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
+
   border-radius: 20px;
+  -webkit-box-shadow: 0 1px 2px 0 #ac1000;
+          box-shadow: 0 1px 2px 0 #ac1000;
 }
 
 /* ХОВЕР - КОРЗИНА */
@@ -551,17 +594,20 @@ li .current-site-navigation-link:active {
   position: absolute;
   right: 0;
   bottom: -245px;
-  padding: 20px 15px;
-  width: 540px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-  color: #323232;
-  background-color: #f8f7f4;
+  z-index: 4;
+
+  display: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: none;
-  z-index: 4;
+  width: 540px;
+  padding: 20px 15px;
+
+  color: #323232;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .user-navigation-cart svg {
@@ -571,6 +617,7 @@ li .current-site-navigation-link:active {
 
 .hover-filled-cart-table {
   width: 510px;
+
   border-collapse: collapse;
 }
 
@@ -580,9 +627,9 @@ li .current-site-navigation-link:active {
 
 .hover-filled-cart-table a,
 .hover-filled-cart-table td {
+  font-weight: 400;
   font-size: 13px;
   line-height: 16px;
-  font-weight: 400;
   vertical-align: top;
 }
 
@@ -593,13 +640,14 @@ li .current-site-navigation-link:active {
 .cart-delete-button {
   width: 11px;
   height: 11px;
+
   background: url(../img/icons/cross-small.svg) no-repeat;
   border: 0;
   cursor: pointer;
 }
 .cart-item-name {
-  padding-top: 8px;
   width: 220px;
+  padding-top: 8px;
 }
 
 .cart-item-image {
@@ -614,6 +662,7 @@ li .current-site-navigation-link:active {
 
 .cart-price {
   padding: 8px 10px 0;
+
   text-align: center;
 }
 
@@ -634,61 +683,70 @@ li .current-site-navigation-link:active {
 
 .cart-tfoot tr {
   text-align: right;
+
   border-top: 1px solid #cacac7;
 }
 
 .cart-tfoot td {
   position: relative;
   right: -3px;
+
   padding-top: 14px;
+
+  font-weight: 700;
   font-size: 15px;
   line-height: 18px;
-  font-weight: 700;
 }
 
- .hover-filled-cart .hover-filled-cart-button {
+.hover-filled-cart .hover-filled-cart-button {
   position: relative;
   right: -2px;
+
   float: right;
   margin-top: 13px;
-  color: #fefefe;
   padding: 9px 15px 11px;
-  -webkit-box-shadow: 0px 1px 2px 0 #ac1000;
-          box-shadow: 0px 1px 2px 0 #ac1000;
+
   font-size: 18px;
   line-height: 24px;
+  color: #fefefe;
+
   border-radius: 20px;
+  -webkit-box-shadow: 0 1px 2px 0 #ac1000;
+          box-shadow: 0 1px 2px 0 #ac1000;
 }
 
 /* ХЕДЕР КОНТАКТЫ */
 
 .header-contacts {
   width: 170px;
-  margin-left: auto;
   margin-top: 8px;
+  margin-left: auto;
+
   text-align: right;
 }
 
 .header-contacts-hours {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
   margin: 0;
   margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .header-contacts-tel {
   position: relative;
   right: -1px;
+
+  font-weight: 700;
   font-size: 22px;
   line-height: 24px;
-  font-weight: 700;
 }
 
 .header-contacts-tel:hover,
 .header-contacts-tel:focus,
 .header-contacts-tel:active {
- color: #ffbc9e;
+  color: #ffbc9e;
 }
 
 /* ХЛЕБНЫЕ КРОШКИ */
@@ -699,31 +757,33 @@ li .current-site-navigation-link:active {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   margin-top: -23px;
 }
 
 .h1-cream {
-  font-size: 35px;
-  line-height: 41px;
   -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  padding: 0;
+  -ms-flex-order: 1;
+  order: 1;
   margin: 0;
   margin-bottom: 26px;
   margin-left: -1px;
+  padding: 0;
+
+  font-size: 35px;
+  line-height: 41px;
 }
 
 .breadcrumbs {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
   margin-bottom: 2px;
+  padding: 0;
+
+  list-style: none;
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -740,6 +800,7 @@ li .current-site-navigation-link:active {
 .breadcrumbs a:not(.breadcrumbs-current):focus,
 .breadcrumbs a:not(.breadcrumbs-current):active {
   color: #ffbc9e;
+
   border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
@@ -757,17 +818,20 @@ li .current-site-navigation-link:active {
 /* СЛАЙДЕР */
 
 .wrapper-page-index {
-  background-image: url("../img/slider/slider-icecream-1.png");
   background-color: #849d8f;
+  background-image: url("../img/slider/slider-icecream-1.png");
   background-repeat: no-repeat;
   background-position: top center;
+
   -webkit-transition: background-image 0.5s ease, background-color 1s ease;
-  transition: background-image 0.5s ease, background-color 1s ease;
+          transition: background-image 0.5s ease, background-color 1s ease;
 }
 
 .slider {
   position: relative;
+
   padding-top: 275px;
+
   text-align: center;
   color: #ffffff;
 }
@@ -775,6 +839,7 @@ li .current-site-navigation-link:active {
 .slider-list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -783,28 +848,31 @@ li .current-site-navigation-link:active {
 }
 
 .slider-item p {
+  width: 670px;
   margin: 0 auto;
   margin-bottom: 30px;
-  width: 670px;
+
+  font-weight: 700;
   font-size: 60px;
   line-height: 60px;
-  font-weight: 700;
 }
 
 .slider-lead-button {
   margin-bottom: 42px;
   padding: 9px 41px 10px;
+
   font-size: 32px;
   line-height: 44px;
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 .slider-controls {
   position: absolute;
   bottom: 62px;
   left: 0;
-  font-size: 0;
   z-index: 9;
+
+  font-size: 0;
 }
 
 .slider-controls label {
@@ -812,7 +880,9 @@ li .current-site-navigation-link:active {
   width: 21px;
   height: 21px;
   margin-right: 8px;
+
   vertical-align: top;
+
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -849,6 +919,7 @@ li .current-site-navigation-link:active {
 .wrapper-page-index::before,
 .wrapper-page-index::after {
   content: "";
+
   visibility: hidden;
 }
 
@@ -867,8 +938,8 @@ li .current-site-navigation-link:active {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 40px;
 }
 
@@ -879,8 +950,10 @@ li .current-site-navigation-link:active {
 
 .special-offer-banner {
   position: relative;
+
   width: 560px;
   padding: 15px 20px 24px;
+
   border-radius: 15px;
 }
 
@@ -890,8 +963,9 @@ li .current-site-navigation-link:active {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
   background: url(../img/bg-banner-raspberry.jpg) no-repeat;
   background-color: #aa0532;
 }
@@ -902,31 +976,35 @@ li .current-site-navigation-link:active {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
   background: url(../img/bg-banner-choco.jpg) no-repeat;
   background-color: #512f19;
 }
 
 .special-offer-lead {
+  font-weight: 700;
   font-size: 35px;
   line-height: 41px;
-  font-weight: 700;
 }
 
 .special-offer-banner p {
+  margin: 15px 0 45px;
+
+  font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  font-weight: 700;
-  margin: 15px 0 45px;
 }
 
 .special-offer-button {
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   padding: 10px 23px 11px;
+
   font-size: 18px;
   line-height: 24px;
+
   opacity: 0.99;
 }
 
@@ -944,23 +1022,25 @@ li .current-site-navigation-link:active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .catalog-filter fieldset {
   margin: 0;
   margin-right: 15px;
   padding: 0;
+
   border: 0;
 }
 
 .catalog-filter legend {
-  padding-left: 15px;
   margin-bottom: 7px;
+  padding-left: 15px;
+
+  font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 500;
 }
 
 .field-wrapper {
@@ -970,28 +1050,32 @@ li .current-site-navigation-link:active {
 
 /* СОРТИРОВКА */
 
-.field-sorting-options::-ms-expand {  /* Вопрос - правильно решена задача "убрать стрелку селекта" тут и чуть нижже appearance с префиксами */
+.field-sorting-options::-ms-expand {
+  /* Вопрос - правильно решена задача "убрать стрелку селекта" тут и чуть нижже appearance с префиксами */
   display: none;
-  }
+}
 
 .field-sorting-options {
-  -webkit-appearance: none;
-	-moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
   width: 193px; /* Вопрос - не уверен, что правильно задавать тут ширину и высоту */
   height: 36px;
   margin-bottom: 15px;
-  padding-left: 11px;
   padding-bottom: 1px;
-  text-align: left;
+  padding-left: 11px;
+
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
+  text-align: left;
   color: #ffffff;
+
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
   border: none;
+  border-radius: 20px;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
 }
 
 .field-sorting {
@@ -1003,18 +1087,21 @@ li .current-site-navigation-link:active {
 }
 
 .field-sorting-options-arrow::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 13px;
   left: 168px;
-  border-left: 5.5px solid transparent;
-  border-right: 5.5px solid transparent;
+
   border-top: 10px solid #ffffff;
+  border-right: 5.5px solid transparent;
+  border-left: 5.5px solid transparent;
+
   pointer-events: none;
 }
 
 .field-sorting-options option {
   padding: 0;
+
   color: #323232;
 }
 
@@ -1026,6 +1113,7 @@ li .current-site-navigation-link:active {
 .field-sorting-options:hover,
 .field-sorting-options:focus {
   color: #323232;
+
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -1033,10 +1121,12 @@ li .current-site-navigation-link:active {
 
 .range-controls {
   position: relative;
+
   width: 219px;
   height: 36px;
   padding-top: 16px;
   padding-left: 22px;
+
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
@@ -1044,22 +1134,27 @@ li .current-site-navigation-link:active {
 .range-controls .scale {
   width: 176px;
   height: 4px;
+
   background-color: rgba(248, 247, 244, 0.5);
 }
 
 .range-controls .bar {
   position: absolute;
   left: 38px;
+
   width: 107px;
   height: 4px;
+
   background-color: #f8f7f4;
 }
 
 .range-controls .range-toggle {
   position: absolute;
   top: 8px;
+
   width: 20px;
   height: 20px;
+
   background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -1082,8 +1177,10 @@ li .current-site-navigation-link:active {
 
 label[for|="fat"] {
   position: relative;
-  padding-left: 32px;
+
   margin-right: 14px;
+  padding-left: 32px;
+
   cursor: pointer;
 }
 
@@ -1091,8 +1188,10 @@ label[for|="fat"] {
   position: absolute;
   top: 0;
   left: 0;
+
   width: 22px;
   height: 22px;
+
   border: 4px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
@@ -1103,12 +1202,14 @@ input[type="radio"]:focus + .fat-radio {
 }
 
 input[type="radio"]:checked + .fat-radio::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 3px;
+
   width: 8px;
   height: 8px;
+
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
 }
@@ -1123,7 +1224,7 @@ input[type="radio"]:focus + .fat-radio {
 }
 
 
-input[type="radio"]:disabled + .fat-radio{
+input[type="radio"]:disabled + .fat-radio {
   border: 4px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -1139,7 +1240,9 @@ input[type="radio"]:disabled + .fat-radio::after {
 
 label[for|="filler"] {
   position: relative;
+
   margin-right: 51px;
+
   cursor: pointer;
 }
 
@@ -1155,8 +1258,10 @@ label[for|="filler"]:last-of-type {
   position: absolute;
   top: 0;
   left: -31px;
+
   width: 20px;
   height: 20px;
+
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 3px;
 }
@@ -1184,10 +1289,12 @@ input[type="checkbox"]:checked + .filler-checkbox {
 }
 
 input[type="checkbox"]:checked + .filler-checkbox::after {
-  content: '';
+  content: "";
   position: absolute;
+
   width: 24px;
   height: 20px;
+
   background: url(../img/icons/checkbox-on.svg) no-repeat;
   opacity: 0.8;
 }
@@ -1213,32 +1320,38 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   position: relative;
   top: -1px;
   left: 0.5px;
+
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   padding: 6.5px 27px 7.5px 28px;
+
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
   color: #ffffff;
+
   background-color: rgba(255, 255, 255, 0.2);
-  -webkit-box-shadow: 0 0 0 2px #ffffff;
-          box-shadow: 0 0 0 2px #ffffff;
   border: 0;
   border-radius: 20px;
+  -webkit-box-shadow: 0 0 0 2px #ffffff;
+          box-shadow: 0 0 0 2px #ffffff;
 }
 
 .catalog-filter-button:hover,
 .catalog-filter-button:focus {
   color: #323232;
+
   background-color: #ffffff;
 }
 
-.catalog-filter-button:active { /* Вопрос - норм что кнопка теряя бордер при нажатии как бы уменьшается? в стайлгайде для базовой обводки кнопки хотят использовать бордер,но с ним как-то кривее получалось */
+.catalog-filter-button:active {
+  /* Вопрос - норм что кнопка теряя бордер при нажатии как бы уменьшается? в стайлгайде для базовой обводки кнопки хотят использовать бордер,но с ним как-то кривее получалось */
   color: #323232;
+
   background-color: #ededed;
-  -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
-          box-shadow: inset 0px 2px 1px 0 #696969;
   border: 0;
+  -webkit-box-shadow: inset 0 2px 1px 0 #696969;
+          box-shadow: inset 0 2px 1px 0 #696969;
 }
 
 /* КАТАЛОГ */
@@ -1254,24 +1367,26 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .catalog-list {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0;
+
+  list-style: none;
 }
 
 .catalog-item {
   position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   width: 267px;
   margin-right: 26px;
   margin-bottom: 39px;
@@ -1290,33 +1405,37 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   margin-bottom: 7px;
 }
 
-.catalog-item-image-circle img{
+.catalog-item-image-circle img {
   border-radius: 50%;
- }
+}
 
- .hit .catalog-item-image-circle::before{
-  content: '';
+.hit .catalog-item-image-circle::before {
+  content: "";
   position: absolute;
+
   width: 61px;
   height: 61px;
-  background: url(../img/icons/hit.svg) no-repeat;
- }
 
- .catalog-item-name {
-  width: 258px;
+  background: url(../img/icons/hit.svg) no-repeat;
+}
+
+.catalog-item-name {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
+  width: 258px;
+
+  font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 500;
   text-align: center;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
 }
 
 .catalog-item-name a {
   color: inherit;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1324,6 +1443,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 .catalog-item-name:focus a,
 .catalog-item-name:active a {
   color: #ffbc9e;
+
   border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
@@ -1331,39 +1451,46 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   position: absolute;
   top: 209px;
   left: -2px;
+
+  font-weight: 700;
   font-size: 45px;
   line-height: 45px;
-  font-weight: 700;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-item-weight {
   margin-left: 38px;
+
   font-size: 30px;
 }
 
 .catalog-item-weight::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   left: 82px;
+
   width: 31px;
   height: 36px;
+
   background: url(../img/icons/ruble.svg) no-repeat;
 }
 
 .catalog-item-button {
   position: absolute;
-  bottom: -55px;
   right: 33px;
+  bottom: -55px;
+
+  display: none;
   margin: 20px auto 0;
   padding: 10px 17px;
-  -webkit-box-shadow: 0px 1px 2px 0 #ac1000;
-          box-shadow: 0px 1px 2px 0 #ac1000;
+
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
-  display: none;
+
+  -webkit-box-shadow: 0 1px 2px 0 #ac1000;
+          box-shadow: 0 1px 2px 0 #ac1000;
 }
 
 .catalog-item:hover {
@@ -1371,19 +1498,21 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .catalog-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -6px;
   left: -13px;
+  z-index: -1;
+
+  display: none;
   width: 293px;
   height: 405px;
-  opacity: 0.2;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+
   background-color: #f8f7f4;
-  display: none;
-  z-index: -1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  opacity: 0.2;
 }
 
 .catalog-item:hover::before,
@@ -1391,7 +1520,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   display: block;
 }
 
-.catalog-item:hover .catalog-item-button ,
+.catalog-item:hover .catalog-item-button,
 .catalog-item:focus .catalog-item-button {
   display: inline-block;
 }
@@ -1399,11 +1528,12 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 /* БЛОК ПРЕИМУЩЕСТВ */
 
 .advantages {
+  margin-bottom: 40px;
   padding: 25px 22px 25px 20px;
-  border-radius: 15px;
+
   background-color: #f0e5d0;
   background-image: url(../img/bg-waffle-pattern.jpg);
-  margin-bottom: 40px;
+  border-radius: 15px;
 }
 
 .advantages-lead,
@@ -1413,22 +1543,24 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .advantages-lead {
+  font-weight: 500;
   font-size: 24px;
   line-height: 30px;
-  font-weight: 500;
   color: #323232;
 }
 
 .advantages-list {
   position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
   list-style: none;
 }
 
@@ -1437,7 +1569,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   padding-top: 21px;
 }
 
-.advantages-list-item:nth-child(odd){
+.advantages-list-item:nth-child(odd) {
   margin-left: 57px;
 }
 
@@ -1448,42 +1580,50 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .advantages-list-item:nth-child(1)::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 8px;
   left: 0;
-  height: 49px;
+
   width: 49px;
+  height: 49px;
+
   background: url(../img/icons/ice-cream.svg) no-repeat;
 }
 
 .advantages-list-item:nth-child(2)::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 8px;
   left: 565px;
-  height: 49px;
+
   width: 49px;
+  height: 49px;
+
   background: url(../img/icons/cow.svg) no-repeat;
 }
 
 .advantages-list-item:nth-child(3)::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 96px;
   left: 0;
-  height: 49px;
+
   width: 49px;
+  height: 49px;
+
   background: url(../img/icons/eco.svg) no-repeat;
 }
 
 .advantages-list-item:nth-child(4)::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 96px;
   left: 565px;
-  height: 49px;
+
   width: 49px;
+  height: 49px;
+
   background: url(../img/icons/thermometer.svg) no-repeat;
 }
 
@@ -1494,39 +1634,43 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 39px;
 }
 
 .news-blog {
-  padding: 23px 20px;
   width: 560px;
-  border-radius: 15px;
-  background-color: #ffffff;
+  padding: 23px 20px;
+
   background: url(../img/bg-banner-strawberry.jpg) no-repeat;
+  background-color: #ffffff;
+  border-radius: 15px;
 }
 
 .news-blog-title {
   margin: 0;
   margin-bottom: 5px;
-  color: #323232;
+
+  font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 500;
+  color: #323232;
 }
 
 .news-blog-link {
-  margin: 0;
   width: 285px;
+  margin: 0;
 }
 
 .news-blog-link a {
   position: relative;
+
+  font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  font-weight: 700;
   color: #323232;
+
   border-bottom: 2px solid #323232; /* Вопрос - надо тут ради PxP извращатся чтобы бордер был прижат к тексту? */
 }
 
@@ -1534,6 +1678,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 .news-blog-link a:focus,
 .news-blog-link a:active {
   color: #e84d37;
+
   border-bottom-color: #e84d37;
 }
 
@@ -1542,58 +1687,63 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 .subscribe-border {
   width: 560px;
   min-height: 220px;
-  background: url(../img/icons/bg-border-lines.svg) no-repeat;
   padding: 4px 5px 5px 6px;
+
+  background: url(../img/icons/bg-border-lines.svg) no-repeat;
 }
 
 .subscribe {
-  padding: 30px 20px 35px;
   width: 549px;
+  padding: 30px 20px 35px;
+
   background-color: #f8f7f4;
   border-radius: 10px;
 }
 
 .subscribe-offer {
   margin: 0;
+
   font-size: 16px;
   line-height: 22px;
   color: #5a5a5a;
 }
 
 .subscribe-form input {
+  width: 368px;
+  height: 44px;
   margin-top: 36px;
   margin-right: 8px;
   padding: 10px 0 10px 15px;
-  width: 368px;
-  height: 44px;
+
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   color: #323232;
-  font-weight: 700;
-  -webkit-box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
-          box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+
   border: none;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+          box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
 }
 
 .subscribe-form input::-webkit-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .subscribe-form input:-ms-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .subscribe-form input::-ms-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .subscribe-form input::placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .subscribe-form input:hover {
@@ -1612,43 +1762,49 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .subscribe-button {
-  padding: 10px 19px;
   width: 129px;
-  color: #fefefe;
+  padding: 10px 19px;
+
   font-size: 18px;
   line-height: 24px;
+  color: #fefefe;
 }
 
 /* МОДАЛКА ПОДПИСКИ */
 
 .modal-feedback {
   position: absolute;
-  width: 478px;
   top: 337px;
   left: 50%;
+
+  display: none;
+  width: 478px;
   margin-left: -239px;
   padding: 16px 24px 27px 25px;
-  border-radius: 10px;
+
   background-color: #f8f7f4;
-  display: none;
+  border-radius: 10px;
 }
 
 .modal-feedback-lead {
   margin: 0;
   margin-bottom: 20px;
+
+  font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  font-weight: 500;
   color: #323232;
 }
 
 .modal-feedback-lead::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 16px;
   right: 16px;
+
   width: 18px;
   height: 17px;
+
   background: url(../img/icons/cross-big.svg) no-repeat;
 }
 
@@ -1659,16 +1815,18 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .modal-feedback-form input,
 .modal-feedback-form textarea {
-  margin-bottom: 20px;
   width: 267px;
+  margin-bottom: 20px;
+
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   color: #323232;
-  font-weight: 700;
-  -webkit-box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
-          box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+
   border: 0;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+          box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
 }
 
 .modal-feedback-form input {
@@ -1676,33 +1834,33 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .modal-feedback-form textarea {
-  padding: 8px 0 10px 15px;
-  margin-bottom: 23px;
   width: 428px;
+  margin-bottom: 23px;
+  padding: 8px 0 10px 15px;
 }
 
 .modal-feedback-form input::-webkit-input-placeholder,
 .modal-feedback-form textarea::-webkit-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .modal-feedback-form input:-ms-input-placeholder,
 .modal-feedback-form textarea:-ms-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .modal-feedback-form input::-ms-input-placeholder,
 .modal-feedback-form textarea::-ms-input-placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .modal-feedback-form input::placeholder,
 .modal-feedback-form textarea::placeholder {
-  color: #999999;
   font-weight: 400;
+  color: #999999;
 }
 
 .modal-feedback-form input:hover,
@@ -1725,6 +1883,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 .modal-feedback-button {
   float: right;
   padding: 10px 23px;
+
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
@@ -1734,6 +1893,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .map {
   position: relative;
+
   margin: 0 -27px;
 }
 
@@ -1741,10 +1901,13 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   position: absolute;
   top: 63px;
   right: 27px;
-  padding: 29px 25px 31px;
+
   width: 302px;
-  background-color: #ffffff;
+  padding: 29px 25px 31px;
+
   color: #323232;
+
+  background-color: #ffffff;
   border-radius: 15px;
 }
 
@@ -1755,6 +1918,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 .map-addres p,
 .map-contacts p {
   margin: 0;
+
   font-size: 14px;
   line-height: 20px;
 }
@@ -1770,10 +1934,11 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .map-addres-lead {
   margin-top: 1px;
+
+  font-style: normal;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 700;
-  font-style: normal;
 }
 
 .map-contacts p:first-of-type {
@@ -1782,14 +1947,16 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .map-contacts p:last-of-type {
   margin-top: 2px;
+
   line-height: 22px;
 }
 
 .map-contacts-tel {
   display: block;
+
+  font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  font-weight: 700;
   color: #323232;
 }
 
@@ -1801,6 +1968,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .map-feedback-button {
   padding: 10px 27px 10px 28px;
+
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
@@ -1813,14 +1981,15 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  list-style: none;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin: 0 -9px 35px auto;
   padding: 0;
+
+  list-style: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .pagination-list a {
@@ -1833,6 +2002,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .current-pagination a {
   color: #000000;
+
   background-color: #ffffff;
 }
 
@@ -1841,14 +2011,15 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 27px;
   height: 26px;
   margin-right: 2px;
+
   border-radius: 50%;
 }
 
@@ -1857,8 +2028,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .pagination-list-item:last-child a {
-  margin-left: 4px;
   margin-right: 0;
+  margin-left: 4px;
 }
 
 .pagination-list-item a[href]:hover,
@@ -1870,7 +2041,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.pagination-arrow:first-child svg{
+.pagination-arrow:first-child svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -1887,12 +2058,13 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .main-footer {
   position: relative;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   min-height: 103px;
 }
 
@@ -1901,8 +2073,10 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   position: absolute;
   top: -6px;
   left: 27px;
+
   width: 1146px;
   height: 1px;
+
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1913,6 +2087,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   display: flex;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -1941,18 +2116,20 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   opacity: 1;
 }
 
-.main-footer-social-list-item a:active path{
- fill: #e9e9e9;
+.main-footer-social-list-item a:active path {
+  fill: #e9e9e9;
 }
 
 .main-footer-social-list-item a::before {
-  content: '';
+  content: "";
   position: absolute;
-  height: 32px;
+
   width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
   -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
           box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
 }
 
 .main-footer-social-list-item a:hover::before,
@@ -1974,15 +2151,15 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .main-footer-documentation-list {
-  height: 44px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-line-pack: start;
-      align-content: flex-start;
+  align-content: flex-start;
+  height: 44px;
   padding: 0;
   padding-left: 129px;
 }
@@ -1995,6 +2172,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   font-size: 13px;
   line-height: 16px;
   color: inherit;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -2004,6 +2182,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .main-footer-documentation a:hover {
   color: #ffbc9e;
+
   border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
@@ -2015,6 +2194,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   position: absolute;
   top: 7px;
   left: -22px;
+
   width: 15px;
   height: 13px;
 }
@@ -2028,32 +2208,38 @@ a:hover + .svg-heart path {
 .main-footer-copyright {
   position: relative;
   right: -2px;
+
+  width: 190px;
+  margin: 0;
+  margin-bottom: 29px;
+  margin-left: auto;
+
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
-  width: 190px;
-  margin: 0;
-  margin-left: auto;
-  margin-bottom: 29px;
 }
 
 .main-footer-copyright a {
   color: #fefefe;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .main-footer-copyright a:hover {
   color: #ffbc9e;
+
   border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
 .main-footer-copyright a::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -43px;
   left: 0;
+
   width: 108px;
   height: 39px;
   margin-bottom: 5px;
+
   background: url(../img/icons/logo-htmlacademy.svg) no-repeat;
 }
