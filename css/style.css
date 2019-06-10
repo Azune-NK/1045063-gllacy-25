@@ -8,11 +8,13 @@
  */
 
 *, *::before, *::after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 
 html {
-   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
 }
 
 body {
@@ -48,7 +50,8 @@ input[type="radio"].visually-hidden {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -64,9 +67,11 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
   color: #ffffff;
   background-color: #f26843;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
   background-image: linear-gradient(to top, #e74a35, #f26843); /* Проверить градиент для защиты */
   background-repeat: no-repeat;
-  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  -webkit-box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+          box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   border: 0;
   border-radius: 50px;
   cursor: pointer;
@@ -78,8 +83,10 @@ input[type="radio"].visually-hidden {
   background-image:
   linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
   linear-gradient(to top, #e74a35, #f26843); */
+  background: -webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+  -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+          box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .button:active {
@@ -87,21 +94,28 @@ input[type="radio"].visually-hidden {
   background-image:
   linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
   linear-gradient(to bottom, #e74a35, #f26843); */
+  background: -webkit-gradient(linear, left top, left bottom, from(#d84732), to(#e1613e));
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+  -webkit-box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+          box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 /* ШАПКА */
 
 .main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .site-navigation,
 .catalog-navigation,
 .user-navigation {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
@@ -123,7 +137,9 @@ input[type="radio"].visually-hidden {
 .user-navigation {
   width: 267px;
   margin-left: auto;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-top: 23px;
 }
 
@@ -155,7 +171,8 @@ input[type="radio"].visually-hidden {
 .site-navigation-item > a:active {
   color: #323232;
   background-color: #ededed;
-  box-shadow: inset 0px 2px 1px 0 #696969;
+  -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
+          box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
 a:hover .site-navigation-item-border,
@@ -176,7 +193,8 @@ li .current-catalog-navigation-link {
 li .current-site-navigation-link:active {
   color: #323232;
   background-color: #ededed;
-  box-shadow: inset 0px 2px 1px 0 #696969;
+  -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
+          box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
 .site-navigation-item {
@@ -191,7 +209,8 @@ li .current-site-navigation-link:active {
   padding-top: 5px;
   padding-bottom: 4px;
   background-color: #f8f7f4;
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   display: none;
   z-index: 10;
@@ -362,7 +381,8 @@ li .current-site-navigation-link:active {
   width: 341px;
   padding: 20px 15px;
   background-color: #f8f7f4;
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   display: none;
   z-index: 4;
@@ -375,9 +395,25 @@ li .current-site-navigation-link:active {
   line-height: 24px;
   color: #323232;
   font-weight: 700;
-  box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+          box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
   border: none;
   border-radius: 5px;
+}
+
+.hover-search input::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.hover-search input:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.hover-search input::-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
 }
 
 .hover-search input::placeholder {
@@ -386,15 +422,18 @@ li .current-site-navigation-link:active {
 }
 
 .hover-search input:hover {
-  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+          box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .hover-search input:focus {
-  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .hover-search input:invalid {
-  box-shadow: 0 0 0 2px red;
+  -webkit-box-shadow: 0 0 0 2px red;
+          box-shadow: 0 0 0 2px red;
 }
 
 /* ХОВЕР - ЛОГИН */
@@ -419,7 +458,8 @@ li .current-site-navigation-link:active {
   height: 214px; /* Вопрос - про PxP - вот у ссылок под инпутами высота строки аж 24 при шрифте 13, по зеплину между ссылками по высоте отступ 8, при такой lh отступ будет 11, что мы и видим при отрисовке браузером, если уменьшу lh - смогу сделать как по макету, иначе мне что остается, через pos-r двигать 2ю ссылку ближе к 1й? Вот как в таком случае решать по PxP конкретно тут и в будущем */
   padding: 20px 17px 22px 19px;
   background-color: #f8f7f4;
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   display: none;
   z-index: 4;
@@ -437,9 +477,25 @@ li .current-site-navigation-link:active {
   line-height: 24px;
   color: #323232;
   font-weight: 700;
-  box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
+          box-shadow: 0 0 0 2px rgba(178, 178, 178, 0.52);
   border: none;
   border-radius: 5px;
+}
+
+.hover-login input::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.hover-login input:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.hover-login input::-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
 }
 
 .hover-login input::placeholder {
@@ -448,15 +504,18 @@ li .current-site-navigation-link:active {
 }
 
 .hover-login input:hover {
-  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+          box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .hover-login input:focus {
-  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .hover-login input:invalid {
-  box-shadow: 0 0 0 2px red;
+  -webkit-box-shadow: 0 0 0 2px red;
+          box-shadow: 0 0 0 2px red;
 }
 
 .hover-login-links a {
@@ -478,7 +537,8 @@ li .current-site-navigation-link:active {
   float: left;
   padding: 11px 25px 9px;
   margin-right: 20px;
-  box-shadow: 0px 1px 2px 0 #ac1000;
+  -webkit-box-shadow: 0px 1px 2px 0 #ac1000;
+          box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
@@ -494,10 +554,12 @@ li .current-site-navigation-link:active {
   padding: 20px 15px;
   width: 540px;
   border-radius: 5px;
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   color: #323232;
   background-color: #f8f7f4;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: none;
   z-index: 4;
 }
@@ -591,7 +653,8 @@ li .current-site-navigation-link:active {
   margin-top: 13px;
   color: #fefefe;
   padding: 9px 15px 11px;
-  box-shadow: 0px 1px 2px 0 #ac1000;
+  -webkit-box-shadow: 0px 1px 2px 0 #ac1000;
+          box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
   border-radius: 20px;
@@ -631,15 +694,22 @@ li .current-site-navigation-link:active {
 /* ХЛЕБНЫЕ КРОШКИ */
 
 .wrapper-h1-breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: -23px;
 }
 
 .h1-cream {
   font-size: 35px;
   line-height: 41px;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   padding: 0;
   margin: 0;
   margin-bottom: 26px;
@@ -650,6 +720,8 @@ li .current-site-navigation-link:active {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 2px;
 }
@@ -689,6 +761,7 @@ li .current-site-navigation-link:active {
   background-color: #849d8f;
   background-repeat: no-repeat;
   background-position: top center;
+  -webkit-transition: background-image 0.5s ease, background-color 1s ease;
   transition: background-image 0.5s ease, background-color 1s ease;
 }
 
@@ -790,8 +863,12 @@ li .current-site-navigation-link:active {
 /* БЛОК СПЕЦ ПРЕДЛОЖЕНИЙ */
 
 .special-offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 40px;
 }
 
@@ -808,15 +885,25 @@ li .current-site-navigation-link:active {
 }
 
 .banner-raspberry {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: url(../img/bg-banner-raspberry.jpg) no-repeat;
   background-color: #aa0532;
 }
 
 .banner-chocolate {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: url(../img/bg-banner-choco.jpg) no-repeat;
   background-color: #512f19;
 }
@@ -835,7 +922,8 @@ li .current-site-navigation-link:active {
 }
 
 .special-offer-button {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   padding: 10px 23px 11px;
   font-size: 18px;
   line-height: 24px;
@@ -850,9 +938,14 @@ li .current-site-navigation-link:active {
 }
 
 .catalog-filter-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .catalog-filter fieldset {
@@ -1120,14 +1213,16 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   position: relative;
   top: -1px;
   left: 0.5px;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   padding: 6.5px 27px 7.5px 28px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 0 2px #ffffff;
+  -webkit-box-shadow: 0 0 0 2px #ffffff;
+          box-shadow: 0 0 0 2px #ffffff;
   border: 0;
   border-radius: 20px;
 }
@@ -1141,7 +1236,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 .catalog-filter-button:active { /* Вопрос - норм что кнопка теряя бордер при нажатии как бы уменьшается? в стайлгайде для базовой обводки кнопки хотят использовать бордер,но с ним как-то кривее получалось */
   color: #323232;
   background-color: #ededed;
-  box-shadow: inset 0px 2px 1px 0 #696969;
+  -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
+          box-shadow: inset 0px 2px 1px 0 #696969;
   border: 0;
 }
 
@@ -1159,15 +1255,23 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .catalog-list {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
 }
 
 .catalog-item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 267px;
   margin-right: 26px;
   margin-bottom: 39px;
@@ -1200,12 +1304,15 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
  .catalog-item-name {
   width: 258px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
   text-align: center;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .catalog-item-name a {
@@ -1251,7 +1358,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   right: 33px;
   margin: 20px auto 0;
   padding: 10px 17px;
-  box-shadow: 0px 1px 2px 0 #ac1000;
+  -webkit-box-shadow: 0px 1px 2px 0 #ac1000;
+          box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
@@ -1271,7 +1379,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   height: 405px;
   opacity: 0.2;
   border-radius: 5px;
-  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
   display: none;
   z-index: -1;
@@ -1312,9 +1421,14 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .advantages-list {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style: none;
 }
 
@@ -1376,8 +1490,12 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 /* БЛОК НОВОСТЕЙ */
 
 .wrapper-double-collumns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 39px;
 }
 
@@ -1452,9 +1570,25 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   line-height: 24px;
   color: #323232;
   font-weight: 700;
-  box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+  -webkit-box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+          box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
   border: none;
   border-radius: 5px;
+}
+
+.subscribe-form input::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.subscribe-form input:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.subscribe-form input::-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
 }
 
 .subscribe-form input::placeholder {
@@ -1463,15 +1597,18 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .subscribe-form input:hover {
-  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+          box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .subscribe-form input:focus {
-  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .subscribe-form input:invalid {
-  box-shadow: 0 0 0 2px red;
+  -webkit-box-shadow: 0 0 0 2px red;
+          box-shadow: 0 0 0 2px red;
 }
 
 .subscribe-button {
@@ -1528,7 +1665,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   line-height: 24px;
   color: #323232;
   font-weight: 700;
-  box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+  -webkit-box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
+          box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
   border: 0;
   border-radius: 5px;
 }
@@ -1543,6 +1681,24 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   width: 428px;
 }
 
+.modal-feedback-form input::-webkit-input-placeholder,
+.modal-feedback-form textarea::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.modal-feedback-form input:-ms-input-placeholder,
+.modal-feedback-form textarea:-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.modal-feedback-form input::-ms-input-placeholder,
+.modal-feedback-form textarea::-ms-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
 .modal-feedback-form input::placeholder,
 .modal-feedback-form textarea::placeholder {
   color: #999999;
@@ -1551,16 +1707,19 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .modal-feedback-form input:hover,
 .modal-feedback-form textarea:hover {
-  box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
+          box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .modal-feedback-form input:focus,
 .modal-feedback-form textarea:focus {
-  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .modal-feedback-form input:invalid {
-  box-shadow: 0 0 0 2px red;
+  -webkit-box-shadow: 0 0 0 2px red;
+          box-shadow: 0 0 0 2px red;
 }
 
 .modal-feedback-button {
@@ -1650,8 +1809,12 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 /* ПАГИНАЦИЯ */
 
 .pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   list-style: none;
   font-size: 16px;
   line-height: 18px;
@@ -1674,9 +1837,15 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .pagination-list-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 27px;
   height: 26px;
   margin-right: 2px;
@@ -1702,7 +1871,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .pagination-arrow:first-child svg{
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .pagination-link[href] path {
@@ -1717,7 +1887,11 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .main-footer {
   position: relative;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 103px;
 }
@@ -1734,6 +1908,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .main-footer-social-list,
 .main-footer-documentation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
@@ -1774,17 +1950,20 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   position: absolute;
   height: 32px;
   width: 32px;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 }
 
 .main-footer-social-list-item a:hover::before,
 .main-footer-social-list-item a:focus::before {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
 }
 
 .main-fooater-social-list-item a:active::before {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+          box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
 }
 
 /* БЛОК ДОКУМЕНТАЦИИ */
@@ -1796,9 +1975,14 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .main-footer-documentation-list {
   height: 44px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   padding: 0;
   padding-left: 129px;
 }
