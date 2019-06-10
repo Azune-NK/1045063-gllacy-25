@@ -2042,6 +2042,10 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 /* ПОДВАЛ */
 
+.ie11-flexbug-min-height-fix {
+  display: flex;
+}
+
 .main-footer {
   position: relative;
 
