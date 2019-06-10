@@ -185,10 +185,11 @@ li .current-site-navigation-link:active {
 
 .catalog-navigation {
   position: absolute;
-  top: 36px;
-  left: -7px;
+  top: 37px;
+  left: -6px;
   width: 143px;
-  height: 171px;
+  padding-top: 5px;
+  padding-bottom: 4px;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
@@ -214,17 +215,14 @@ li .current-site-navigation-link:active {
 .catalog-navigation a {
   display: block;
   padding: 5px 0 7px 20px;
+  margin-bottom: 3px;
   font-size: 14px;
   line-height: 16px;
   color: #323232;
 }
 
 .catalog-navigation-item:first-of-type a {
-  margin: 7px 0 13px;
-}
-
-.catalog-navigation-item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .catalog-navigation .current-catalog-navigation-link {
@@ -360,7 +358,7 @@ li .current-site-navigation-link:active {
 .hover-search {
   position: absolute;
   right: 0;
-  bottom: -89px;
+  bottom: -88px;
   width: 341px;
   padding: 20px 15px;
   background-color: #f8f7f4;
@@ -371,7 +369,7 @@ li .current-site-navigation-link:active {
 }
 
 .hover-search input {
-  padding: 11px 0 10px 15px;
+  padding: 10px 0 10px 15px;
   width: 311px;
   font-size: 14px;
   line-height: 24px;
@@ -409,11 +407,16 @@ li .current-site-navigation-link:active {
   margin-bottom: 20px;
 }
 
+.hover-login-form .hover-login-input:nth-child(2) {
+  margin-bottom: 20px;
+}
+
 .hover-login {
   position: absolute;
   right: 0;
-  bottom: -224px;
+  bottom: -218px;
   width: 277px;
+  height: 214px; /* Вопрос - про PxP - вот у ссылок под инпутами высота строки аж 24 при шрифте 13, по зеплину между ссылками по высоте отступ 8, при такой lh отступ будет 11, что мы и видим при отрисовке браузером, если уменьшу lh - смогу сделать как по макету, иначе мне что остается, через pos-r двигать 2ю ссылку ближе к 1й? Вот как в таком случае решать по PxP конкретно тут и в будущем */
   padding: 20px 17px 22px 19px;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -428,7 +431,7 @@ li .current-site-navigation-link:active {
 }
 
 .hover-login input {
-  padding: 11px 0 10px 15px;
+  padding: 10px 0 10px 15px;
   width: 241px;
   font-size: 14px;
   line-height: 24px;
@@ -456,7 +459,8 @@ li .current-site-navigation-link:active {
   box-shadow: 0 0 0 2px red;
 }
 
-.hover-login-links a{
+.hover-login-links a {
+  font-weight: 400;
   font-size: 13px;
   line-height: 24px;
   color: #323232;
@@ -472,12 +476,13 @@ li .current-site-navigation-link:active {
 
 .hover-login-button {
   float: left;
-  padding: 10px 25px;
+  padding: 11px 25px 9px;
   margin-right: 20px;
   box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
+  border-radius: 20px;
 }
 
 /* ХОВЕР - КОРЗИНА */
@@ -485,7 +490,7 @@ li .current-site-navigation-link:active {
 .hover-filled-cart {
   position: absolute;
   right: 0;
-  bottom: -250px;
+  bottom: -245px;
   padding: 20px 15px;
   width: 540px;
   border-radius: 5px;
@@ -520,7 +525,7 @@ li .current-site-navigation-link:active {
 }
 
 .cart-delete {
-  padding-top: 5px;
+  padding-top: 3px;
 }
 
 .cart-delete-button {
@@ -531,22 +536,27 @@ li .current-site-navigation-link:active {
   cursor: pointer;
 }
 .cart-item-name {
-  padding-top: 10px;
+  padding-top: 8px;
   width: 220px;
 }
 
 .cart-item-image {
   padding: 0;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
+  padding-left: 3px;
+}
+
+.cart-tbody-row:nth-child(2) .cart-item-image {
+  padding-bottom: 22px;
 }
 
 .cart-price {
-  padding: 10px 10px 0;
+  padding: 8px 10px 0;
   text-align: center;
 }
 
 .cart-price-sum {
-  padding-top: 10px;
+  padding-top: 8px;
 }
 
 .cart-price-per-weight {
@@ -566,20 +576,25 @@ li .current-site-navigation-link:active {
 }
 
 .cart-tfoot td {
-  padding-top: 15px;
+  position: relative;
+  right: -3px;
+  padding-top: 14px;
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
 }
 
  .hover-filled-cart .hover-filled-cart-button {
+  position: relative;
+  right: -2px;
   float: right;
   margin-top: 13px;
   color: #fefefe;
-  padding: 10px 15px;
+  padding: 9px 15px 11px;
   box-shadow: 0px 1px 2px 0 #ac1000;
   font-size: 18px;
   line-height: 24px;
+  border-radius: 20px;
 }
 
 /* ХЕДЕР КОНТАКТЫ */
@@ -1123,7 +1138,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   background-color: #ffffff;
 }
 
-.catalog-filter-button:active { /* Вопрос - норм что кнопка теряя бордер при нажатии как бы уменьшается? ну и в стайлгайде для базовой обводки кнопки хотят использовать бордер,но с ним как-то кривее получалось */
+.catalog-filter-button:active { /* Вопрос - норм что кнопка теряя бордер при нажатии как бы уменьшается? в стайлгайде для базовой обводки кнопки хотят использовать бордер,но с ним как-то кривее получалось */
   color: #323232;
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
@@ -1207,7 +1222,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .catalog-item-price {
   position: absolute;
-  top: 210px;
+  top: 209px;
   left: -2px;
   font-size: 45px;
   line-height: 45px;
@@ -1475,7 +1490,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   top: 337px;
   left: 50%;
   margin-left: -239px;
-  padding: 16px 25px 27px;
+  padding: 16px 24px 27px 25px;
   border-radius: 10px;
   background-color: #f8f7f4;
   display: none;
@@ -1494,7 +1509,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   content: '';
   position: absolute;
   top: 16px;
-  right: 17px;
+  right: 16px;
   width: 18px;
   height: 17px;
   background: url(../img/icons/cross-big.svg) no-repeat;
@@ -1508,7 +1523,6 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 .modal-feedback-form input,
 .modal-feedback-form textarea {
   margin-bottom: 20px;
-  padding: 11px 0 10px 15px;
   width: 267px;
   font-size: 16px;
   line-height: 24px;
@@ -1517,10 +1531,15 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   box-shadow: 0 0 0 1px rgba(178, 178, 178, 0.52);
   border: 0;
   border-radius: 5px;
- }
+}
+
+.modal-feedback-form input {
+  padding: 10px 0 10px 15px;
+}
 
 .modal-feedback-form textarea {
-  margin-bottom: 25px;
+  padding: 8px 0 10px 15px;
+  margin-bottom: 23px;
   width: 428px;
 }
 
@@ -1546,7 +1565,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .modal-feedback-button {
   float: right;
-  padding: 11px 24px;
+  padding: 10px 23px;
   font-size: 18px;
   line-height: 24px;
   color: #fefefe;
