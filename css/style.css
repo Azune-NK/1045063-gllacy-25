@@ -237,7 +237,7 @@ li .current-site-navigation-link:active {
 }
 
 .site-navigation-item:hover .catalog-navigation {
-  /* Доделать на js для caniuse .popup-show */
+  /* Доделать на js доступность при фокусе .popup-show */
   display: block;
 }
 
@@ -395,7 +395,7 @@ li .current-site-navigation-link:active {
   position: absolute;
   right: 0;
   bottom: -88px;
-  z-index: 4;
+  z-index: 10;
 
   display: none;
   width: 341px;
@@ -475,11 +475,11 @@ li .current-site-navigation-link:active {
   position: absolute;
   right: 0;
   bottom: -218px;
-  z-index: 4;
+  z-index: 10;
 
   display: none;
   width: 277px;
-  height: 214px; /* Вопрос - про PxP - вот у ссылок под инпутами высота строки аж 24 при шрифте 13, по зеплину между ссылками по высоте отступ 8, при такой lh отступ будет 11, что мы и видим при отрисовке браузером, если уменьшу lh - смогу сделать как по макету, иначе мне что остается, через pos-r двигать 2ю ссылку ближе к 1й? Вот как в таком случае решать по PxP конкретно тут и в будущем */
+  height: 214px;
   padding: 20px 17px 22px 19px;
 
   background-color: #f8f7f4;
@@ -543,6 +543,19 @@ li .current-site-navigation-link:active {
           box-shadow: 0 0 0 2px red;
 }
 
+.wrapper-login-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.hover-login-links {
+  width: 120px;
+}
+
 .hover-login-links a {
   font-weight: 400;
   font-size: 13px;
@@ -550,6 +563,16 @@ li .current-site-navigation-link:active {
   color: #323232;
 
   border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+.hover-login-links a:nth-child(1) {
+  position: relative;
+  top: -2px;
+}
+
+.hover-login-links a:nth-child(2) {
+  position: relative;
+  top: -5px;
 }
 
 .hover-login-links a:hover,
@@ -561,7 +584,6 @@ li .current-site-navigation-link:active {
 }
 
 .hover-login-button {
-  float: left;
   margin-right: 20px;
   padding: 11px 25px 9px;
 
@@ -580,7 +602,7 @@ li .current-site-navigation-link:active {
   position: absolute;
   right: 0;
   bottom: -245px;
-  z-index: 4;
+  z-index: 10;
 
   display: none;
   -webkit-box-sizing: border-box;
@@ -620,10 +642,11 @@ li .current-site-navigation-link:active {
 }
 
 .cart-delete {
-  padding-top: 3px;
+  padding-top: 10px;
 }
 
 .cart-delete-button {
+  display: block;
   width: 11px;
   height: 11px;
 
@@ -633,7 +656,7 @@ li .current-site-navigation-link:active {
 }
 .cart-item-name {
   width: 220px;
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
 .cart-item-image {
@@ -647,13 +670,13 @@ li .current-site-navigation-link:active {
 }
 
 .cart-price {
-  padding: 8px 10px 0;
+  padding: 10px 10px 0;
 
   text-align: center;
 }
 
 .cart-price-sum {
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
 .cart-price-per-weight {
@@ -688,8 +711,9 @@ li .current-site-navigation-link:active {
   position: relative;
   right: -2px;
 
-  float: right;
+  display: block;
   margin-top: 13px;
+  margin-left: 339px;
   padding: 9px 15px 11px;
 
   font-size: 18px;
@@ -721,9 +745,6 @@ li .current-site-navigation-link:active {
 }
 
 .header-contacts-tel {
-  position: relative;
-  right: -1px;
-
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
@@ -765,6 +786,7 @@ li .current-site-navigation-link:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 700px;
   margin: 0;
   margin-bottom: 2px;
   padding: 0;
@@ -1037,12 +1059,11 @@ li .current-site-navigation-link:active {
 /* СОРТИРОВКА */
 
 .field-sorting-options::-ms-expand {
-  /* Вопрос - правильно решена задача "убрать стрелку селекта" тут и чуть нижже appearance с префиксами */
   display: none;
 }
 
 .field-sorting-options {
-  width: 193px; /* Вопрос - не уверен, что правильно задавать тут ширину и высоту */
+  width: 193px;
   height: 36px;
   margin-bottom: 15px;
   padding-bottom: 1px;
@@ -1072,11 +1093,10 @@ li .current-site-navigation-link:active {
   padding-left: 16px;
 }
 
-.field-sorting-options-arrow::before {
-  content: "";
+.field-sorting-options-arrow {
   position: absolute;
-  top: 13px;
-  left: 168px;
+  right: 14px;
+  bottom: 28px;
 
   border-top: 10px solid #ffffff;
   border-right: 5.5px solid transparent;
@@ -1091,8 +1111,8 @@ li .current-site-navigation-link:active {
   color: #323232;
 }
 
-.field-sorting-options:hover + .field-sorting-options-arrow::before,
-.field-sorting-options:focus + .field-sorting-options-arrow::before {
+.field-sorting-options:hover + .field-sorting-options-arrow,
+.field-sorting-options:focus + .field-sorting-options-arrow {
   border-top: 10px solid #323232;
 }
 
@@ -1104,6 +1124,51 @@ li .current-site-navigation-link:active {
 }
 
 /* ВЫБОР ЦЕНЫ */
+
+.ramge-min,
+.range-max {
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.range-min input,
+.range-max input {
+  width: 26px;
+  margin: 0;
+  margin-top: -1px;
+  margin-bottom: -2px;
+  margin-left: 3px;
+
+  font: inherit;
+  color: inherit;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.range-max input {
+  margin-left: 13px;
+}
+
+.field-price-range legend {
+  position: relative;
+}
+
+.field-price-range legend::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 114px;
+
+  width: 7px;
+  height: 2px;
+
+  background: #ffffff;
+}
 
 .range-controls {
   position: relative;
@@ -1221,19 +1286,24 @@ input[type="radio"]:disabled + .fat-radio::after {
 /* ВЫБОР НАПОЛНИТЕЛЯ */
 
 .field-wrapper-filler {
-  padding: 6.5px 19.5px 6.5px 47px;
+  padding: 6.5px 20px 6.5px 15px;
 }
 
 label[for|="filler"] {
   position: relative;
 
-  margin-right: 51px;
+  margin-right: 17px;
+  padding-left: 32px;
 
   cursor: pointer;
 }
 
-label[for|="filler"]:first-of-type {
-  margin-right: 49px;
+label[for|="filler"]:not(:first-of-type):not(:nth-child(2)) {
+  padding-left: 37px;
+}
+
+label[for|="filler"]:not(:first-of-type) {
+  margin-right: 14px;
 }
 
 label[for|="filler"]:last-of-type {
@@ -1243,7 +1313,7 @@ label[for|="filler"]:last-of-type {
 .filler-checkbox {
   position: absolute;
   top: 0;
-  left: -31px;
+  left: 0;
 
   width: 20px;
   height: 20px;
@@ -1252,17 +1322,21 @@ label[for|="filler"]:last-of-type {
   border-radius: 3px;
 }
 
+label[for="filler-choco"] .filler-checkbox {
+  left: 1px;
+}
+
 label[for="filler-sugar"] .filler-checkbox {
-  left: -32px;
+  left: 0;
 }
 
 label[for="filler-fruits"] .filler-checkbox,
 label[for="filler-jam"] .filler-checkbox {
-  left: -34px;
+  left: 3px;
 }
 
 label[for="filler-syrup"] .filler-checkbox {
-  left: -31.5px;
+  left: 5px;
 }
 
 label:hover .filler-checkbox,
@@ -1305,7 +1379,6 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 .catalog-filter-button {
   position: relative;
   top: -1px;
-  left: 0.5px;
 
   -ms-flex-item-align: end;
   align-self: flex-end;
@@ -1331,7 +1404,6 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .catalog-filter-button:active {
-  /* Вопрос - норм что кнопка теряя бордер при нажатии как бы уменьшается? в стайлгайде для базовой обводки кнопки хотят использовать бордер,но с ним как-то кривее получалось */
   color: #323232;
 
   background-color: #ededed;
@@ -1441,25 +1513,15 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
-  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-item-price-symbol {
+  margin-left: 5px;
 }
 
 .catalog-item-weight {
-  margin-left: 38px;
-
   font-size: 30px;
-}
-
-.catalog-item-weight::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 82px;
-
-  width: 31px;
-  height: 36px;
-
-  background: url(../img/icons/ruble.svg) no-repeat;
 }
 
 .catalog-item-button {
@@ -1657,7 +1719,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   line-height: 30px;
   color: #323232;
 
-  border-bottom: 2px solid #323232; /* Вопрос - надо тут ради PxP извращатся чтобы бордер был прижат к тексту? */
+  border-bottom: 2px solid #323232;
 }
 
 .news-blog-link a:hover,
@@ -1867,7 +1929,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .modal-feedback-button {
-  float: right;
+  display: block;
+  margin-left: auto;
   padding: 10px 23px;
 
   font-size: 18px;
@@ -2043,6 +2106,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 /* ПОДВАЛ */
 
 .ie11-flexbug-min-height-fix {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
