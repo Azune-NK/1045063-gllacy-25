@@ -893,6 +893,11 @@ li .current-site-navigation-link:active {
   cursor: pointer;
 }
 
+.slider-controls label:hover,
+.slider-controls label:focus {
+  background-color: rgba(248, 247, 244, 0.4);
+}
+
 #product-1:checked ~ .wrapper-page-index {
   background-color: #849d8f;
   background-image: url("../img/slider/slider-icecream-1.png");
@@ -2237,7 +2242,9 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   font-weight: 700;
 }
 
-.main-footer-documentation a:hover {
+.main-footer-documentation a:hover,
+.main-footer-documentation a:focus,
+.main-footer-documentation a:active {
   color: #ffbc9e;
 
   border-bottom-color: rgba(255, 188, 158, 0.2);
@@ -2256,7 +2263,9 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   height: 13px;
 }
 
-a:hover + .svg-heart path {
+a:hover + .svg-heart path,
+a:focus + .svg-heart path,
+a:active + .svg-heart path {
   fill: #ffbc9e;
 }
 
@@ -2282,7 +2291,9 @@ a:hover + .svg-heart path {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.main-footer-copyright a:hover {
+.main-footer-copyright a:hover,
+.main-footer-copyright a:focus,
+.main-footer-copyright a:active {
   color: #ffbc9e;
 
   border-bottom-color: rgba(255, 188, 158, 0.2);
