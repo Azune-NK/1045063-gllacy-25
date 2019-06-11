@@ -970,7 +970,7 @@ li .current-site-navigation-link:active {
   -ms-flex-direction: column;
       flex-direction: column;
 
-  background: url(../img/bg-banner-raspberry.jpg) no-repeat;
+  background: url(../img/bg-banner-raspberry.jpg) no-repeat top center;
   background-color: #aa0532;
   background-size: cover;
 }
@@ -984,7 +984,7 @@ li .current-site-navigation-link:active {
   -ms-flex-direction: column;
       flex-direction: column;
 
-  background: url(../img/bg-banner-choco.jpg) no-repeat;
+  background: url(../img/bg-banner-choco.jpg) no-repeat top center;
   background-color: #512f19;
   background-size: cover;
 }
