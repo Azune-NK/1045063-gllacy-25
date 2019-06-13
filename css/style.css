@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  position: relative;
   font-size: 16px;
   line-height: 22px;
   font-family: "Roboto", Arial, sans-serif;
@@ -52,10 +53,6 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
-}
-
-.popup-show {
-  display: block;
 }
 
 .button {
@@ -1827,8 +1824,50 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 /* МОДАЛКА ПОДПИСКИ */
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-feedback {
-  position: absolute;
+  position: fixed;
+  z-index: 100;
+
   top: 337px;
   left: 50%;
 
@@ -1841,6 +1880,25 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   border-radius: 10px;
 }
 
+.modal-feedback-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+}
+
+.popup-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.popup-error {
+  animation: shake 0.6s;
+}
+
+
 .modal-feedback-lead {
   margin: 0;
   margin-bottom: 20px;
@@ -1851,8 +1909,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   color: #323232;
 }
 
-.modal-feedback-lead::after {
-  content: "";
+.modal-feedback-close {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -1861,6 +1918,9 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   height: 17px;
 
   background: url(../img/icons/cross-big.svg) no-repeat;
+
+  cursor: pointer;
+  border: 0;
 }
 
 .modal-feedback-name,
@@ -1953,8 +2013,23 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   margin: 0 -27px;
 }
 
+.map iframe {
+  position: relative;
+  z-index: 2;
+}
+
+.map-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
 .map-info {
   position: absolute;
+  z-index: 3;
   top: 63px;
   right: 27px;
 

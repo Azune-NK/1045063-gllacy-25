@@ -5,7 +5,7 @@
     <title>Магазин мороженого Глейси</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked tabindex="-1">
@@ -177,7 +177,8 @@
         </div>
         <section class="map">
           <h2 class="visually-hidden">Как до нас добраться</h2>
-          <img src="img/map-with-pin-and-shadow.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7b7576fee9a57803f95c57367820772f396baf11f40e2ccab900d20d4720b1c8&amp;source=constructor" width="1200" height="430" frameborder="0"></iframe>
+          <p class="map-image"><img src="img/map-with-pin-and-shadow.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430"></p>
           <section class="map-info">
             <h3 class="visually-hidden">Наши контакты</h3>
             <div class="map-addres">
@@ -216,16 +217,19 @@
           <p class="main-footer-copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
         </footer>
       </div>
-      <section class="modal-feedback">
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        <p class="modal-feedback-lead">Мы обязательно вам ответим!</p>
-        <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <p class="modal-feedback-name"><input type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p>
-          <p class="modal-feedback-email"><input type="email" name="feedback-email" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?"></p>
-          <textarea name="feedback-info" rows="5" aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
-          <button class="modal-feedback-button button" type="submit">Отправить</button>
-        </form>
-      </section>
+      <div class="wrapper-modal-feedback">
+        <section class="modal-feedback">
+          <h2 class="visually-hidden">Форма обратной связи</h2>
+          <p class="modal-feedback-lead">Мы обязательно вам ответим!</p>
+          <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="modal-feedback-name"><input type="text" name="feedback-name" aria-label="Как вас зовут?" placeholder="Как вас зовут?"></p>
+            <p class="modal-feedback-email"><input type="email" name="feedback-email" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?"></p>
+            <textarea name="feedback-info" rows="5" aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
+            <button class="modal-feedback-button button" type="submit">Отправить</button>
+          </form>
+          <button class="modal-feedback-close" type="button"></button>
+        </section>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>
