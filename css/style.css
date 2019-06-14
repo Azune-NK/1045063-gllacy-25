@@ -130,8 +130,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation {
-  width: 689px;
-  margin-right: auto;
+  width: 550px;
   padding-top: 23px;
 }
 
@@ -139,7 +138,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  width: 267px;
+  width: 420px;
   margin-left: auto;
   padding-top: 23px;
 }
@@ -331,41 +330,40 @@ li .current-site-navigation-link:active {
 
 .user-navigation-login {
   position: relative;
+  align-self: flex-start;
 
-  width: 92px;
-  height: 32px;
+  max-width: 200px;
 
   border-radius: 30px;
 }
 
 .user-navigation-login > a {
   display: block;
-  padding: 7px 17px 15px 44px;
+  padding: 7px 17px 9px 44px;
 }
 
 .user-navigation-cart {
   position: relative;
+  align-self: flex-start;
 
-  width: 100px;
-  height: 32px;
-  margin-left: 10px;
+  max-width: 145px;
+  margin-left: 9px;
 
   border-radius: 30px;
 }
 
 .user-navigation-cart > a {
   display: block;
-  padding: 7px 17px 15px 44px;
+  padding: 7px 17px 9px 44px;
 }
 
 .filled-cart {
-  width: 117px;
   margin-right: 1px;
-  margin-left: 9px;
+  margin-left: 8px;
 }
 
 .filled-cart > a {
-  padding: 7px 15px 15px 44px;
+  padding: 7px 16px 9px 44px;
 }
 
 .user-navigation svg {
@@ -398,7 +396,7 @@ li .current-site-navigation-link:active {
 
 .hover-search input {
   width: 311px;
-  padding: 10px 0 10px 15px;
+  padding: 10px 15px;
 
   font-weight: 700;
   font-size: 14px;
@@ -485,7 +483,7 @@ li .current-site-navigation-link:active {
 .hover-login input {
   width: 241px;
   height: 44px;
-  padding: 10px 0 10px 15px;
+  padding: 10px 15px;
 
   font-weight: 700;
   font-size: 14px;
@@ -778,6 +776,7 @@ li .current-site-navigation-link:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   max-width: 700px;
   margin: 0;
   margin-bottom: 2px;
@@ -1220,6 +1219,21 @@ li .current-site-navigation-link:active {
   right: 66.5px;
 }
 
+.range-controls .range-toggle-min:hover,
+.range-controls .range-toggle-min:focus {
+  width: 22px;
+  height: 22px;
+  top: 7px;
+  left: 33.5px;
+}
+
+.range-controls .range-toggle-max:hover,
+.range-controls .range-toggle-max:focus {
+  width: 22px;
+  height: 22px;
+  top: 7px;
+  right: 65.5px;
+}
 /* ВЫБОР ЖИРНОСТИ */
 
 .field-wrapper-fat {
@@ -1433,6 +1447,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   padding: 0;
 
   list-style: none;
+  align-items: flex-start;
 }
 
 .catalog-item {
@@ -1527,11 +1542,10 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 .catalog-item-button {
   position: absolute;
   right: 33px;
-  bottom: -55px;
+  bottom: -54px;
 
   display: none;
-  margin: 20px auto 0;
-  padding: 10px 17px;
+  padding: 10px 17px 11px;
 
   font-size: 18px;
   line-height: 24px;
@@ -1539,6 +1553,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
   -webkit-box-shadow: 0 1px 2px 0 #ac1000;
           box-shadow: 0 1px 2px 0 #ac1000;
+
+  border-radius: 20px;
 }
 
 .catalog-item:hover {
@@ -1554,7 +1570,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
   display: none;
   width: 293px;
-  height: 405px;
+  height: calc(100% + 81px);
 
   background-color: #f8f7f4;
   border-radius: 5px;
@@ -1631,7 +1647,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   position: relative;
 }
 
-.advantages-list-item:nth-child(1)::before {
+.advantages-icon-icecream::before {
   content: "";
   position: absolute;
   top: 8px;
@@ -1643,7 +1659,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   background: url(../img/icons/ice-cream.svg) no-repeat;
 }
 
-.advantages-list-item:nth-child(2)::before {
+.advantages-icon-cow::before {
   content: "";
   position: absolute;
   top: 8px;
@@ -1655,7 +1671,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   background: url(../img/icons/cow.svg) no-repeat;
 }
 
-.advantages-list-item:nth-child(3)::before {
+.advantages-icon-eco::before {
   content: "";
   position: absolute;
   top: 9px;
@@ -1667,7 +1683,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   background: url(../img/icons/eco.svg) no-repeat;
 }
 
-.advantages-list-item:nth-child(4)::before {
+.advantages-icon-thermometer::before {
   content: "";
   position: absolute;
   top: 9px;
@@ -1696,6 +1712,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   padding: 23px 20px;
 
   background: url(../img/bg-banner-strawberry.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top;
   background-color: #ffffff;
   border-radius: 15px;
 }
@@ -1742,6 +1760,9 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   padding: 4px 5px 5px 6px;
 
   background: url(../img/icons/bg-border-lines.svg) no-repeat;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 15px; /* Ну, я придумал как можно с наименьшими усилиями можно решить вопрос с полосочками, пускай и не идеально */
 }
 
 .subscribe {
@@ -1765,7 +1786,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   height: 44px;
   margin-top: 36px;
   margin-right: 8px;
-  padding: 10px 0 10px 15px;
+  padding: 10px 15px;
 
   font-weight: 700;
   font-size: 16px;
@@ -1945,13 +1966,14 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .modal-feedback-form input {
-  padding: 10px 0 10px 15px;
+  padding: 10px 15px;
 }
 
 .modal-feedback-form textarea {
-  width: 428px;
+  min-width: 428px; /* Вопрос - правильно так ограничивать переполнение или костыльно? */
+  max-width: 428px;
   margin-bottom: 23px;
-  padding: 8px 0 10px 15px;
+  padding: 8px 15px 10px 15px;
 }
 
 .modal-feedback-form input::-webkit-input-placeholder,
@@ -2007,14 +2029,19 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 /* КАРТА */
 
-.map {
+.map { /* Вопрос - правильно реализовал растяжение? и то что iframe в html задал 100% размер( как писал в скапйе, почему-то тоже самое не сработало с img, пришлось через css вставлять, я мб спать хотел и не додумался как у инлайн свойства задать */
   position: relative;
-
+  width: 1200px;
+  padding-top: 63px;
+  padding-right: 27px;
+  padding-bottom: 62px;
+  min-height: 430px;
   margin: 0 -27px;
 }
 
 .map iframe {
-  position: relative;
+  position: absolute;
+  top: 0;
   z-index: 2;
 }
 
@@ -2025,15 +2052,23 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   z-index: 1;
 
   margin: 0;
+  background-image: url(../img/map-with-pin-and-shadow.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.map-image img {
+  height: inherit;
 }
 
 .map-info {
-  position: absolute;
+  position: relative;
   z-index: 3;
-  top: 63px;
-  right: 27px;
 
   width: 302px;
+  margin-left: auto;
   padding: 29px 25px 31px;
 
   color: #323232;
@@ -2114,7 +2149,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  margin: 0 -9px 35px auto;
+  margin: 0 -9px 30px auto;
   padding: 0;
 
   list-style: none;
@@ -2203,6 +2238,7 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   -ms-flex-align: end;
   align-items: flex-end;
   min-height: 103px;
+  margin-top: 5px;
 }
 
 .main-footer::after {
@@ -2222,6 +2258,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -2231,16 +2269,16 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 /* СОЦ-ПАНЕЛЬ */
 
 .main-footer-social {
+  align-self: center;
   width: 293px;
-  margin-bottom: 32px;
+  padding-left: 5px;
+  padding-top: 34px;
+  padding-bottom: 24px;
 }
 
 .main-footer-social-list-item {
   margin-right: 17px;
-}
-
-.main-footer-social-list-item:first-child {
-  margin-left: 5px;
+  margin-bottom: 8px;
 }
 
 .main-footer-social-list-item a {
@@ -2283,8 +2321,12 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 /* БЛОК ДОКУМЕНТАЦИИ */
 
 .main-footer-documentation {
-  width: 586px;
-  margin-bottom: 34px;
+  width: 550px;
+  align-self: center;
+  display: flex;
+  padding-top: 22px;
+  padding-bottom: 30px;
+  margin-left: 105px;
 }
 
 .main-footer-documentation-list {
@@ -2292,17 +2334,10 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  height: 44px;
-  padding: 0;
-  padding-left: 129px;
 }
 
-.main-footer-documentation-list-item {
-  margin-right: 32px;
+.main-footer-documentation-list {
+  margin-right: 31px;
 }
 
 .main-footer-documentation a {
@@ -2313,7 +2348,11 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.main-footer-documentation-list-item:first-of-type a {
+.production-list {
+  padding-left: 25px;
+}
+
+.documentation-for-suppliers a {
   font-weight: 700;
 }
 
@@ -2325,13 +2364,13 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   border-bottom-color: rgba(255, 188, 158, 0.2);
 }
 
-.main-footer-documentation-list-item:first-of-type {
+.documentation-for-suppliers {
   position: relative;
 }
 
 .svg-heart {
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: -22px;
 
   width: 15px;
@@ -2347,11 +2386,13 @@ a:active + .svg-heart path {
 /* БЛОК КОПИРАЙТА */
 
 .main-footer-copyright {
+  align-self: center;
   position: relative;
   right: -2px;
 
   width: 190px;
   margin: 0;
+  margin-top: 56px;
   margin-bottom: 29px;
   margin-left: auto;
 
@@ -2382,7 +2423,6 @@ a:active + .svg-heart path {
 
   width: 108px;
   height: 39px;
-  margin-bottom: 5px;
 
   background: url(../img/icons/logo-htmlacademy.svg) no-repeat;
 }

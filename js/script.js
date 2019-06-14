@@ -43,6 +43,8 @@ link.addEventListener("click", function (evt) {
           }
   });
 
+ /* Проблема - вызвали модалку - появилась с анимацией - закрыли модалку - открыли - снова появилась с анимацей - пока все ок - вызвали модалку - сделали сабмит модалки с незаполнеными полями - вызвали modal-error - закрыли модалку - открываем модалку - модалка появляется с анимацией error, а не show */
+
 close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("popup-show");
