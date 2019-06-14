@@ -444,11 +444,6 @@ li .current-site-navigation-link:active {
           box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
-.hover-search input:invalid {
-  -webkit-box-shadow: 0 0 0 2px red;
-          box-shadow: 0 0 0 2px red;
-}
-
 /* ХОВЕР - ЛОГИН */
 
 .hover-login p {
@@ -1850,14 +1845,14 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
           box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
-.subscribe-form input:focus {
-  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
-          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
-}
-
 .subscribe-form input:invalid {
   -webkit-box-shadow: 0 0 0 2px red;
           box-shadow: 0 0 0 2px red;
+}
+
+.subscribe-form input:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .subscribe-button {
@@ -2088,15 +2083,15 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
           box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
+.modal-feedback-form input:invalid {
+  -webkit-box-shadow: 0 0 0 2px red;
+          box-shadow: 0 0 0 2px red;
+}
+
 .modal-feedback-form input:focus,
 .modal-feedback-form textarea:focus {
   -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
           box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
-}
-
-.modal-feedback-form input:invalid {
-  -webkit-box-shadow: 0 0 0 2px red;
-          box-shadow: 0 0 0 2px red;
 }
 
 .modal-feedback-button {
