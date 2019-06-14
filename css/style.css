@@ -390,6 +390,7 @@ li .current-site-navigation-link:active {
 
   display: none;
   width: 341px;
+  min-height: 84px;
   padding: 20px 15px;
 
   background-color: #f8f7f4;
@@ -468,7 +469,7 @@ li .current-site-navigation-link:active {
   right: 0;
   bottom: -218px;
   width: 277px;
-  height: 222px;
+  min-height: 222px;
   display: none;
 }
 
