@@ -535,14 +535,14 @@ li .current-site-navigation-link:active {
           box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
-.hover-login input:focus {
-  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
-          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
-}
-
 .hover-login input:invalid {
   -webkit-box-shadow: 0 0 0 2px red;
           box-shadow: 0 0 0 2px red;
+}
+
+.hover-login input:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
+          box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.52);
 }
 
 .wrapper-login-links {
