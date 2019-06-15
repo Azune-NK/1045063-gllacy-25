@@ -402,6 +402,7 @@ li .current-site-navigation-link:active {
 
 .hover-search input {
   width: 311px;
+  height: 44px;
   padding: 10px 15px;
 
   font-weight: 700;
@@ -607,7 +608,7 @@ li .current-site-navigation-link:active {
 
   display: none;
   width: 540px;
-  height: 250px;
+  min-height: 250px;
 }
 
 .hover-filled-cart {
