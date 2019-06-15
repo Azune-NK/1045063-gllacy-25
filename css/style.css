@@ -12,6 +12,7 @@ html {
 
 body {
   position: relative;
+
   font-size: 16px;
   line-height: 22px;
   font-family: "Roboto", Arial, sans-serif;
@@ -313,9 +314,9 @@ li .current-site-navigation-link:active {
 
 .user-navigation-search {
   position: relative;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   width: 33px;
   height: 32px;
   margin-right: 10px;
@@ -332,9 +333,9 @@ li .current-site-navigation-link:active {
 
 .user-navigation-login {
   position: relative;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   max-width: 200px;
 
   border-radius: 30px;
@@ -347,9 +348,9 @@ li .current-site-navigation-link:active {
 
 .user-navigation-cart {
   position: relative;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   max-width: 145px;
   margin-left: 10px;
 
@@ -460,12 +461,13 @@ li .current-site-navigation-link:active {
 
 .wrapper-hover-login {
   position: absolute;
-  z-index: 10;
   right: 0;
   bottom: -218px;
+  z-index: 10;
+
+  display: none;
   width: 277px;
   min-height: 222px;
-  display: none;
 }
 
 .hover-login {
@@ -599,12 +601,13 @@ li .current-site-navigation-link:active {
 
 .wrapper-hover-filled-cart {
   position: absolute;
-  z-index: 10;
   right: 0;
   bottom: -246px;
+  z-index: 10;
+
+  display: none;
   width: 540px;
   height: 250px;
-  display: none;
 }
 
 .hover-filled-cart {
@@ -961,9 +964,9 @@ li .current-site-navigation-link:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
+  /* -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-between; */
   margin-bottom: 40px;
 }
 
@@ -989,6 +992,7 @@ li .current-site-navigation-link:active {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
       flex-direction: column;
+  margin-right: auto;
 
   background: url(../img/bg-banner-raspberry.jpg) no-repeat top center;
   background-color: #aa0532;
@@ -1240,18 +1244,20 @@ li .current-site-navigation-link:active {
 
 .range-controls .range-toggle-min:hover,
 .range-controls .range-toggle-min:focus {
-  width: 22px;
-  height: 22px;
   top: 7px;
   left: 33.5px;
+
+  width: 22px;
+  height: 22px;
 }
 
 .range-controls .range-toggle-max:hover,
 .range-controls .range-toggle-max:focus {
-  width: 22px;
-  height: 22px;
   top: 7px;
   right: 65.5px;
+
+  width: 22px;
+  height: 22px;
 }
 /* ВЫБОР ЖИРНОСТИ */
 
@@ -1463,12 +1469,12 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding: 0;
 
   list-style: none;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 .catalog-item {
@@ -1572,10 +1578,9 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   line-height: 24px;
   color: #fefefe;
 
+  border-radius: 20px;
   -webkit-box-shadow: 0 1px 2px 0 #ac1000;
           box-shadow: 0 1px 2px 0 #ac1000;
-
-  border-radius: 20px;
 }
 
 .catalog-item:hover {
@@ -1733,9 +1738,9 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   padding: 23px 20px;
 
   background: url(../img/bg-banner-strawberry.jpg) no-repeat;
-  background-size: cover;
-  background-position: center top;
   background-color: #ffffff;
+  background-position: center top;
+  background-size: cover;
   border-radius: 15px;
 }
 
@@ -1781,9 +1786,9 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   padding: 4px 5px 5px 6px;
 
   background: url(../img/icons/bg-border-lines.svg) no-repeat;
-  background-size: cover;
   background-position: top center;
-  border-radius: 15px; /* Ну, я придумал как можно с наименьшими усилиями можно решить вопрос с полосочками, пускай и не идеально */
+  background-size: cover;
+  border-radius: 15px;
 }
 
 .subscribe {
@@ -1962,10 +1967,9 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .modal-feedback {
   position: fixed;
-  z-index: 100;
-
   top: 337px;
   left: 50%;
+  z-index: 100;
 
   display: none;
   width: 478px;
@@ -1978,15 +1982,18 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .modal-feedback-overlay {
   position: absolute;
+  top: 0;
+  z-index: 99;
+
   width: 100%;
   height: 100%;
-  top: 0;
+
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 99;
 }
 
 .popup-show {
   display: block;
+
   -webkit-animation: bounce 0.6s;
           animation: bounce 0.6s;
 }
@@ -2016,9 +2023,8 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   height: 17px;
 
   background: url(../img/icons/cross-big.svg) no-repeat;
-
-  cursor: pointer;
   border: 0;
+  cursor: pointer;
 }
 
 .modal-feedback-name,
@@ -2043,14 +2049,17 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 }
 
 .modal-feedback-form input {
+  height: 44px;
   padding: 10px 15px;
 }
 
 .modal-feedback-form textarea {
-  min-width: 428px; /* Вопрос - правильно так ограничивать переполнение или костыльно? */
-  max-width: 428px;
+  width: 428px;
+  min-height: 155px;
   margin-bottom: 23px;
   padding: 8px 15px 10px 15px;
+
+  resize: vertical;
 }
 
 .modal-feedback-form input::-webkit-input-placeholder,
@@ -2106,20 +2115,25 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 /* КАРТА */
 
-.map { /* Вопрос - правильно реализовал растяжение? и то что iframe в html задал 100% размер( как писал в скапйе, почему-то тоже самое не сработало с img, пришлось через css вставлять, я мб спать хотел и не додумался как у инлайн свойства задать */
+.map {
   position: relative;
-  width: 1200px;
+
+  min-height: 430px;
+  margin: 0 auto;
   padding-top: 63px;
   padding-right: 27px;
   padding-bottom: 62px;
-  min-height: 430px;
-  margin: 0 -27px;
 }
 
 .map iframe {
   position: absolute;
   top: 0;
   z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
 }
 
 .map-image {
@@ -2128,12 +2142,13 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
   left: 0;
   z-index: 1;
 
+  width: 100%;
+  height: 100%;
   margin: 0;
+
   background-image: url(../img/map-with-pin-and-shadow.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .map-image img {
@@ -2347,11 +2362,11 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 
 .main-footer-social {
   -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   width: 293px;
-  padding-left: 5px;
   padding-top: 34px;
   padding-bottom: 24px;
+  padding-left: 5px;
 }
 
 .main-footer-social-list-item {
@@ -2399,15 +2414,15 @@ input[type="checkbox"]:disabled + .filler-checkbox::after {
 /* БЛОК ДОКУМЕНТАЦИИ */
 
 .main-footer-documentation {
-  width: 550px;
-  -ms-flex-item-align: center;
-      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: center;
+  align-self: center;
+  width: 550px;
+  margin-left: 105px;
   padding-top: 22px;
   padding-bottom: 30px;
-  margin-left: 105px;
 }
 
 .main-footer-documentation-list {
@@ -2467,11 +2482,11 @@ a:active + .svg-heart path {
 /* БЛОК КОПИРАЙТА */
 
 .main-footer-copyright {
-  -ms-flex-item-align: center;
-      align-self: center;
   position: relative;
   right: -2px;
 
+  -ms-flex-item-align: center;
+  align-self: center;
   width: 190px;
   margin: 0;
   margin-top: 56px;
