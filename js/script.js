@@ -32,9 +32,9 @@ link.addEventListener("click", function (evt) {
 
   if (!storageName) {
     feedbackName.focus();
-  } else if (storageName && !storageEmail) {
+  } else if (!storageEmail) {
     email.focus();
-  } else if (storageName && storageEmail) {
+  } else {
     feedbackInfo.focus();
   }
 });
